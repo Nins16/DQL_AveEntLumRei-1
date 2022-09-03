@@ -142,7 +142,7 @@ class SumoEnvrionment:
 
         queues = [traci.lanearea.getLastStepVehicleNumber(detector) for detector in e2_detectors] #gets the queus in detectors
 
-        tl_phase = traci.trafficlight.getPhase(self.traffic_light)
+        tl_phase = traci.trafficlight.getPhase(trafficlight)
         one_hot_vector_tl_phase = np.eye(self.total_phases)[tl_phase]
         arry = np.hstack([queues, one_hot_vector_tl_phase])
 

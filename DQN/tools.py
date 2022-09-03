@@ -38,16 +38,26 @@ class Net:
         return x
 
 class SmartTLS:
-    def __init__(self, tlsID):
+    def __init__(self, tlsID, memsize):
         self.tlsID = tlsID
-        self.model = Net()
+        self.get_phase_data()
+        self.replay = deque(maxlen=memsize) #Instant's replay experience
+        self.e2_detectors = None
+    
+    def get_phase_data(self):
+        """Convert Phase SUMO XML TL Program phase data to native python string phase data
+        """
+        self.tl_program = traci.trafficlight.getProgram(self.tlsID)
+        phases_objects=traci.trafficlight.getCompleteRedYellowGreenDefinition(self.tlsID)[0].getPhases()
+        self.phases = [phase.state for phase in phases_objects]
+        self.total_phases = len(self.phases)
+    
+    def init_model(self,neighbors):
+        #state length is 
+        pass
     def get_reward(self):
         pass
-    def get_state(self):
-        pass
     def train(self):
-        pass
-    def net(self):
         pass
     def total_phases(self):
         pass
