@@ -1,0 +1,23 @@
+03/09/2022
+Initialized the dqn script.
+
+Key Notes:
+Main algo used is Neighborhood DQL where the current action of 
+neighboring states are included in the agent.
+The agent holds the model.
+
+Note:
+- Demand not yet included
+- It is important to install the following libs:
+	-(matplotlib, pandas, numpy, torch, tqdm)
+- Sumo must also be installed
+
+Problems:
+(1) I don't know how to add the agents as a data type. Should I use lists or dict?
+(2) I don't know how i should implement the model within the agent
+(3) Hyperparameters of all models should be universal
+
+Solutions:
+(1) Better to use a dict
+(2) We'll let the environment initialize the NN
+(3) Use json to hold the hyperparameter values
