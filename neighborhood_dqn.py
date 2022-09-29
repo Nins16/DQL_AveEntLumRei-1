@@ -19,9 +19,18 @@ import torch.nn.functional as F
 
 from sumolib import checkBinary  # noqa
 import traci  # noqa
+import sumolib
+from DQN import tools
 
 class SumoEnvironment:
-    def __init__(self, gui = True, buffer_size = 15, buffer_yellow = 6, train=False):
+    def __init__(self, gui = True, buffer_size = 10, buffer_yellow = 3, train=False,
+                dir=Path("Simulation_Environment\Main DQN"),neighbor_limit = 2):
+        #Set directory of environment
+        self.dir = dir
+
+        #Create Num
+        self.net = sumolib.net.readNet(Path(f"{self.dir}\\osm.net.xml"))
+
         #Set Buffer Size
         self.buffer_yellow = buffer_yellow
         self.buffer_size = buffer_size
@@ -43,42 +52,98 @@ class SumoEnvironment:
             sys.path.append(tools)
         else:
             sys.exit("please declare environment variable 'SUMO_HOME'")
-        traci.start([self.sumoBinary, "-c", "Simulation_Environment\Main Route Simulation\osm.sumocfg",
-                             "--tripinfo-output", "Data\\tripinfo.xml",  "--start"])
+        traci.start([self.sumoBinary, "-c", f"{self.dir}\osm.sumocfg",
+                             "--tripinfo-output", f"{self.dir}\\Results\\tripinfo.xml",  "--start"])
         
+        #Get Phase Data of Each Traffic Light
+        self.get_phase_data()
+
         #Create dictionary for e2 detectors in TLS using trafficlightID as key
         self.get_e2_detectors()
-    
+
+        #Set neighbor Limit
+        self.neighbor_limit = neighbor_limit
+
+        #Create Dict for each trafficlight
+        self.init_tls_properties()
+
+
+        #Create Network for each traffic light if in training mode
+        self.train = train
+        if train == True:
+            self.init_neural_net()
+
+
+    def get_phase_data(self):
+        """Convert Phase SUMO XML TL Program phase data to native python string phase data
+        """
+        self.total_phases = {}
+        self.previous_tl_state = {}
+        self.phases = {}
+        for traffic_light in traci.trafficlight.getIDList():
+            phases_objects=traci.trafficlight.getCompleteRedYellowGreenDefinition(traffic_light)[0].getPhases()
+            self.phases[traffic_light] = [phase.state for phase in phases_objects]
+            self.total_phases[traffic_light] = len(self.phases)
+            self.previous_tl_state[traffic_light] = traci.trafficlight.getRedYellowGreenState(traffic_light)
+
     def take_action(self, tlsID, phase_no):
-        pass
-    
-    def get_neighbors(self):
         pass
 
     def get_reward(self):
         pass
-
+    
     def get_e2_detectors(self):
+        #Get all tls and e2 detectors
         all_tls = traci.trafficlight.getIDList()
         all_e2_detectors = traci.lanearea.getIDList()
+        
+        #initialize data storage for e2 detectors of each lane
+        #Note that there should be only one e2 detector per lane
+        self.e2_detectors = {}
         for tls in all_tls:
-            tls_pos = traci.getNode
             controlled_lanes = traci.trafficlight.getControlledLanes(tls)
-            detectors_in_controlled_lanes = [i for i in all_e2_detectors if i in controlled_lanes]
+            detectors_in_controlled_lanes = [detector for detector in all_e2_detectors if traci.lanearea.getLaneID(detector) in controlled_lanes]
+            self.e2_detectors[tls] = detectors_in_controlled_lanes
 
-    def get_state(self, trafficlight):
+    def get_state(self, trafficlight, joint_action):
         #Get ID list of detectors
-        e2_detectors = self.detectors
-
+        e2_detectors = self.e2_detectors[trafficlight]
+        
+        #Get Queues of each detector
         queues = [traci.lanearea.getLastStepVehicleNumber(detector) for detector in e2_detectors] #gets the queus in detectors
 
+        #get current Phase ID
         tl_phase = traci.trafficlight.getPhase(trafficlight)
-        one_hot_vector_tl_phase = np.eye(self.total_phases)[tl_phase]
-        arry = np.hstack([queues, one_hot_vector_tl_phase])
+
+        #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
+        one_hot_vector_tl_phase = np.eye(self.total_phases[trafficlight])[tl_phase]
+        arry = np.hstack([queues, one_hot_vector_tl_phase, joint_action])
 
         return arry
         
-    def get_joint_action(self, neighbors):
+    def get_joint_action(self, trafficlight):
+        #What is the joint action? Up for them to decide
+        pass
+    
+    def init_tls_properties(self):
+        """initializes the properties of each tls"""
+        self.tls = {}
+        all_tls = traci.trafficlight.getIDList()
+        
+        #Create a dictionary for each tls
+        for tls in all_tls:
+            self.tls[tls] = {}
+
+        #Add neighbour list to tls dict
+        neighbors = tools.get_neighbors(2,self.net)
+        for key,val in neighbors.items(): 
+            item = self.tls[key]
+            item['neighbor'] = val
+        
+    def init_neural_net(self):
+        """Initializes the neural network of each ITS"""
+        #Create dictionary for tls neighbors
+        self.get_neighbors(self.neighbor_limit)
         pass
 
 def train(M=5):
