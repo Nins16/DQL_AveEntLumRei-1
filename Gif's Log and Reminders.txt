@@ -18,6 +18,26 @@ Problems:
 (3) Hyperparameters of all models should be universal
 
 Solutions:
-(1) Better to use a dict
-(2) We'll let the environment initialize the NN
-(3) Use json to hold the hyperparameter values
+(1) Better to use a dict /
+(2) We'll let the environment initialize the NN /
+(3) Use json to hold the hyperparameter values 
+
+30/09/2022
+Added neighbor script in get_state
+Added randomized state
+Added init_tls_properties
+Added init_neural_net
+Added Error Check in get_e2_detectors
+tls_dict['phases'] changed from state to state index
+removed get_neighbor function(since it is already added to the get_state function)
+Added update_current_action
+Added cycle length init variable in environment
+Updated Network
+
+Todo:
+get_state function:
+	- change joint action variable to phase length in percentage relative to cycle length
+	- Replace OHV to the percentage of phase length relative to cycle length in traffic light
+
+add script in update_current_action
+add get_e2_detectors(Maybe e3? check with members)

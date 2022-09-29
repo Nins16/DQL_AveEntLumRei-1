@@ -24,7 +24,7 @@ from DQN import tools
 
 class SumoEnvironment:
     def __init__(self, gui = True, buffer_size = 10, buffer_yellow = 3, train=False,
-                dir=Path("Simulation_Environment\Main DQN"),neighbor_limit = 2):
+                dir=Path("Simulation_Environment\Main DQN"),neighbor_limit = 2, cycle_length=120):
         #Set directory of environment
         self.dir = dir
 
@@ -54,9 +54,6 @@ class SumoEnvironment:
             sys.exit("please declare environment variable 'SUMO_HOME'")
         traci.start([self.sumoBinary, "-c", f"{self.dir}\osm.sumocfg",
                              "--tripinfo-output", f"{self.dir}\\Results\\tripinfo.xml",  "--start"])
-        
-        #Get Phase Data of Each Traffic Light
-        self.get_phase_data()
 
         #Create dictionary for e2 detectors in TLS using trafficlightID as key
         self.get_e2_detectors()
@@ -67,12 +64,16 @@ class SumoEnvironment:
         #Create Dict for each trafficlight
         self.init_tls_properties()
 
+        #Get Phase Data of Each Traffic Light
+        self.get_phase_data()
+
+        #Randomize state
+        self.randomize_state()
 
         #Create Network for each traffic light if in training mode
         self.train = train
         if train == True:
             self.init_neural_net()
-
 
     def get_phase_data(self):
         """Convert Phase SUMO XML TL Program phase data to native python string phase data
@@ -81,10 +82,12 @@ class SumoEnvironment:
         self.previous_tl_state = {}
         self.phases = {}
         for traffic_light in traci.trafficlight.getIDList():
+            tls_dict = self.tls[traffic_light]
             phases_objects=traci.trafficlight.getCompleteRedYellowGreenDefinition(traffic_light)[0].getPhases()
-            self.phases[traffic_light] = [phase.state for phase in phases_objects]
-            self.total_phases[traffic_light] = len(self.phases)
-            self.previous_tl_state[traffic_light] = traci.trafficlight.getRedYellowGreenState(traffic_light)
+            #Gets the phase index where there is no transition phase(basically, no "yellow phase")
+            tls_dict['phases'] = [idx for idx, phase in enumerate(phases_objects) if 'y' not in phase.state]
+            #Gets the numer of phases
+            tls_dict['total_phases'] = len(tls_dict['phases'])
 
     def take_action(self, tlsID, phase_no):
         pass
@@ -98,14 +101,34 @@ class SumoEnvironment:
         all_e2_detectors = traci.lanearea.getIDList()
         
         #initialize data storage for e2 detectors of each lane
-        #Note that there should be only one e2 detector per lane
+        #Note that there should be only one e2 detector per lane(this should be true even for network application)
         self.e2_detectors = {}
         for tls in all_tls:
             controlled_lanes = traci.trafficlight.getControlledLanes(tls)
             detectors_in_controlled_lanes = [detector for detector in all_e2_detectors if traci.lanearea.getLaneID(detector) in controlled_lanes]
             self.e2_detectors[tls] = detectors_in_controlled_lanes
+        
+        #Duplicate Error Checking
+        for idx_1 in len(all_tls):
+            for idx_2, tls_2 in enumerate(all_tls):
+                if idx_1 == idx_2:
+                    continue
+                for detector in self.e2_detectors[idx_1]:
+                    if detector in self.e2_detector[idx_2]:
+                        raise AttributeError("Detector shared in multple lanes, add node in between or remove detector.")
+    
+    def get_phase_duration(self, trafficlight):
+        pass
 
-    def get_state(self, trafficlight, joint_action):
+
+    def get_state(self, trafficlight):
+        """Gets the state of the trafficlight"""
+
+        #Get action of neighbors(joint-action)
+        tls_dict = self.tls[trafficlight]
+        neighbors = tls_dict['neighbors']
+        joint_action = [int(traci.trafficlight.getProgram(i)) for i in neighbors] #TODO: Change to Phase Length in percentage relative to cycle length
+
         #Get ID list of detectors
         e2_detectors = self.e2_detectors[trafficlight]
         
@@ -116,13 +139,13 @@ class SumoEnvironment:
         tl_phase = traci.trafficlight.getPhase(trafficlight)
 
         #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
+        #TODO: FIXTHIS WHERE INSTEAD OF OHV, USE SIGMOID OF PHASE LENGTH
         one_hot_vector_tl_phase = np.eye(self.total_phases[trafficlight])[tl_phase]
+
         arry = np.hstack([queues, one_hot_vector_tl_phase, joint_action])
 
         return arry
-        
-    def get_joint_action(self, trafficlight):
-        #What is the joint action? Up for them to decide
+    def update_current_action(self, trafficlight):
         pass
     
     def init_tls_properties(self):
@@ -138,13 +161,21 @@ class SumoEnvironment:
         neighbors = tools.get_neighbors(2,self.net)
         for key,val in neighbors.items(): 
             item = self.tls[key]
-            item['neighbor'] = val
+            item['neighbors'] = val
         
+            
+    def randomize_state(self):
+        for trafficlight in traci.trafficlight.getIDList():
+            randomized_action = random.randint(0,self.tls[trafficlight]['total_phases'] - 1)
+            traci.trafficlight.setPhase(trafficlight,randomized_action)
+            
     def init_neural_net(self):
         """Initializes the neural network of each ITS"""
-        #Create dictionary for tls neighbors
-        self.get_neighbors(self.neighbor_limit)
-        pass
+        for trafficlight in traci.trafficlight.getIDList():
+            states_length = len(self.get_state(trafficlight))
+            tls_dict = self.tls[trafficlight]
+            total_phases = tls_dict['total_phases']
+            tls_dict['agent'] = tools.Net(states_length,total_phases)
 
 def train(M=5):
     ### Please start from scratch. Use this as guide.

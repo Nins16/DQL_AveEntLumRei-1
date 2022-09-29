@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2022-09-04 14:44:21 by Eclipse SUMO netedit Version 1.10.0
+<!-- generated on 2022-09-29 12:25:49 by Eclipse SUMO netedit Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -621,24 +621,24 @@
         <lane id="west_recto_3_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="180.94" shape="1327.58,1079.33 1504.27,1040.72"/>
     </edge>
 
-    <tlLogic id="corrales_recto_tl" type="actuated" programID="0" offset="0">
-        <phase duration="33" state="rrrrGGGrrrrrGGGg" minDur="13" maxDur="50"/>
+    <tlLogic id="corrales_recto_tl" type="static" programID="0" offset="0">
+        <phase duration="33" state="rrrrGGGrrrrrGGGg"/>
         <phase duration="6"  state="rrrryyyrrrrryyyg"/>
-        <phase duration="6"  state="rrrrrrrGrrrrrrrG" minDur="13" maxDur="50"/>
+        <phase duration="33" state="rrrrrrrGrrrrrrrG"/>
         <phase duration="6"  state="rrrrrrryrrrrrrry"/>
-        <phase duration="33" state="GGGgrrrrGGGgrrrr" minDur="13" maxDur="50"/>
+        <phase duration="33" state="GGGgrrrrGGGgrrrr"/>
         <phase duration="6"  state="yyyyrrrryyyyrrrr"/>
     </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="actuated" programID="0" offset="0">
-        <phase duration="39" state="GGGgrrrrGGGggrrrrr" minDur="13" maxDur="50"/>
+    <tlLogic id="luna_corrales_tl" type="static" programID="0" offset="0">
+        <phase duration="39" state="GGGgrrrrGGGggrrrrr"/>
         <phase duration="6"  state="yyyyrrrryyyyyrrrrr"/>
-        <phase duration="39" state="rrrrGGGgrrrrrGGGgg" minDur="10" maxDur="50"/>
+        <phase duration="39" state="rrrrGGGgrrrrrGGGgg"/>
         <phase duration="6"  state="rrrryyyyrrrrryyyyy"/>
     </tlLogic>
-    <tlLogic id="luna_roa_tl" type="actuated" programID="0" offset="0">
-        <phase duration="40" state="rrrGGGgrrrrGGGg" minDur="10" maxDur="50"/>
+    <tlLogic id="luna_roa_tl" type="static" programID="0" offset="0">
+        <phase duration="40" state="rrrGGGgrrrrGGGg"/>
         <phase duration="5"  state="rrryyyyrrrryyyy"/>
-        <phase duration="40" state="GGgrrrrGGggrrrr" minDur="10" maxDur="50"/>
+        <phase duration="40" state="GGgrrrrGGggrrrr"/>
         <phase duration="5"  state="yyyrrrryyyyrrrr"/>
     </tlLogic>
     <tlLogic id="osmena_florentino_tl" type="static" programID="0" offset="0">
@@ -647,12 +647,12 @@
         <phase duration="39" state="rrrGGgGrrr"/>
         <phase duration="6"  state="rrryyyyrrr"/>
     </tlLogic>
-    <tlLogic id="recto_osmena_tl" type="actuated" programID="0" offset="0">
-        <phase duration="33" state="rrrrrGGGggrrrrGGGr" minDur="13" maxDur="50"/>
+    <tlLogic id="recto_osmena_tl" type="static" programID="0" offset="0">
+        <phase duration="33" state="rrrrrGGGggrrrrGGGr"/>
         <phase duration="6"  state="rrrrryyyggrrrryyyr"/>
-        <phase duration="6"  state="rrrrrrrrGGrrrrrrrG" minDur="13" maxDur="50"/>
+        <phase duration="33" state="rrrrrrrrGGrrrrrrrG"/>
         <phase duration="6"  state="rrrrrrrryyrrrrrrry"/>
-        <phase duration="33" state="GGGggrrrrrGGGgrrrr" minDur="13" maxDur="50"/>
+        <phase duration="33" state="GGGggrrrrrGGGgrrrr"/>
         <phase duration="6"  state="yyyyyrrrrryyyyrrrr"/>
     </tlLogic>
 

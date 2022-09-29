@@ -15,6 +15,7 @@ import torch.nn.functional as F
 
 from sumolib import checkBinary  # noqa
 import traci  # noqa
+import sumolib
 
 class Net:
     def __init__(self,states_length,total_phases):
