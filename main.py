@@ -37,6 +37,9 @@ class SumoEnvironment:
         if self.buffer_size < self.buffer_yellow:
             raise ValueError("Buffer size must be greater than yellow buffer")
 
+        #Set Cycle Length
+        self.cycle_length = cycle_length
+
         #Set GUI boolean condition
         self.gui = gui
 
@@ -89,9 +92,6 @@ class SumoEnvironment:
             #Gets the numer of phases
             tls_dict['total_phases'] = len(tls_dict['phases'])
 
-    def take_action(self, tlsID, phase_no):
-        pass
-
     def get_reward(self):
         pass
     
@@ -118,8 +118,10 @@ class SumoEnvironment:
                         raise AttributeError("Detector shared in multple lanes, add node in between or remove detector.")
     
     def get_phase_duration(self, trafficlight):
-        pass
-
+        """Gets the phase duration of a traffic light(excluding transition phase e.g. 'yellow')"""
+        phases = traci.trafficlight.getCompleteRedYellowGreenDefinition(trafficlight)[0].getPhases()
+        duration = [i.duration for i in phases if 'y' not in i.state]
+        return duration
 
     def get_state(self, trafficlight):
         """Gets the state of the trafficlight"""
@@ -127,7 +129,10 @@ class SumoEnvironment:
         #Get action of neighbors(joint-action)
         tls_dict = self.tls[trafficlight]
         neighbors = tls_dict['neighbors']
-        joint_action = [int(traci.trafficlight.getProgram(i)) for i in neighbors] #TODO: Change to Phase Length in percentage relative to cycle length
+        joint_action = []
+        for neighbor in neighbors:
+            joint_action.append(self.get_phase_duration(neighbor))
+        joint_action = np.hstack(joint_action)/self.cycle_length   
 
         #Get ID list of detectors
         e2_detectors = self.e2_detectors[trafficlight]
@@ -139,14 +144,25 @@ class SumoEnvironment:
         tl_phase = traci.trafficlight.getPhase(trafficlight)
 
         #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
-        #TODO: FIXTHIS WHERE INSTEAD OF OHV, USE SIGMOID OF PHASE LENGTH
-        one_hot_vector_tl_phase = np.eye(self.total_phases[trafficlight])[tl_phase]
+        phase_durations = np.array(self.get_phase_duration(trafficlight))/self.cycle_length
 
-        arry = np.hstack([queues, one_hot_vector_tl_phase, joint_action])
+        arry = np.hstack([queues, phase_durations, joint_action])
 
         return arry
-    def update_current_action(self, trafficlight):
-        pass
+
+    def take_action(self, trafficlight, q_values):
+        #create a distribution of phase duration based from the q_values
+        sum_q_values = np.sum(q_values)
+        percentage = q_values/sum_q_values
+        phase_time = percentage*self.cycle_length
+        
+        #set the phase duration
+        tls_dict = self.tls[trafficlight]
+        for idx, duration in enumerate(phase_time):
+            phase_idx = tls_dict['phases'][idx]
+            traci.trafficlight.setPhase(trafficlight, phase_idx)
+            traci.trafficlight.setPhaseDuration(trafficlight, duration)
+        traci.trafficlight.setPhase(trafficlight, 0) #resets the trafficlight
     
     def init_tls_properties(self):
         """initializes the properties of each tls"""
@@ -177,22 +193,5 @@ class SumoEnvironment:
             total_phases = tls_dict['total_phases']
             tls_dict['agent'] = tools.Net(states_length,total_phases)
 
-def train(M=5):
-    ### Please start from scratch. Use this as guide.
-    # for m in range(M):
-    #     for j in agents.keys():
-    #         state = env.get_state(j)
-    #         neighbors = env.get_neighbors(j)
-    #         joint_actions = env.get_joint_action(neighbors)
-    #         q_values = net(state, joint_actions)
-    #         if random.random() < epsilon:
-    #             action = np.random.randint(0,j.total_phases)
-    #         else:
-    #             action = torch.argmax(q_values)
 
-    #Initialize environment
-    env = SumoEnvironment(gui=False, buffer_size=10, buffer_yellow=3, train=True)
-
-    #initialize agents
-    agents = {}
     
