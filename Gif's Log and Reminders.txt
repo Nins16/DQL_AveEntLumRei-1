@@ -36,8 +36,8 @@ Updated Network
 
 Todo:
 get_state function:
-	- change joint action variable to phase length in percentage relative to cycle length
-	- Replace OHV to the percentage of phase length relative to cycle length in traffic light
+	- change joint action variable to phase length in percentage relative to cycle length /
+	- Replace OHV to the percentage of phase length relative to cycle length in traffic light /
 
-add script in update_current_action
+add script in update_current_action /
 add get_e2_detectors(Maybe e3? check with members)

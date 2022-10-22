@@ -1,52 +1,12 @@
-import matplotlib.pyplot as plt
-from pathlib import Path
+import random
+from collections import deque
+import numpy as np
 import torch
 import torch.nn as nn
-import torch.optim
-import numpy as np
-import optparse
 import os
-import sys
-import pandas as pd
-from tqdm import tqdm
-from collections import deque
-import random
 import torch.nn.functional as F
 
-from sumolib import checkBinary  # noqa
-import traci  # noqa
-import sumolib
-from collections import deque
 
-class Net:
-    def __init__(self,states_length,total_phases):
-        super().__init__()
-        self.states_length = states_length
-        self.total_phases = total_phases
-        self.fc1 = nn.Linear(states_length,1000)
-        self.fc2 = nn.Linear(1000,500)
-        self.fc3 = nn.Linear(500,self.total_phases)
-    
-    def forward(self, x):
-        #Neural Network Forward Pass Layers
-        x = F.relu(self.fc1(x))
-        # x = nn.BatchNorm1d(x)
-        x = F.relu(self.fc2(x))
-        x = F.relu(self.fc3(x))
-        return F.sigmoid(x)
-
-class SmartTLS:
-    def __init__(self, tlsID, memsize):
-        self.tlsID = tlsID
-        self.replay = deque(maxlen=memsize) #Instant's replay experience
-    
-    def init_model(self,neighbors):
-        #state length is 
-        pass
-    def train(self):
-        pass
-
-#This is used for the DDOG Network
 class OUActionNoise(object):
     def __init__(self, mu, sigma=0.15, theta=0.2,dt=1e-2, x0=None):
         self.theta = theta
@@ -142,7 +102,7 @@ class ActorNetwork(nn.Module):
         torch.nn.init.uniform_(self.mu.weight.data(), -f3, f3)
         torch.nn.init.uniform_(self.mu.bias.data(), -f3, f3)
 
-        self.optimizer = torch.optim.Adam(self.parameters(), lr=beta)
+        self.optimizer = torch.optim.Adam(self.parameters(), lr=alpha)
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
         self.to(self.device)
@@ -164,19 +124,21 @@ class ActorNetwork(nn.Module):
         self.load_state_dict(torch.load(self.checkpoint_file))  
 
 class DDPGAGent(object):
-    def __init__(self, alpha, beta, input_dims, tau, env, gamma=0.99, n_actions=4, max_size=1e6, layer1_size=400, layer2_size=300, batch_size=24):
-        self.gamma= gamma
-        self.tau = tau
+    def __init__(self, alpha, beta, input_dims, tau, env, gamma=0.99, n_actions=4, max_size=1e6, layer1_size=400, layer2_size=300, batch_size=24, name=None):
+        self.gamma  = gamma
+        self.tau    = tau
         self.replay = deque(maxlen=max_size)
         self.batch_size = batch_size
+        self.name   = name
         
-        self.actor          = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions=n_actions, name="Actor")
-        self.target_actor   = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions=n_actions, name="TargetActor")
-        self.critic         = CriticNetwork(beta, input_dims, layer1_size, layer2_size, n_actions=n_actions, name="Critic")
-        self.target_critic  = CriticNetwork(beta, input_dims, layer1_size, layer2_size, n_actions=n_actions, name="TargetCritic")
+        self.actor          = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions=n_actions, name=f"{self.name} Actor")
+        self.target_actor   = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions=n_actions, name=f"{self.name} TargetActor")
+        self.critic         = CriticNetwork(beta, input_dims, layer1_size, layer2_size, n_actions=n_actions, name=f"{self.name} Critic")
+        self.target_critic  = CriticNetwork(beta, input_dims, layer1_size, layer2_size, n_actions=n_actions, name=f"{self.name} TargetCritic")
 
-        self.noise = OUActionNoise(mu=np.zeros(n_actions))
+        self.noise  = OUActionNoise(mu=np.zeros(n_actions))
 
+        
         self.update_network_parameters(tau=1)
     
     def choose_action(self, observation):
@@ -209,10 +171,11 @@ class DDPGAGent(object):
             self.target_crtic.eval()
             self.crtic.eval()
 
-            target_actions = self.target_actor.forward(state2_batch)
-            critic_value_ = self.target_critic.forward(state2_batch, target_actions)
-            critic_value = self.critic.forward(state1_batch, action_batch)
+            target_actions  = self.target_actor.forward(state2_batch)
+            critic_value_   = self.target_critic.forward(state2_batch, target_actions)
+            critic_value    = self.critic.forward(state1_batch, action_batch)
 
+            #This is a vectorized implementation. This may cause errors. If it fails use a loop(slow but reliable)
             target = reward_batch + self.gamma*critic_value_*done_batch
             target = torch.tensor(target).to(self.critic.device)
             target = target.view(self.batch_size,1)
@@ -269,38 +232,3 @@ class DDPGAGent(object):
         self.critic.load_checkpoint()
         self.target_actor.load_checkpoint()
         self.target_critic.load_checkpoint()
-
-
-
-
-#Tools
-def get_neighbors(neighbour_limit,net):
-    """Returns the neighbouring nodes"""
-    def distance(x,y):  #Distance between two points in a cartesea plane (No Elevation)
-        x_a = x[0]
-        x_b = x[1]
-        y_a = y[0]
-        y_b = y[1]
-        c   = np.sqrt(((x_a-y_a)**2)+((x_b-y_b)**2))
-        return c
-
-    all_nodes   = net.getNodes()
-    tls_nodes   = [node for node in all_nodes if node.getType() == 'traffic_light']
-    array       = np.zeros([len(tls_nodes)]*2)
-    column_names    = [i.getID() for i in tls_nodes]
-    df              = pd.DataFrame(array, columns=column_names, index=column_names)
-    for row in column_names:
-        for column in column_names:
-            row_node    = net.getNode(row)
-            column_node = net.getNode(column)
-            row_coords  = row_node._coord
-            column_coords = column_node._coord
-            df.loc[row,column] = distance(row_coords,column_coords)
-    distance_dict = {}
-    for node in column_names:
-        node_tl_name = node+'_tl'
-        lst=[i+'_tl' for i in list(df[node].sort_values()[1:neighbour_limit+1].index)]
-        distance_dict[node_tl_name] = lst
-    
-    return distance_dict
-
