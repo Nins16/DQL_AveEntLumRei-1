@@ -68,13 +68,15 @@ class SumoEnvironment:
         self.init_yellow_transition()
 
         #Randomize state
-        self.randomize_state()
+        self.reset_phase()
         
         #inits vehicle counter
         for trafficlight in traci.trafficlight.getIDList():
             tls_dict = self.tls[trafficlight]
             tls_dict['vehicle speed'] = []
             tls_dict['lane queue'] = {}
+        
+        print("Environment initialized")
     
     def get_e2_detectors(self):
         #Get all tls and e2 detectors
@@ -141,10 +143,9 @@ class SumoEnvironment:
                 traci.trafficlight.setPhaseDuration(trafficlight, self.buffer_yellow)
             traci.trafficlight.setPhase(trafficlight, 0)
 
-    def randomize_state(self):
+    def reset_phase(self):
         for trafficlight in traci.trafficlight.getIDList():
-            randomized_action = random.randint(0,self.tls[trafficlight]['total_phases'] - 1)
-            traci.trafficlight.setPhase(trafficlight,self.tls[trafficlight]['phases'][randomized_action])
+            traci.trafficlight.setPhase(trafficlight,self.tls[trafficlight]['phases'][0])
     
     def get_phase_duration(self, trafficlight):
         """Gets the phase duration of a traffic light(excluding transition phase e.g. 'yellow')"""
@@ -249,10 +250,19 @@ class SumoEnvironment:
             traci.simulation.step()
             for trafficlight in traci.trafficlight.getIDList():
                 self.record(trafficlight)
+
         
     def obs(self, trafficlight):
+        """Returns the state, reward, and done"""
         new_state = self.get_state(trafficlight)
         reward = self.get_reward(trafficlight)
         done = self.is_done()
+        tls_dict = self.tls[trafficlight]
+
+        #resets the detector queue and vehicle speed
+        tls_dict['vehicle speed'] = []
+        queue = tls_dict['lane queue']
+        for key, val in queue.items():
+            queue[key] = []
 
         return new_state, reward, done
