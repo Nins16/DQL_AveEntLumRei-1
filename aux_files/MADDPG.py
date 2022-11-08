@@ -3,7 +3,89 @@ import torch as T
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+import numpy as np
 
+class MultiAgentReplayBuffer:
+    def __init__(self, max_size, critic_dims, actor_dims, 
+            n_actions, n_agents, batch_size):
+        self.mem_size = max_size
+        self.mem_cntr = 0
+        self.n_agents = n_agents
+        self.actor_dims = actor_dims
+        self.batch_size = batch_size
+        self.n_actions = n_actions
+
+        self.state_memory = np.zeros((self.mem_size, critic_dims))
+        self.new_state_memory = np.zeros((self.mem_size, critic_dims))
+        self.reward_memory = np.zeros((self.mem_size, n_agents))
+        self.terminal_memory = np.zeros((self.mem_size, n_agents), dtype=bool)
+
+        self.init_actor_memory()
+
+    def init_actor_memory(self):
+        self.actor_state_memory = []
+        self.actor_new_state_memory = []
+        self.actor_action_memory = []
+
+        for i in range(self.n_agents):
+            self.actor_state_memory.append(
+                            np.zeros((self.mem_size, self.actor_dims[i])))
+            self.actor_new_state_memory.append(
+                            np.zeros((self.mem_size, self.actor_dims[i])))
+            self.actor_action_memory.append(
+                            np.zeros((self.mem_size, self.n_actions)))
+
+
+    def store_transition(self, raw_obs, state, action, reward, 
+                               raw_obs_, state_, done):
+        # this introduces a bug: if we fill up the memory capacity and then
+        # zero out our actor memory, the critic will still have memories to access
+        # while the actor will have nothing but zeros to sample. Obviously
+        # not what we intend.
+        # In reality, there's no problem with just using the same index
+        # for both the actor and critic states. I'm not sure why I thought
+        # this was necessary in the first place. Sorry for the confusion!
+
+        #if self.mem_cntr % self.mem_size == 0 and self.mem_cntr > 0:
+        #    self.init_actor_memory()
+        
+        index = self.mem_cntr % self.mem_size
+
+        for agent_idx in range(self.n_agents):
+            self.actor_state_memory[agent_idx][index] = raw_obs[agent_idx]
+            self.actor_new_state_memory[agent_idx][index] = raw_obs_[agent_idx]
+            self.actor_action_memory[agent_idx][index] = action[agent_idx]
+
+        self.state_memory[index] = state
+        self.new_state_memory[index] = state_
+        self.reward_memory[index] = reward
+        self.terminal_memory[index] = done
+        self.mem_cntr += 1
+
+    def sample_buffer(self):
+        max_mem = min(self.mem_cntr, self.mem_size)
+
+        batch = np.random.choice(max_mem, self.batch_size, replace=False)
+
+        states = self.state_memory[batch]
+        rewards = self.reward_memory[batch]
+        states_ = self.new_state_memory[batch]
+        terminal = self.terminal_memory[batch]
+
+        actor_states = []
+        actor_new_states = []
+        actions = []
+        for agent_idx in range(self.n_agents):
+            actor_states.append(self.actor_state_memory[agent_idx][batch])
+            actor_new_states.append(self.actor_new_state_memory[agent_idx][batch])
+            actions.append(self.actor_action_memory[agent_idx][batch])
+
+        return actor_states, states, actions, rewards, \
+               actor_new_states, states_, terminal
+
+    def ready(self):
+        if self.mem_cntr >= self.batch_size:
+            return True
 class CriticNetwork(nn.Module):
     def __init__(self, beta, input_dims, fc1_dims, fc2_dims, 
                     n_agents, n_actions, name, chkpt_dir):
@@ -53,7 +135,7 @@ class ActorNetwork(nn.Module):
     def forward(self, state):
         x = F.relu(self.fc1(state))
         x = F.relu(self.fc2(x))
-        pi = T.softmax(self.pi(x), dim=1)
+        pi = T.sigmoid(self.pi(x))
 
         return pi
 
@@ -65,25 +147,14 @@ class ActorNetwork(nn.Module):
 
 
 class Agent:
-    def __init__(self, actor_dims, critic_dims, n_actions, n_agents, agent_idx, chkpt_dir,
-                    alpha=0.01, beta=0.01, fc1=64, 
-                    fc2=64, gamma=0.95, tau=0.01):
+    def __init__(self, actor, target_actor, critic, target_critic, gamma=0.95, tau=0.01):
         self.gamma = gamma
         self.tau = tau
-        self.n_actions = n_actions
-        self.agent_name = 'agent_%s' % agent_idx
-        self.actor = ActorNetwork(alpha, actor_dims, fc1, fc2, n_actions, 
-                                  chkpt_dir=chkpt_dir,  name=self.agent_name+'_actor')
-        self.critic = CriticNetwork(beta, critic_dims, 
-                            fc1, fc2, n_agents, n_actions, 
-                            chkpt_dir=chkpt_dir, name=self.agent_name+'_critic')
-        self.target_actor = ActorNetwork(alpha, actor_dims, fc1, fc2, n_actions,
-                                        chkpt_dir=chkpt_dir, 
-                                        name=self.agent_name+'_target_actor')
-        self.target_critic = CriticNetwork(beta, critic_dims, 
-                                            fc1, fc2, n_agents, n_actions,
-                                            chkpt_dir=chkpt_dir,
-                                            name=self.agent_name+'_target_critic')
+ 
+        self.actor = actor
+        self.critic = critic
+        self.target_actor = target_actor
+        self.target_critic = target_critic
 
         self.update_network_parameters(tau=1)
 
@@ -133,28 +204,77 @@ class Agent:
         self.critic.load_checkpoint()
         self.target_critic.load_checkpoint()
 
-class MADDPGAgent:
-    """The Agent must input the actors(list) and critic network implicitly \n"""
-    def __init__(self,alpha, beta, tau, env, gamma=0.99, max_size=100, layer1_size=400, layer2_size=300, batch_size=24, name=None, critic_input_dims = None, critic_n_actions = 0,
-     actor_input_dims = [], actor_n_actions=[], actor_names=[]):
-        self.gamma  = gamma
-        self.tau    = tau
-        self.replay = {}
-        self.batch_size = batch_size
-        self.name   = name
-        self.critic         = CriticNetwork(beta, critic_input_dims, layer1_size, layer2_size, n_actions=critic_n_actions, name=f"{self.name} Critic")
-        self.target_critic  = CriticNetwork(beta, critic_input_dims, layer1_size, layer2_size, n_actions=critic_n_actions, name=f"{self.name} TargetCritic")
-        
-        self.actors = {}
-        for n_actions, input_dims, name in zip(actor_n_actions, actor_input_dims, actor_names):
-            actor = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions, f"{self.name} Actor {name}")
-            target_actor = ActorNetwork(alpha, input_dims, layer1_size, layer2_size, n_actions, f"{self.name} TargetActor {name}")
-            self.actors[name] = {}
-            actor_dict = self.actors[name]
-            actor_dict['actor'] = actor
-            actor_dict['target_actor'] = target_actor
-            self.replay[name] = deque(maxlen=max_size)
-            self.actor_noise  = OUActionNoise(mu=np.zeros(n_actions))
+class MADDPG:
+    def __init__(self, agents):
+        self.agents = agents
 
-        
-        self.update_network_parameters(tau=1)
+    def save_checkpoint(self):
+        print('... saving checkpoint ...')
+        for agent in self.agents:
+            agent.save_models()
+
+    def load_checkpoint(self):
+        print('... loading checkpoint ...')
+        for agent in self.agents:
+            agent.load_models()
+
+    def choose_action(self, raw_obs):
+        actions = []
+        for agent_idx, agent in enumerate(self.agents):
+            action = agent.choose_action(raw_obs[agent_idx])
+            actions.append(action)
+        return actions
+
+    def learn(self, memory):
+        if not memory.ready():
+            return
+
+        actor_states, states, actions, rewards, actor_new_states, states_, dones = memory.sample_buffer()
+
+        device = self.agents[0].actor.device
+
+        states = T.tensor(states, dtype=T.float).to(device)
+        actions = T.tensor(actions, dtype=T.float).to(device)
+        rewards = T.tensor(rewards).to(device)
+        states_ = T.tensor(states_, dtype=T.float).to(device)
+        dones = T.tensor(dones).to(device)
+
+        all_agents_new_actions = []
+        all_agents_new_mu_actions = []
+        old_agents_actions = []
+
+        for agent_idx, agent in enumerate(self.agents):
+            new_states = T.tensor(actor_new_states[agent_idx], 
+                                 dtype=T.float).to(device)
+
+            new_pi = agent.target_actor.forward(new_states)
+
+            all_agents_new_actions.append(new_pi)
+            mu_states = T.tensor(actor_states[agent_idx], 
+                                 dtype=T.float).to(device)
+            pi = agent.actor.forward(mu_states)
+            all_agents_new_mu_actions.append(pi)
+            old_agents_actions.append(actions[agent_idx])
+
+        new_actions = T.cat([acts for acts in all_agents_new_actions], dim=1)
+        mu = T.cat([acts for acts in all_agents_new_mu_actions], dim=1)
+        old_actions = T.cat([acts for acts in old_agents_actions],dim=1)
+
+        for agent_idx, agent in enumerate(self.agents):
+            critic_value_ = agent.target_critic.forward(states_, new_actions).flatten()
+            critic_value_[dones[:,0]] = 0.0
+            critic_value = agent.critic.forward(states, old_actions).flatten()
+
+            target = rewards[:,agent_idx] + agent.gamma*critic_value_
+            critic_loss = F.mse_loss(target, critic_value)
+            agent.critic.optimizer.zero_grad()
+            critic_loss.backward(retain_graph=True)
+            agent.critic.optimizer.step()
+
+            actor_loss = agent.critic.forward(states, mu).flatten()
+            actor_loss = -T.mean(actor_loss)
+            agent.actor.optimizer.zero_grad()
+            actor_loss.backward(retain_graph=True)
+            agent.actor.optimizer.step()
+
+            agent.update_network_parameters()

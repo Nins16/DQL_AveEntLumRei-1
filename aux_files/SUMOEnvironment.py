@@ -17,8 +17,9 @@ from aux_files import tools
 
 
 class SumoEnvironment:
+    """Environment for MADDPG"""
     def __init__(self, gui = True, buffer_size = 10, buffer_yellow = 3, train=False,
-                dir=Path("Simulation_Environment\Main MADDPG"),neighbor_limit = 2, cycle_length=120):
+                dir=Path("Simulation_Environment\Main MADDPG"), neighbor_limit = 2, cycle_length=120):
         #Set directory of environment
         self.dir = dir
 
@@ -66,6 +67,9 @@ class SumoEnvironment:
 
         #Init yellow transition
         self.init_yellow_transition()
+
+        #Init Values for e2 detectors record
+        self.init_e2_records()
 
         #Randomize state
         self.reset_phase()
@@ -147,6 +151,17 @@ class SumoEnvironment:
         for trafficlight in traci.trafficlight.getIDList():
             traci.trafficlight.setPhase(trafficlight,self.tls[trafficlight]['phases'][0])
     
+    def init_e2_records(self):
+        """inits the e2 records of all tls"""
+        all_tls = traci.trafficlight.getIDList()
+        for trafficlight in all_tls:
+            tls_dict = self.tls[trafficlight]
+            detector_dct = tls_dict['lane queue']
+            e2_detectors = self.e2_detectors[trafficlight]
+            
+            for detector in e2_detectors:
+                detector_dct[detector] = [0]
+    
     def get_phase_duration(self, trafficlight):
         """Gets the phase duration of a traffic light(excluding transition phase e.g. 'yellow')"""
         phases = traci.trafficlight.getCompleteRedYellowGreenDefinition(trafficlight)[0].getPhases()
@@ -155,12 +170,12 @@ class SumoEnvironment:
 
     def get_reward(self, trafficlight):
         durations = self.get_phase_duration(trafficlight)
-        exceed_min_green = False
+        below_min_green = False
         for duration in durations:
             if duration < 15:
-                exceed_min_green = True
+                below_min_green = True
         
-        if exceed_min_green:
+        if below_min_green:
             return -10
         
         tls_dict    = self.tls[trafficlight]
@@ -210,11 +225,10 @@ class SumoEnvironment:
         tls_dict = self.tls[trafficlight]
         
         #Get the average queue
-        # queues = [traci.lanearea.getLastStepVehicleNumber(detector) for detector in e2_detectors] #gets the queus in detectors
-        queues = []
+        queues = np.array([])
         for vals in tls_dict['lane queue'].values():
-            queues.append(vals)
-        queues = np.array(queues).mean(axis=0)
+            mean_vals = np.array(vals).mean()
+            queues = np.hstack([mean_vals, queues])
 
         #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
         phase_durations = np.array(self.get_phase_duration(trafficlight))/self.cycle_length
@@ -225,32 +239,39 @@ class SumoEnvironment:
 
     def set_action(self, trafficlight, q_values):
         """Actions must be in sigmoid (e.g. [0.1, 0.6,0.9,0.4])"""
+        q_values = np.reshape(q_values,-1)
+        tls_dict = self.tls[trafficlight]
 
         #create a distribution of phase duration based from the q_values
         sum_q_values = np.sum(q_values.cpu().detach().numpy())
         percentage = q_values/sum_q_values
-        phase_time = percentage*self.cycle_length
+        total_avail_green = self.cycle_length - len(tls_dict['transition phases'])*self.buffer_yellow   #subtracts the cycle length by the total time of the transition phases
+        phase_time = percentage*total_avail_green
         
         #set the phase duration
-        tls_dict = self.tls[trafficlight]
         for idx, duration in enumerate(phase_time):
             phase_idx = tls_dict['phases'][idx]
             traci.trafficlight.setPhase(trafficlight, phase_idx)
-            traci.trafficlight.setPhaseDuration(trafficlight, duration-self.buffer_yellow)
+            traci.trafficlight.setPhaseDuration(trafficlight, duration)
         traci.trafficlight.setPhase(trafficlight, 0) #resets the trafficlight
     
     def is_done(self):
         return traci.simulation.getMinExpectedNumber() == 0
 
 ###Please Edit
-    def step(self):
-        """Simulates the environment by the cycle length and records the 
-        observation to the tls dict"""
+    def step(self, actions, all_tls):
+        #  """Simulates the environment by the cycle length and records the 
+        # observation to the tls dict"""
+        
+        for action, trafficlight in zip(actions, all_tls):
+            self.set_action(trafficlight,action)
+
         for seconds in range(self.cycle_length):
             traci.simulation.step()
             for trafficlight in traci.trafficlight.getIDList():
                 self.record(trafficlight)
-
+        
+        new_state, reward, done = self
         
     def obs(self, trafficlight):
         """Returns the state, reward, and done"""
@@ -266,3 +287,30 @@ class SumoEnvironment:
             queue[key] = []
 
         return new_state, reward, done
+    
+    def reset(self):
+        traci.close()
+        traci.start([self.sumoBinary, "-c", f"{self.dir}\osm.sumocfg",
+                             "--tripinfo-output", f"{self.dir}\\Results\\tripinfo.xml",  "--start"])
+        #Create dictionary for e2 detectors in TLS using trafficlightID as key
+        self.get_e2_detectors()
+
+        #Set neighbor Limit
+        self.neighbor_limit = neighbor_limit
+
+        #Create Dict for each trafficlight
+        self.init_tls_properties()
+
+        #Get Phase Data of Each Traffic Light
+        self.get_phase_data()
+
+        #Init yellow transition
+        self.init_yellow_transition()
+
+        #Init Values for e2 detectors record
+        self.init_e2_records()
+
+        #Randomize state
+        self.reset_phase()
+    def close(self):
+        traci.close()
