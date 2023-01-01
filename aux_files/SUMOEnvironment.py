@@ -198,7 +198,7 @@ class SumoEnvironment:
         tls_dict = self.tls[trafficlight]
         all_speed = []
         e2_detectors = self.e2_detectors[trafficlight]
-
+        #Records average speed
         for detector in e2_detectors:
             speed = traci.lanearea.getLastStepMeanSpeed(detector)
             if speed < 0:
@@ -208,6 +208,7 @@ class SumoEnvironment:
         tls_dict['vehicle speed'].append(average_speed)
 
         detector_dct = tls_dict['lane queue']
+        #Records queue length
         for detector in e2_detectors:
             lane_occupancy = traci.lanearea.getLastStepOccupancy(detector)
             
@@ -268,11 +269,9 @@ class SumoEnvironment:
 
         for seconds in range(self.cycle_length):
             traci.simulation.step()
-            for trafficlight in traci.trafficlight.getIDList():
+            for trafficlight in all_tls:
                 self.record(trafficlight)
-        
-        new_state, reward, done = self
-        
+ #TODO! See if need, if not delete       
     def obs(self, trafficlight):
         """Returns the state, reward, and done"""
         new_state = self.get_state(trafficlight)
@@ -294,9 +293,6 @@ class SumoEnvironment:
                              "--tripinfo-output", f"{self.dir}\\Results\\tripinfo.xml",  "--start"])
         #Create dictionary for e2 detectors in TLS using trafficlightID as key
         self.get_e2_detectors()
-
-        #Set neighbor Limit
-        self.neighbor_limit = neighbor_limit
 
         #Create Dict for each trafficlight
         self.init_tls_properties()
