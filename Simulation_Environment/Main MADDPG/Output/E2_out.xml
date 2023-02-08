@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2022-11-27 22:00:54 by Eclipse SUMO GUI Version 1.10.0
+<!-- generated on 2023-02-08 19:15:12 by Eclipse SUMO sumo Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
-        <additional-files value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.poly.xml,D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\lanearea_detectors.xml"/>
+        <net-file value="Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
+        <additional-files value="Simulation_Environment\Main%20MADDPG\osm.poly.xml,Simulation_Environment\Main%20MADDPG\lanearea_detectors.xml,Simulation_Environment\Main%20MADDPG\trips.trips.xml"/>
     </input>
+
+    <output>
+        <tripinfo-output value="Simulation_Environment\Main%20MADDPG\Results\tripinfo.xml"/>
+    </output>
 
     <processing>
         <ignore-route-errors value="true"/>
@@ -23,12 +27,13 @@
         <no-step-log value="true"/>
     </report>
 
+    <traci_server>
+        <remote-port value="54127"/>
+    </traci_server>
+
     <gui_only>
-        <gui-settings-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.view.xml"/>
+        <gui-settings-file value="Simulation_Environment\Main%20MADDPG\osm.view.xml"/>
+        <start value="true"/>
     </gui_only>
 
 </configuration>
--->
-
-<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e2_file.xsd">
-</detector>

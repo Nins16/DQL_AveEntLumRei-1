@@ -8,7 +8,7 @@
     <input>
         <net-file value="osm.net.xml"/>
         <!-- <route-files value="osm.passenger.trips.xml"/> -->
-        <additional-files value="osm.poly.xml, lanearea_detectors.xml"/>
+        <additional-files value="osm.poly.xml, lanearea_detectors.xml, trips.trips.xml"/>
     </input>
 
     <processing>

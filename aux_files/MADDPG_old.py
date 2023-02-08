@@ -10,13 +10,14 @@ T.set_default_dtype(T.float)
 
 class MultiAgentReplayBuffer:
     def __init__(self, max_size, critic_dims, actor_dims, 
-            n_actions, n_agents, batch_size):
+            n_actions, n_agents, n_actor_actions, batch_size):
         self.mem_size = max_size
         self.mem_cntr = 0
         self.n_agents = n_agents
         self.actor_dims = actor_dims
         self.batch_size = batch_size
         self.n_actions = n_actions
+        self.n_actor_actions = n_actor_actions
 
         self.state_memory = np.zeros((self.mem_size, critic_dims))
         self.new_state_memory = np.zeros((self.mem_size, critic_dims))
@@ -36,7 +37,7 @@ class MultiAgentReplayBuffer:
             self.actor_new_state_memory.append(
                             np.zeros((self.mem_size, self.actor_dims[i])))
             self.actor_action_memory.append(
-                            np.zeros((self.mem_size, self.n_actions)))
+                            np.zeros((self.mem_size, self.n_actor_actions)))
 
 
     def store_transition(self, raw_obs, state, action, reward, 
@@ -55,9 +56,12 @@ class MultiAgentReplayBuffer:
         index = self.mem_cntr % self.mem_size
 
         for agent_idx in range(self.n_agents):
-            self.actor_state_memory[agent_idx][index] = raw_obs[agent_idx]
-            self.actor_new_state_memory[agent_idx][index] = raw_obs_[agent_idx]
-            self.actor_action_memory[agent_idx][index] = action[agent_idx]
+            self.actor_state_memory[agent_idx][index] = raw_obs[agent_idx].astype('float')
+            self.actor_new_state_memory[agent_idx][index] = raw_obs_[agent_idx].astype('float')
+
+            #pads the action before passing it to memory
+            a_action = action[agent_idx].astype('float')
+            self.actor_action_memory[agent_idx][index] = np.pad(a_action,(0,self.n_actor_actions - a_action.shape[0]), 'constant')
 
         self.state_memory[index] = state
         self.new_state_memory[index] = state_
@@ -89,21 +93,21 @@ class MultiAgentReplayBuffer:
     def ready(self):
         if self.mem_cntr >= self.batch_size:
             return True
-
 class CriticNetwork(nn.Module):
     def __init__(self, beta, input_dims, fc1_dims, fc2_dims, 
-                    n_agents, n_actions, name, chkpt_dir):
+                    all_actions, name, chkpt_dir):
         super(CriticNetwork, self).__init__()
 
         self.chkpt_file = os.path.join(chkpt_dir, name)
 
-        self.fc1 = nn.Linear(input_dims+n_agents*n_actions, fc1_dims)
+        self.fc1 = nn.Linear(input_dims+all_actions, fc1_dims)
         self.fc2 = nn.Linear(fc1_dims, fc2_dims)
         self.q = nn.Linear(fc2_dims, 1)
 
-        self.optimizer = optim.Adam(self.parameters(), lr=beta)
+        self.optimizer = optim.Adam(self.parameters(), lr=beta )
         self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
- 
+
+        self.float()
         self.to(self.device)
 
     def forward(self, state, action):
@@ -111,7 +115,7 @@ class CriticNetwork(nn.Module):
         x = F.relu(self.fc2(x))
         q = self.q(x)
 
-        return q
+        return q.float()
 
     def save_checkpoint(self):
         T.save(self.state_dict(), self.chkpt_file)
@@ -130,10 +134,13 @@ class ActorNetwork(nn.Module):
         self.fc1 = nn.Linear(input_dims, fc1_dims)
         self.fc2 = nn.Linear(fc1_dims, fc2_dims)
         self.pi = nn.Linear(fc2_dims, n_actions)
+        self.n_actions = n_actions
+        self.input_dims = input_dims
 
         self.optimizer = optim.Adam(self.parameters(), lr=alpha)
         self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
- 
+
+        self.float()
         self.to(self.device)
 
     def forward(self, state):
@@ -151,35 +158,26 @@ class ActorNetwork(nn.Module):
 
 
 class Agent:
-    def __init__(self, actor_dims, critic_dims, n_actions, n_agents, agent_idx, chkpt_dir,
-                    alpha=0.01, beta=0.01, fc1=64, 
-                    fc2=64, gamma=0.95, tau=0.01):
+    def __init__(self, actor, target_actor, critic, target_critic, gamma=0.95, tau=0.01):
         self.gamma = gamma
         self.tau = tau
-        self.n_actions = n_actions
-        self.agent_name = 'agent_%s' % agent_idx
-        self.actor = ActorNetwork(alpha, actor_dims, fc1, fc2, n_actions, 
-                                  chkpt_dir=chkpt_dir,  name=self.agent_name+'_actor')
-        self.critic = CriticNetwork(beta, critic_dims, 
-                            fc1, fc2, n_agents, n_actions, 
-                            chkpt_dir=chkpt_dir, name=self.agent_name+'_critic')
-        self.target_actor = ActorNetwork(alpha, actor_dims, fc1, fc2, n_actions,
-                                        chkpt_dir=chkpt_dir, 
-                                        name=self.agent_name+'_target_actor')
-        self.target_critic = CriticNetwork(beta, critic_dims, 
-                                            fc1, fc2, n_agents, n_actions,
-                                            chkpt_dir=chkpt_dir,
-                                            name=self.agent_name+'_target_critic')
+ 
+        self.actor = actor
+        self.critic = critic
+        self.target_actor = target_actor
+        self.target_critic = target_critic
+        self.n_actions = actor.n_actions
 
         self.update_network_parameters(tau=1)
 
     def choose_action(self, observation):
-        state = T.tensor([observation], dtype=T.float).to(self.actor.device)
+        observation = np.array([observation])
+        state = T.tensor(observation, dtype=T.float).to(self.actor.device)
         actions = self.actor.forward(state)
         noise = T.rand(self.n_actions).to(self.actor.device)
         action = actions + noise
-
-        return action.detach().cpu().numpy()[0]
+        action = action.detach().cpu().numpy()[0]
+        return action
 
     def update_network_parameters(self, tau=None):
         if tau is None:
@@ -220,18 +218,8 @@ class Agent:
         self.target_critic.load_checkpoint()
 
 class MADDPG:
-    def __init__(self, actor_dims, critic_dims, n_agents, n_actions, 
-                 scenario='simple',  alpha=0.01, beta=0.01, fc1=64, 
-                 fc2=64, gamma=0.99, tau=0.01, chkpt_dir='tmp/maddpg/'):
-        self.agents = []
-        self.n_agents = n_agents
-        self.n_actions = n_actions
-        chkpt_dir += scenario 
-        for agent_idx in range(self.n_agents):
-            self.agents.append(Agent(actor_dims[agent_idx], critic_dims,  
-                            n_actions, n_agents, agent_idx, alpha=alpha, beta=beta,
-                            chkpt_dir=chkpt_dir, fc1=fc1,fc2=fc2,gamma=gamma,tau=tau))
-
+    def __init__(self, agents):
+        self.agents = agents
 
     def save_checkpoint(self):
         print('... saving checkpoint ...')
@@ -254,16 +242,18 @@ class MADDPG:
         if not memory.ready():
             return
 
-        actor_states, states, actions, rewards, \
-        actor_new_states, states_, dones = memory.sample_buffer()
+        actor_states, states, actions, rewards, actor_new_states, states_, dones = memory.sample_buffer()
 
         device = self.agents[0].actor.device
 
         states = T.tensor(states, dtype=T.float).to(device)
-        actions = T.tensor(actions, dtype=T.float).to(device)
+        # actions = T.tensor(actions, dtype=T.float).to(device)
+        #Moved this to the bottom since agents do not have the same no of actions
         rewards = T.tensor(rewards, dtype=T.float).to(device)
         states_ = T.tensor(states_, dtype=T.float).to(device)
         dones = T.tensor(dones).to(device)
+        
+        actions = T.tensor(actions, dtype=T.float).to(device)
 
         all_agents_new_actions = []
         all_agents_new_mu_actions = []
@@ -288,16 +278,17 @@ class MADDPG:
 
         for agent_idx, agent in enumerate(self.agents):
             critic_value_ = agent.target_critic.forward(states_, new_actions).flatten()
-            # critic_value_[dones[:,0]] = 0.0
+            critic_value_[dones[:,0]] = 0.0
             critic_value = agent.critic.forward(states, old_actions).flatten()
 
             target = rewards[:,agent_idx] + agent.gamma*critic_value_
+            print(target.size(), critic_value.size(), states.size(), old_actions.size(), rewards.size(), old_actions.size(), new_states.size(), states_.size(), new_actions.size())
             critic_loss = F.mse_loss(target, critic_value)
             agent.critic.optimizer.zero_grad()
             critic_loss.backward(retain_graph=True)
             agent.critic.optimizer.step()
 
-            actor_loss = agent.critic.forward(states, mu).flatten()
+            actor_loss = agent.critic.forward(states, mu).flatten ()
             actor_loss = -T.mean(actor_loss)
             agent.actor.optimizer.zero_grad()
             actor_loss.backward(retain_graph=True)

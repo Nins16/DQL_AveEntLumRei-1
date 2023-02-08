@@ -68,9 +68,6 @@ class SumoEnvironment:
         #Init yellow transition
         self.init_yellow_transition()
 
-        #Init Values for e2 detectors record
-        self.init_e2_records()
-
         #Randomize state
         self.reset_phase()
         
@@ -79,6 +76,9 @@ class SumoEnvironment:
             tls_dict = self.tls[trafficlight]
             tls_dict['vehicle speed'] = []
             tls_dict['lane queue'] = {}
+        
+        #Init Values for e2 detectors record
+        self.init_e2_records()
         
         print("Environment initialized")
     
@@ -179,7 +179,7 @@ class SumoEnvironment:
             return -10
         
         tls_dict    = self.tls[trafficlight]
-        all_speed   = tls_dict["vehicle_speed"]
+        all_speed   = tls_dict["vehicle speed"]
         population = len(all_speed)
         all_speed = np.array(all_speed)
         speed_max = all_speed.max()
@@ -191,7 +191,9 @@ class SumoEnvironment:
         #reset vehicle speed counter
         tls_dict = self.tls
         tls_dict['vehicle speed'] = []
-        return (1/population)*speed_max_sum
+        reward = (1/population)*speed_max_sum
+
+        return reward*10
         
     
     def record(self,trafficlight):
@@ -233,31 +235,36 @@ class SumoEnvironment:
 
         #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
         phase_durations = np.array(self.get_phase_duration(trafficlight))/self.cycle_length
-
         arry = np.hstack([queues, phase_durations])
 
-        return arry
+        return arry.astype('float64')
 
     def set_action(self, trafficlight, q_values):
         """Actions must be in sigmoid (e.g. [0.1, 0.6,0.9,0.4])"""
+        
+        tls_dict = self.tls[trafficlight]
+        no_of_phases = tls_dict['total_phases']
         q_values = np.reshape(q_values,-1)
+        q_values = q_values[0:no_of_phases-1]
         tls_dict = self.tls[trafficlight]
 
         #create a distribution of phase duration based from the q_values
-        sum_q_values = np.sum(q_values.cpu().detach().numpy())
+        sum_q_values = np.sum(q_values)
         percentage = q_values/sum_q_values
         total_avail_green = self.cycle_length - len(tls_dict['transition phases'])*self.buffer_yellow   #subtracts the cycle length by the total time of the transition phases
         phase_time = percentage*total_avail_green
-        
         #set the phase duration
         for idx, duration in enumerate(phase_time):
             phase_idx = tls_dict['phases'][idx]
             traci.trafficlight.setPhase(trafficlight, phase_idx)
-            traci.trafficlight.setPhaseDuration(trafficlight, duration)
+            traci.trafficlight.setPhaseDuration(trafficlight, int(duration))
         traci.trafficlight.setPhase(trafficlight, 0) #resets the trafficlight
     
     def is_done(self):
-        return traci.simulation.getMinExpectedNumber() == 0
+        if traci.simulation.getMinExpectedNumber() == 0:
+            return True
+        else:
+            return False
 
 ###Please Edit
     def step(self, actions, all_tls):
@@ -271,6 +278,7 @@ class SumoEnvironment:
             traci.simulation.step()
             for trafficlight in all_tls:
                 self.record(trafficlight)
+
  #TODO! See if need, if not delete       
     def obs(self, trafficlight):
         """Returns the state, reward, and done"""
@@ -303,10 +311,21 @@ class SumoEnvironment:
         #Init yellow transition
         self.init_yellow_transition()
 
+        for trafficlight in traci.trafficlight.getIDList():
+            tls_dict = self.tls[trafficlight]
+            tls_dict['vehicle speed'] = []
+            tls_dict['lane queue'] = {}
+        
         #Init Values for e2 detectors record
         self.init_e2_records()
 
         #Randomize state
         self.reset_phase()
+    
+    def get_phase_no(self, tls):
+        tls_dict = self.tls[tls]
+        phase_no = tls_dict['total_phases']
+        return phase_no
+
     def close(self):
         traci.close()
