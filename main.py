@@ -44,7 +44,7 @@ EVALUATE = False
 
 #Other Params
 PRINT_INTERVAL = 100
-GUI = False
+GUI = True
 
 def get_all_states(env, trafficlights):
     states = np.array([])
@@ -237,5 +237,8 @@ if __name__ == '__main__':
             if avg_score > best_score:
                 maddpg_agent.save_checkpoint()
                 best_score = avg_score
+            with open("average.csv", "w") as f:
+                for idx, score in enumerate(score_history):
+                    f.write(f"{idx},{score}\n")
         if i % PRINT_INTERVAL == 0 and i > 0:
             print('episode', i, 'average score {:.1f}'.format(avg_score))

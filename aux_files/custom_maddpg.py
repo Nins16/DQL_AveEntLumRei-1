@@ -6,6 +6,7 @@ import torch.optim as optim
 import numpy as np
 import random
 
+#Actor Network
 class ActorNetwork(nn.Module):
     def __init__(self, alpha, input_dims, fc1_dims, fc2_dims, 
                  n_actions, name, chkpt_dir):
@@ -36,6 +37,7 @@ class ActorNetwork(nn.Module):
         self.load_state_dict(T.load(self.chkpt_file))
     pass
 
+#Critic Network
 class CriticNetwork(nn.Module):
     def __init__(self, beta, input_dims, fc1_dims, fc2_dims, 
                 total_actions,name, chkpt_dir):
@@ -208,6 +210,7 @@ class MADDPG:
         old_agents_actions = []
 
         for agent_idx, agent in enumerate(self.agents):
+            #get new actions
             with T.no_grad():
                 new_states = self.three_d_memory_processor(obs_, agent_idx)
                 new_states = T.tensor(new_states, dtype=T.float).to(device)
@@ -225,19 +228,20 @@ class MADDPG:
                 old_agents_actions.append(action)
 
         for agent_idx, agent in enumerate(self.agents):
-            new_actions = T.cat([acts for acts in all_agents_new_actions], dim=1).detach().to(device)
+            new_actions = T.cat([acts for acts in all_agents_new_actions], dim=1).to(device)
             mu = T.cat([mu for mu in all_agents_new_mu_actions], dim=1).to(device)
             old_actions  = T.cat([acts for acts in old_agents_actions], dim=1).to(device)
 
             critic_value_ = agent.target_critic.forward(states_, new_actions).flatten()
             critic_value_[dones[:,0]] = 0.0
-            agent.critic.optimizer.zero_grad()
             critic_value = agent.critic.forward(states, old_actions).flatten()
 
             target = rewards[:,agent_idx] + agent.gamma*critic_value_
             critic_loss = self.MSELoss(target.detach(), critic_value)
+            agent.critic.optimizer.zero_grad()
             critic_loss.backward(retain_graph=True)
-            agent.critic.optimizer.step()            
+            agent.critic.optimizer.step()
+                        
             actor_loss = agent.critic.forward(states, mu).flatten()
             actor_loss = -T.mean(actor_loss)
             agent.actor.optimizer.zero_grad()

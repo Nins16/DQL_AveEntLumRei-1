@@ -253,11 +253,14 @@ class SumoEnvironment:
         percentage = q_values/sum_q_values
         total_avail_green = self.cycle_length - len(tls_dict['transition phases'])*self.buffer_yellow   #subtracts the cycle length by the total time of the transition phases
         phase_time = percentage*total_avail_green
-        #set the phase duration
+
+        #Edit the Program Logic
+        logic = traci.trafficlight.getAllProgramLogics(trafficlight)[0]
         for idx, duration in enumerate(phase_time):
             phase_idx = tls_dict['phases'][idx]
-            traci.trafficlight.setPhase(trafficlight, phase_idx)
-            traci.trafficlight.setPhaseDuration(trafficlight, int(duration))
+            logic.phases[phase_idx].duration = duration
+        traci.trafficlight.setProgramLogic(trafficlight, logic)
+
         traci.trafficlight.setPhase(trafficlight, 0) #resets the trafficlight
     
     def is_done(self):
