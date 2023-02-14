@@ -6,8 +6,6 @@ import numpy as np
 import traci
 import os
 import sys
-import pandas as pd
-from tqdm import tqdm
 import random
 
 from sumolib import checkBinary  # noqa
