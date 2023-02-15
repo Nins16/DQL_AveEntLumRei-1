@@ -44,7 +44,7 @@ EVALUATE = False
 
 #Other Params
 PRINT_INTERVAL = 100
-GUI = True
+GUI = False
 
 def get_all_states(env, trafficlights):
     states = np.array([])
