@@ -233,6 +233,7 @@ if __name__ == '__main__':
         with open("rewards.csv", "w") as f:
             for idx, score in enumerate(lst_of_rewards):
                 f.write(f"{idx},{score}\n")
+        
         if not EVALUATE:
             if avg_score > best_score:
                 maddpg_agent.save_checkpoint()

@@ -93,15 +93,6 @@ class SumoEnvironment:
             detectors_in_controlled_lanes = [detector for detector in all_e2_detectors if traci.lanearea.getLaneID(detector) in controlled_lanes]
             self.e2_detectors[tls] = detectors_in_controlled_lanes
         
-        #TODO:Duplicate Error Checking
-        # for idx_1 in range(len(all_tls)):
-        #     for idx_2, tls_2 in enumerate(all_tls):
-        #         if idx_1 == idx_2:
-        #             continue
-        #         print(self.e2_detectors)
-        #         for detector in list(self.e2_detectors.keys())[idx_1]:
-        #             if detector in self.e2_detectors[idx_2]:
-        #                 raise AttributeError("Detector shared in multple lanes, add node in between or remove detector.")
     
     def init_tls_properties(self):
         """initializes the properties of each tls"""
@@ -192,7 +183,6 @@ class SumoEnvironment:
         reward = (1/population)*speed_max_sum
 
         return reward*10
-        
     
     def record(self,trafficlight):
         tls_dict = self.tls[trafficlight]
@@ -218,7 +208,6 @@ class SumoEnvironment:
                     detector_dct[detector] = []
             
             detector_dct[detector].append(lane_occupancy)
-
 
     def get_state(self, trafficlight):
         """Gets the state of the trafficlight"""  
@@ -279,8 +268,7 @@ class SumoEnvironment:
             traci.simulation.step()
             for trafficlight in all_tls:
                 self.record(trafficlight)
-
- #TODO! See if need, if not delete       
+    
     def obs(self, trafficlight):
         """Returns the state, reward, and done"""
         new_state = self.get_state(trafficlight)
