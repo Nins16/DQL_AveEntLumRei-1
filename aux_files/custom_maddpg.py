@@ -5,6 +5,9 @@ import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
 import random
+from pathlib import Path
+
+DEBUG = False
 
 #Actor Network
 class ActorNetwork(nn.Module):
@@ -26,7 +29,7 @@ class ActorNetwork(nn.Module):
     def forward(self, state):
         x = F.relu(self.fc1(state))
         x = F.relu(self.fc2(x))
-        pi = F.softmax(self.pi(x), dim=1)
+        pi = F.relu(self.pi(x))
 
         return pi
 
@@ -57,7 +60,7 @@ class CriticNetwork(nn.Module):
     def forward(self, state, action):
         x = F.relu(self.fc1(T.cat([state, action], dim=1)))
         x = F.relu(self.fc2(x))
-        q = F.softmax(self.q(x), dim=1)
+        q = self.q(x)
 
         return q
 
@@ -115,8 +118,6 @@ class Agent:
 
         self.target_actor.load_state_dict(actor_state_dict)
 
-
-
         target_critic_params = self.target_critic.named_parameters()
         critic_params = self.critic.named_parameters()
 
@@ -151,6 +152,11 @@ class MADDPG:
             agent = Agent(actor_dims[idx], critic_dims, n_actions[idx], sum(n_actions), names[idx], chkpt_dir, alpha, beta, fc1 ,fc2 , gamma, tau)
             self.agents.append(agent)
 
+            loss_dir = Path(f'loss_logs/{agent.name}_loss.csv')
+            with open(loss_dir, 'w') as f:
+                f.write('Actor Loss,Critic Loss\n')
+                agent.loss_dir = loss_dir
+
         self.MSELoss = nn.MSELoss()
         
 
@@ -172,6 +178,13 @@ class MADDPG:
         return actions
     
     def three_d_memory_processor(self, arry, agent_idx):
+        """Isolates the data solely for the respective agent \n
+        e.g.\n
+        [0,0,0,1,0,0],\n
+        [0,0,0,1,0,0],\n
+        [0,0,0,1,0,0]\n
+        ->\n
+        [1,1,1]"""
         agent_arry = []
         for episode in arry:
             agent_arry.append(episode[agent_idx])
@@ -211,21 +224,25 @@ class MADDPG:
 
         for agent_idx, agent in enumerate(self.agents):
             #get new actions
+            #Very problematic, reworking this to get actions based on new just the action batch
+            #such that it pass through the network only once
             with T.no_grad():
+                #new states and new pi is okay
                 new_states = self.three_d_memory_processor(obs_, agent_idx)
                 new_states = T.tensor(new_states, dtype=T.float).to(device)
                 
                 new_pi = agent.target_actor.forward(new_states)
                 all_agents_new_actions.append(new_pi)
 
+                action = self.three_d_memory_processor(actions, agent_idx)
+                action = T.tensor(action, dtype=T.float).to(device)
+                old_agents_actions.append(action)
+
                 mu_states = self.three_d_memory_processor(obs, agent_idx)
                 mu_states = T.tensor(mu_states, dtype=T.float).to(device)
                 pi = agent.actor.forward(mu_states)
                 all_agents_new_mu_actions.append(pi)
 
-                action = self.three_d_memory_processor(actions, agent_idx)
-                action = T.tensor(action, dtype=T.float).to(device)
-                old_agents_actions.append(action)
 
         for agent_idx, agent in enumerate(self.agents):
             new_actions = T.cat([acts for acts in all_agents_new_actions], dim=1).to(device)
@@ -241,12 +258,20 @@ class MADDPG:
             agent.critic.optimizer.zero_grad()
             critic_loss.backward(retain_graph=True)
             agent.critic.optimizer.step()
-                        
+
             actor_loss = agent.critic.forward(states, mu).flatten()
             actor_loss = -T.mean(actor_loss)
+
+            if DEBUG and agent_idx==0:
+                print('States and Mu\n', states, mu)
+                print("Actor Loss", actor_loss)
+
             agent.actor.optimizer.zero_grad()
             actor_loss.backward(retain_graph=True)
             agent.actor.optimizer.step()
+
+            with open(agent.loss_dir, 'a') as f:
+                f.write(f"{actor_loss},{critic_loss}\n")
 
             agent.update_network_parameters()
         print(f"Update finished in Agents")

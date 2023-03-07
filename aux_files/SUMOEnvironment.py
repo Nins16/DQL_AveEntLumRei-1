@@ -13,11 +13,11 @@ import traci  # noqa
 import sumolib
 from aux_files import tools
 
-
+DEBUG = False
 class SumoEnvironment:
     """Environment for MADDPG"""
     def __init__(self, gui = True, buffer_size = 10, buffer_yellow = 3, train=False,
-                dir=Path("Simulation_Environment\Main MADDPG"), neighbor_limit = 2, cycle_length=120):
+                dir=Path("Simulation_Environment\Main MADDPG"), neighbor_limit = 2, cycle_length=120, simulation_time=57600, simulation_time_tol=0.2):
         #Set directory of environment
         self.dir = dir
 
@@ -35,6 +35,10 @@ class SumoEnvironment:
 
         #Set GUI boolean condition
         self.gui = gui
+
+        #Set Simulation limit
+        self.simulation_time = simulation_time
+        self.simulation_time_tol = simulation_time_tol + 1
 
         #initialize program
             # this script has been called from the command line. It will start sumo as a server, then connect and run
@@ -155,25 +159,25 @@ class SumoEnvironment:
         """Gets the phase duration of a traffic light(excluding transition phase e.g. 'yellow')"""
         phases = traci.trafficlight.getCompleteRedYellowGreenDefinition(trafficlight)[0].getPhases()
         duration = [i.duration for i in phases if 'y' not in i.state]
+
+        # if trafficlight == traci.trafficlight.getIDList()[0] and DEBUG:
+        #     print('Phases', duration, trafficlight)
         return duration
 
     def get_reward(self, trafficlight):
         durations = self.get_phase_duration(trafficlight)
-        below_min_green = False
-        for duration in durations:
-            if duration < 15:
-                below_min_green = True
+        punishment = 0
         
-        if below_min_green:
-            return -10
+        for duration in durations:
+            if duration < 15:   #below minimum green time
+                punishment += -2
         
         tls_dict    = self.tls[trafficlight]
         all_speed   = tls_dict["vehicle speed"]
+        
         population = len(all_speed)
         all_speed = np.array(all_speed)
         speed_max = all_speed.max()
-        if speed_max == 0:
-            return 0
         speed_max_ratio = all_speed/speed_max
         speed_max_sum = speed_max_ratio.sum()
 
@@ -182,7 +186,7 @@ class SumoEnvironment:
         tls_dict['vehicle speed'] = []
         reward = (1/population)*speed_max_sum
 
-        return reward*10
+        return reward
     
     def record(self,trafficlight):
         tls_dict = self.tls[trafficlight]
@@ -222,17 +226,23 @@ class SumoEnvironment:
 
         #return state (queues, ohe of tl phase, ordinal joint action of neighbors)
         phase_durations = np.array(self.get_phase_duration(trafficlight))/self.cycle_length
+        # if trafficlight == traci.trafficlight.getIDList()[0] and DEBUG:
+        #     print("Problematic", phase_durations, trafficlight)
+        #     print("Problematic Logic", traci.trafficlight.getAllProgramLogics(trafficlight)[0], trafficlight)
         arry = np.hstack([queues, phase_durations])
 
         return arry.astype('float64')
 
     def set_action(self, trafficlight, q_values):
         """Actions must be in sigmoid (e.g. [0.1, 0.6,0.9,0.4])"""
-        
+
+        if trafficlight == traci.trafficlight.getIDList()[0] and DEBUG:
+            print("Q Value", q_values, trafficlight)
+
         tls_dict = self.tls[trafficlight]
         no_of_phases = tls_dict['total_phases']
         q_values = np.reshape(q_values,-1)
-        q_values = q_values[0:no_of_phases-1]
+
         tls_dict = self.tls[trafficlight]
 
         #create a distribution of phase duration based from the q_values
@@ -241,17 +251,27 @@ class SumoEnvironment:
         total_avail_green = self.cycle_length - len(tls_dict['transition phases'])*self.buffer_yellow   #subtracts the cycle length by the total time of the transition phases
         phase_time = percentage*total_avail_green
 
+
         #Edit the Program Logic
         logic = traci.trafficlight.getAllProgramLogics(trafficlight)[0]
         for idx, duration in enumerate(phase_time):
             phase_idx = tls_dict['phases'][idx]
-            logic.phases[phase_idx].duration = duration
+            phase = logic.phases[phase_idx]
+            phase.duration = duration
+            phase.minDur = duration
+            phase.maxDur = duration
         traci.trafficlight.setProgramLogic(trafficlight, logic)
+        
+        if trafficlight == traci.trafficlight.getIDList()[0] and DEBUG:
+            print("Phase Time", phase_time, trafficlight)
+            # print("Logic", traci.trafficlight.getAllProgramLogics(trafficlight)[0], logic, trafficlight)
 
         traci.trafficlight.setPhase(trafficlight, 0) #resets the trafficlight
     
     def is_done(self):
         if traci.simulation.getMinExpectedNumber() == 0:
+            return True
+        elif traci.simulation.getTime() > self.simulation_time*self.simulation_time_tol:
             return True
         else:
             return False

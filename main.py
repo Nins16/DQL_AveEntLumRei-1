@@ -13,17 +13,21 @@ import torch.nn.functional as F
 
 from sumolib import checkBinary  # noqa
 import traci  # noqa
-import sumolib
 from aux_files.custom_maddpg import MADDPG, ActorNetwork, CriticNetwork, Agent
 from aux_files.SUMOEnvironment import SumoEnvironment
 
 torch.autograd.set_detect_anomaly(True)
 
+DEBUG = False
+
+#Continue Learning or nah
+NEW_MODEL = False
+
 #Hyperparameters of Model
-ALPHA = 0.01    #Learning Rate of Actor
-BETA =  0.01    #Learning Rate of Critic
-FC1 = 64        #First Hidden Layer Size
-FC2 = 80        #Second Hidden Layer Size
+ALPHA = 1e-2    #Learning Rate of Actor
+BETA =  1e-2    #Learning Rate of Critic
+FC1 = 300        #First Hidden Layer Size
+FC2 = 100        #Second Hidden Layer Size
 GAMMA = 0.95
 CHKPT_DIR = Path("DDPG_Models")
 TAU = 0.01
@@ -32,12 +36,13 @@ LEARN_INT = 10
 
 #Buffer Parameters
 BATCH_SIZE=64
-MAX_SIZE=100
+MAX_SIZE=1000
 
 #Parameters for Sumo Environment
-BUFFER_YELLOW = 4   #4 seconds for transition
+BUFFER_YELLOW = 4   #4 seconds for transition 'y' phase
 DIR = Path("Simulation_Environment\Main MADDPG")
 CYCLE_LENGTH = 120  #Cycle Length
+SIMULATION_TIME = 57600
 
 #Train or Evaluate bool
 EVALUATE = False
@@ -47,11 +52,13 @@ PRINT_INTERVAL = 100
 GUI = False
 
 def get_all_states(env, trafficlights):
+    # This function takes in an environment and a list of trafficlight IDs, 
+    # gets the state of each trafficlight, concatenates them together, 
+    # and returns the resulting array of states.
     states = np.array([])
     for tls in trafficlights:
         state = env.get_state(tls)
         states = np.concatenate([states, state])
-    
     return states
 
 def init_agent_old(env):
@@ -143,6 +150,8 @@ def get_obs(env, trafficlights):
     obs = []
     for trafficlight in trafficlights:
         tls_obs = env.get_state(trafficlight)
+        if DEBUG and trafficlight == trafficlights[0]:
+            print("OBS", tls_obs, trafficlight)
         obs.append(tls_obs)
     obs = np.array(obs, dtype='object')
     return obs
@@ -176,7 +185,7 @@ def state_vector(observation):
 
 if __name__ == '__main__':
     #init envi, maddpg agent, and memory
-    env = SumoEnvironment(gui=GUI, buffer_yellow=BUFFER_YELLOW, dir=DIR, cycle_length=CYCLE_LENGTH)
+    env = SumoEnvironment(gui=GUI, buffer_yellow=BUFFER_YELLOW, dir=DIR, cycle_length=CYCLE_LENGTH, simulation_time=SIMULATION_TIME)
     all_tls, maddpg_agent, memory = init_agent(env)
     
     total_steps = 0
@@ -191,7 +200,7 @@ if __name__ == '__main__':
         env.close()
         print("RESTARTING IN EVAL MODE...")
         time.sleep(1)
-        env = SumoEnvironment(gui=True, buffer_yellow=BUFFER_YELLOW, dir=DIR, cycle_length=CYCLE_LENGTH)
+        env = SumoEnvironment(gui=True, buffer_yellow=BUFFER_YELLOW, dir=DIR, cycle_length=CYCLE_LENGTH, simulation_time=SIMULATION_TIME, simulation_time_tol=0.2)
         print("APPLICATION IN EVAL MODE")
         done = [False]*n_agents
 
@@ -229,7 +238,10 @@ if __name__ == '__main__':
 
 
         score_history.append(score)
-        avg_score = np.mean(score_history[-100:])
+        if len(score_history) < 1000:
+            avg_score = np.mean(score_history)
+        else:
+            avg_score = np.mean(score_history[-1000:])
         with open("rewards.csv", "w") as f:
             for idx, score in enumerate(lst_of_rewards):
                 f.write(f"{idx},{score}\n")
