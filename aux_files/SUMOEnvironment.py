@@ -78,6 +78,8 @@ class SumoEnvironment:
             tls_dict = self.tls[trafficlight]
             tls_dict['vehicle speed'] = []
             tls_dict['lane queue'] = {}
+            tls_dict['initial waiting time'] = {}
+            tls_dict['current waiting time'] = {}
         
         #Init Values for e2 detectors record
         self.init_e2_records()
@@ -96,7 +98,6 @@ class SumoEnvironment:
             controlled_lanes = traci.trafficlight.getControlledLanes(tls)
             detectors_in_controlled_lanes = [detector for detector in all_e2_detectors if traci.lanearea.getLaneID(detector) in controlled_lanes]
             self.e2_detectors[tls] = detectors_in_controlled_lanes
-        
     
     def init_tls_properties(self):
         """initializes the properties of each tls"""
@@ -202,6 +203,7 @@ class SumoEnvironment:
         tls_dict['vehicle speed'].append(average_speed)
 
         detector_dct = tls_dict['lane queue']
+
         #Records queue length
         for detector in e2_detectors:
             lane_occupancy = traci.lanearea.getLastStepOccupancy(detector)
@@ -276,7 +278,6 @@ class SumoEnvironment:
         else:
             return False
 
-###Please Edit
     def step(self, actions, all_tls):
         #  """Simulates the environment by the cycle length and records the 
         # observation to the tls dict"""
@@ -324,7 +325,7 @@ class SumoEnvironment:
             tls_dict = self.tls[trafficlight]
             tls_dict['vehicle speed'] = []
             tls_dict['lane queue'] = {}
-        
+
         #Init Values for e2 detectors record
         self.init_e2_records()
 
