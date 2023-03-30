@@ -1,0 +1,563 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="esouth_corrales_0.0" depart="0.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1.0" depart="0.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0.0" depart="0.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1.0" depart="0.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2.0" depart="0.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0.0" depart="0.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_luna_0#1.0" depart="3600.00" type="largeTrucks">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0 east_florentino_0 north_osmena_2 east_luna_0 east_luna_1 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="ewest_luna_1#1.0" depart="3600.00" type="largeTrucks">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_0#1.0" depart="3600.00" type="largeTrucks">
+        <route edges="west_recto_0 west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_1#1.0" depart="3600.00" type="largeTrucks">
+        <route edges="west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_2#1.0" depart="3600.00" type="largeTrucks">
+        <route edges="west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#2.0" depart="7200.00" type="largeTrucks">
+        <route edges="north_corrales_0 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#2.0" depart="7200.00" type="largeTrucks">
+        <route edges="north_corrales_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#2.0" depart="7200.00" type="largeTrucks">
+        <route edges="north_osmena_0 east_recto_1 north_roa_0 east_luna_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#2.0" depart="7200.00" type="largeTrucks">
+        <route edges="north_osmena_2 east_luna_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#2.0" depart="7200.00" type="largeTrucks">
+        <route edges="north_roa_0 east_luna_1 north_corrales_2 south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 east_luna_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#3.0" depart="14400.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 north_corrales_1 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#4.0" depart="18000.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#4.1" depart="18900.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#4.1" depart="18900.00" type="largeTrucks">
+        <route edges="north_corrales_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#4.1" depart="18900.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 east_luna_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#4.1" depart="18900.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#4.1" depart="18900.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#4.1" depart="19200.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#4.2" depart="19800.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#4.2" depart="19800.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#4.2" depart="19800.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#4.2" depart="19800.00" type="largeTrucks">
+        <route edges="north_osmena_2 east_luna_0 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#4.2" depart="19800.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 east_luna_0 east_luna_1 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#4.1" depart="19800.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#4.2" depart="20400.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#4.3" depart="20700.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#4.3" depart="20700.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#4.3" depart="20700.00" type="largeTrucks">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#4.3" depart="20700.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#4.3" depart="20700.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="north_corrales_0 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="north_corrales_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="north_osmena_2 east_luna_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="north_roa_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_luna_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="ewest_luna_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_0#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="west_recto_0 west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_1#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="ewest_recto_2#5.0" depart="21600.00" type="largeTrucks">
+        <route edges="west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#5.1" depart="23400.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#5.1" depart="23400.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#5.1" depart="23400.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#5.1" depart="23400.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#5.1" depart="23400.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 north_osmena_2 east_luna_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 north_roa_1 south_roa_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 west_luna_2 south_osmena_1 south_osmena_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#6.0" depart="28800.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 east_luna_2 west_luna_0 west_luna_1 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 north_corrales_2 south_corrales_0 south_corrales_1 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 north_roa_1 south_roa_0 east_luna_1 south_corrales_1 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#6.1" depart="30000.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 west_luna_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 north_roa_1 south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#6.2" depart="31200.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 north_osmena_3 south_osmena_0 east_luna_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 west_recto_1 north_roa_0 north_roa_1 south_roa_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 west_recto_1 north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#7.0" depart="32400.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 west_luna_1 north_roa_1 south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 north_roa_1 south_roa_0 south_roa_1 west_recto_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 east_luna_2 west_luna_0 south_corrales_1 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 south_corrales_1 west_recto_1 north_roa_0 north_roa_1 south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#7.1" depart="33300.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 west_luna_1 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0 east_florentino_0 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 south_roa_1 west_recto_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#7.2" depart="34200.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_0#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 west_recto_1 north_roa_0 north_roa_1 south_roa_0 west_luna_2 north_osmena_3 south_osmena_0 south_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="eeast_luna_1#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="east_luna_1 east_luna_2 west_luna_0 south_corrales_1 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_0#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_1#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="east_recto_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="eeast_recto_2#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 west_recto_1 north_roa_0 north_roa_1 south_roa_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0 east_florentino_0 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 north_corrales_2 south_corrales_0 west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#7.3" depart="35100.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 east_luna_1 east_luna_2 west_luna_0 west_luna_1 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#8.0" depart="36000.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#8.1" depart="37200.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 east_recto_2 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#8.1" depart="37800.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_0#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_corrales_1#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="esouth_osmena_0#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_1#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_osmena_2#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="esouth_roa_0#8.2" depart="38400.00" type="largeTrucks">
+        <route edges="south_roa_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_0#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_corrales_0 north_corrales_1 north_corrales_2 south_corrales_0 west_luna_1 north_roa_1 south_roa_0 east_luna_1 east_luna_2 west_luna_0 south_corrales_1 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_corrales_1#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_corrales_1 north_corrales_2 south_corrales_0 east_luna_2 west_luna_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_0#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 south_roa_1 east_recto_2 south_corrales_2" />
+    </vehicle>
+    <vehicle id="enorth_osmena_1#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3 south_osmena_0 south_osmena_1 west_florentino_0 east_florentino_0 south_osmena_2 south_osmena_3" />
+    </vehicle>
+    <vehicle id="enorth_osmena_2#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_osmena_2 north_osmena_3 south_osmena_0 east_luna_0 north_roa_1 south_roa_0 south_roa_1 west_recto_2 west_recto_3" />
+    </vehicle>
+    <vehicle id="enorth_roa_0#9.0" depart="43200.00" type="largeTrucks">
+        <route edges="north_roa_0 north_roa_1 south_roa_0 west_luna_2 north_osmena_3 south_osmena_0 east_luna_0 east_luna_1 north_corrales_2 south_corrales_0 west_luna_1 south_roa_1 east_recto_2 east_recto_3" />
+    </vehicle>
+</routes>

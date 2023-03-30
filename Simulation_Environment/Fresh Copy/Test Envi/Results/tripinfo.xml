@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-11-03 14:34:02 by Eclipse SUMO sumo Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
+        <additional-files value="Simulation_Environment\Main%20MADDPG\osm.poly.xml,Simulation_Environment\Main%20MADDPG\lanearea_detectors.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="Simulation_Environment\Main%20MADDPG\Results\tripinfo.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="62118"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="Simulation_Environment\Main%20MADDPG\osm.view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">

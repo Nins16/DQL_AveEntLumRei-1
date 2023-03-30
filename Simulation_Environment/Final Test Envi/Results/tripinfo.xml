@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-03-29 21:54:57 by Eclipse SUMO sumo Version 1.10.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="Simulation_Environment\Final%20Test%20Envi\osm.net.xml"/>
+        <route-files value="Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/buses_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/bicycle_tricycle_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/cars_SUV_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/jeepney_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/largeTrucks_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/motorcycles_scooters_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/motorela_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/smallTrucks_route.xml,Simulation_Environment\Final%20Test%20Envi\Final%20Vehicle%20Route/taxi_route.xml"/>
+        <additional-files value="Simulation_Environment\Final%20Test%20Envi\osm.poly.xml,Simulation_Environment\Final%20Test%20Envi\lanearea_detectors.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="Simulation_Environment\Final%20Test%20Envi\Results\tripinfo.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="59305"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="Simulation_Environment\Final%20Test%20Envi\osm.view.xml"/>
+        <start value="true"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

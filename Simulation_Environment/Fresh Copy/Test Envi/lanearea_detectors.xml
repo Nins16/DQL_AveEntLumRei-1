@@ -1,0 +1,73 @@
+<!--<additional>
+  <laneAreaDetector id="N_0" lane="785902529_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="N_1" lane="785902529_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="W_0" lane="785902540#0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="W_1" lane="785902540#0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="S_0" lane="-732022517_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="S_1" lane="-732022517_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="E_0" lane="-785902540#2_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  <laneAreaDetector id="E_1" lane="-785902540#2_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+  -->
+<additional>
+<!-- CM Rect Corrales Junction -->
+<laneAreaDetector id="la_south_corrales_1_0" lane="south_corrales_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_south_corrales_1_1" lane="south_corrales_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_west_recto_0_0" lane="west_recto_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_west_recto_0_1" lane="west_recto_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_west_recto_0_2" lane="west_recto_0_2" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_east_recto_1_0" lane="east_recto_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_east_recto_1_1" lane="east_recto_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_north_corrales_0_0" lane="north_corrales_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_north_corrales_0_1" lane="north_corrales_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<!-- Luna Corrales Junction -->
+<laneAreaDetector id="la_south_corrales_0_0" lane="south_corrales_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_south_corrales_0_1" lane="south_corrales_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_north_corrales_1_0" lane="north_corrales_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_north_corrales_1_1" lane="north_corrales_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_west_luna_0_0" lane="west_luna_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_west_luna_0_1" lane="west_luna_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_east_luna_1_0" lane="east_luna_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_east_luna_1_1" lane="east_luna_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<!-- Luna Roa Junction -->
+<laneAreaDetector id="la_south_roa_0_0" lane="south_roa_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_east_luna_0_0" lane="east_luna_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_east_luna_0_1" lane="east_luna_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_north_roa_0_0" lane="north_roa_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_west_luna_1_0" lane="west_luna_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_west_luna_1_1" lane="west_luna_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<!-- Osmeña Florentino Junction -->
+<laneAreaDetector id="la_south_osmena_1_0" lane="south_osmena_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_south_osmena_1_1" lane="south_osmena_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_east_florentino_0_0" lane="east_florentino_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_north_osmena_1_0" lane="north_osmena_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_north_osmena_1_1" lane="north_osmena_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<!-- Recto Osmeña Junction -->
+<laneAreaDetector id="la_south_osmena_2_0" lane="south_osmena_2_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_south_osmena_2_1" lane="south_osmena_2_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_east_recto_0_0" lane="east_recto_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_east_recto_0_1" lane="east_recto_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_east_recto_0_2" lane="east_recto_0_2" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_north_osmena_0_0" lane="north_osmena_0_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_north_osmena_0_1" lane="north_osmena_0_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+<laneAreaDetector id="la_west_recto_2_0" lane="west_recto_2_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+<laneAreaDetector id="la_west_recto_2_1" lane="west_recto_2_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
+
+</additional>
