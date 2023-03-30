@@ -74,12 +74,12 @@ class SumoEnvironment:
         self.reset_phase()
         
         #inits vehicle counter
-        for trafficlight in traci.trafficlight.getIDList():
-            tls_dict = self.tls[trafficlight]
-            tls_dict['vehicle speed'] = []
-            tls_dict['lane queue'] = {}
-            tls_dict['initial waiting time'] = {}
-            tls_dict['current waiting time'] = {}
+        # for trafficlight in traci.trafficlight.getIDList():
+        #     tls_dict = self.tls[trafficlight]
+        #     tls_dict['vehicle speed'] = []
+        #     tls_dict['lane queue'] = {}
+        #     tls_dict['initial waiting time'] = {}
+        #     tls_dict['current waiting time'] = {}
         
         #Init Values for e2 detectors record
         self.init_e2_records()
@@ -185,7 +185,7 @@ class SumoEnvironment:
         #reset vehicle speed counter
         tls_dict = self.tls
         tls_dict['vehicle speed'] = []
-        reward = (1/population)*speed_max_sum
+        reward = (1/population)*speed_max_sum + punishment
 
         return reward
     
@@ -193,27 +193,27 @@ class SumoEnvironment:
         tls_dict = self.tls[trafficlight]
         all_speed = []
         e2_detectors = self.e2_detectors[trafficlight]
-        #Records average speed
+        detector_dct = tls_dict['lane queue']
+        #Records average speed, lane occupancy, and waiting time
         for detector in e2_detectors:
+            #Average speed
             speed = traci.lanearea.getLastStepMeanSpeed(detector)
             if speed < 0:
                 speed = 0
             all_speed.append(speed)
-        average_speed = sum(all_speed)/len(all_speed)
-        tls_dict['vehicle speed'].append(average_speed)
 
-        detector_dct = tls_dict['lane queue']
-
-        #Records queue length
-        for detector in e2_detectors:
+            #Average speed
             lane_occupancy = traci.lanearea.getLastStepOccupancy(detector)
-            
-           #If not initialized, initialize detector dct
+            #If not initialized, initialize detector dct
             if len(detector_dct) == 0:
                 for detector in e2_detectors:
                     detector_dct[detector] = []
-            
+
             detector_dct[detector].append(lane_occupancy)
+
+        average_speed = sum(all_speed)/len(all_speed)
+        tls_dict['vehicle speed'].append(average_speed)
+            
 
     def get_state(self, trafficlight):
         """Gets the state of the trafficlight"""  
@@ -325,6 +325,8 @@ class SumoEnvironment:
             tls_dict = self.tls[trafficlight]
             tls_dict['vehicle speed'] = []
             tls_dict['lane queue'] = {}
+            tls_dict['initial waiting time'] = {}
+            tls_dict['current waiting time'] = {}
 
         #Init Values for e2 detectors record
         self.init_e2_records()

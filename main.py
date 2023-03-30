@@ -5,7 +5,6 @@ import torch
 import torch.nn as nn
 import torch.optim
 import numpy as np
-import traci
 
 from collections import deque
 
@@ -49,7 +48,7 @@ EVALUATE = False
 
 #Other Params
 PRINT_INTERVAL = 100
-GUI = False
+GUI = True
 
 def get_all_states(env, trafficlights):
     # This function takes in an environment and a list of trafficlight IDs, 
@@ -128,17 +127,23 @@ def init_agent_old(env):
     return all_tls, maddpg_agents
 
 def init_agent(env):
+    # Get the list of all traffic lights in the simulation
     all_tls = traci.trafficlight.getIDList()
+    # Get the number of traffic lights in the simulation
     n_agents = len(all_tls)
     
+    # Get the state dimensionality for each traffic light
     actor_dims = [env.get_state(tls).shape[0] for tls in all_tls]
+    # Compute the total critic input dimensionality as the sum of all actor dimensions
     critic_dims = sum(actor_dims)
+    # Get the number of actions for each traffic light, which is equal to the number of possible phases
     n_actions = [env.get_phase_no(tls) for tls in all_tls]
     
+    # Initialize the MADDPG agent
+    maddpg_agent = MADDPG(actor_dims, critic_dims, n_agents, n_actions, CHKPT_DIR, all_tls, BATCH_SIZE, ALPHA,
+                          BETA, FC1, FC2, GAMMA, TAU)
 
-    maddpg_agent = MADDPG(actor_dims, critic_dims, n_agents, n_actions, CHKPT_DIR, all_tls, BATCH_SIZE,ALPHA,
-                        BETA, FC1, FC2, GAMMA, TAU)
-
+    # Initialize a deque memory buffer to store past experiences
     memory = deque(maxlen=MAX_SIZE)
 
     return all_tls, maddpg_agent, memory
