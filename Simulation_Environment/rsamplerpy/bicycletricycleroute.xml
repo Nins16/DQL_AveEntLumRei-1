@@ -1,0 +1,2205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-03-31 22:24:54.013511 by routeSampler.py v1_15_0+0002-e6790248698
+<configuration>
+    <output-file value="Simulation_Environment\rsamplerpy\bicycletricycleroute"/>
+    <route-files value="Simulation_Environment\Main MADDPG\Final Vehicle Route\bicycle_tricycle_route.xml"/>
+    <turn-files value="Route Files\bicycle_tricycle.xml"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+<!-- begin="0.0" end="3600.0" -->
+    <vehicle id="0_0" depart="0.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_1" depart="116.13">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_2" depart="232.26">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_3" depart="348.39">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="0_4" depart="464.52">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_5" depart="580.65">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="0_6" depart="696.77">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="0_7" depart="812.90">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_8" depart="929.03">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="0_9" depart="1045.16">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="0_10" depart="1161.29">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="0_11" depart="1277.42">
+        <route edges="west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="0_12" depart="1393.55">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_13" depart="1509.68">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_14" depart="1625.81">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_15" depart="1741.94">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="0_16" depart="1858.06">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_17" depart="1974.19">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_18" depart="2090.32">
+        <route edges="west_recto_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="0_19" depart="2206.45">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="0_20" depart="2322.58">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_21" depart="2438.71">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="0_22" depart="2554.84">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_23" depart="2670.97">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="0_24" depart="2787.10">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="0_25" depart="2903.23">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="0_26" depart="3019.35">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="0_27" depart="3135.48">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="0_28" depart="3251.61">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="0_29" depart="3367.74">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="0_30" depart="3483.87">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+<!-- begin="3600.0" end="7200.0" -->
+    <vehicle id="3600_0" depart="3600.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_1" depart="3694.74">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_2" depart="3789.47">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_3" depart="3884.21">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_4" depart="3978.95">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_5" depart="4073.68">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_6" depart="4168.42">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="3600_7" depart="4263.16">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_8" depart="4357.89">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_9" depart="4452.63">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="3600_10" depart="4547.37">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_11" depart="4642.11">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_12" depart="4736.84">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="3600_13" depart="4831.58">
+        <route edges="east_florentino_0 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_14" depart="4926.32">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_15" depart="5021.05">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_16" depart="5115.79">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_17" depart="5210.53">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_18" depart="5305.26">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_19" depart="5400.00">
+        <route edges="east_luna_0 south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_20" depart="5494.74">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_21" depart="5589.47">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="3600_22" depart="5684.21">
+        <route edges="east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="3600_23" depart="5778.95">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="3600_24" depart="5873.68">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_25" depart="5968.42">
+        <route edges="west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_26" depart="6063.16">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_27" depart="6157.89">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_28" depart="6252.63">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_29" depart="6347.37">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_30" depart="6442.11">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="3600_31" depart="6536.84">
+        <route edges="west_recto_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_32" depart="6631.58">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="3600_33" depart="6726.32">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_34" depart="6821.05">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_35" depart="6915.79">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="3600_36" depart="7010.53">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="3600_37" depart="7105.26">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+<!-- begin="7200.0" end="10800.0" -->
+    <vehicle id="7200_0" depart="7200.00">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_1" depart="7280.00">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_2" depart="7360.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_3" depart="7440.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_4" depart="7520.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_5" depart="7600.00">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_6" depart="7680.00">
+        <route edges="west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_7" depart="7760.00">
+        <route edges="east_luna_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_8" depart="7840.00">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="7200_9" depart="7920.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_10" depart="8000.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_11" depart="8080.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_12" depart="8160.00">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_13" depart="8240.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_14" depart="8320.00">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="7200_15" depart="8400.00">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="7200_16" depart="8480.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_17" depart="8560.00">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_18" depart="8640.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_19" depart="8720.00">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="7200_20" depart="8800.00">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="7200_21" depart="8880.00">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_22" depart="8960.00">
+        <route edges="north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_23" depart="9040.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_24" depart="9120.00">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_25" depart="9200.00">
+        <route edges="west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_26" depart="9280.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_27" depart="9360.00">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_28" depart="9440.00">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_29" depart="9520.00">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_30" depart="9600.00">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_31" depart="9680.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_32" depart="9760.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_33" depart="9840.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_34" depart="9920.00">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="7200_35" depart="10000.00">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="7200_36" depart="10080.00">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_37" depart="10160.00">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="7200_38" depart="10240.00">
+        <route edges="south_corrales_0 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_39" depart="10320.00">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_40" depart="10400.00">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="7200_41" depart="10480.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_42" depart="10560.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="7200_43" depart="10640.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="7200_44" depart="10720.00">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+<!-- begin="10800.0" end="14400.0" -->
+    <vehicle id="10800_0" depart="10800.00">
+        <route edges="south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_1" depart="10897.30">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_2" depart="10994.59">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="10800_3" depart="11091.89">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="10800_4" depart="11189.19">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_5" depart="11286.49">
+        <route edges="south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="10800_6" depart="11383.78">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="10800_7" depart="11481.08">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_8" depart="11578.38">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="10800_9" depart="11675.68">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_10" depart="11772.97">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_11" depart="11870.27">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_12" depart="11967.57">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="10800_13" depart="12064.86">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_14" depart="12162.16">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_15" depart="12259.46">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_16" depart="12356.76">
+        <route edges="south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="10800_17" depart="12454.05">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_18" depart="12551.35">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_19" depart="12648.65">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_20" depart="12745.95">
+        <route edges="south_corrales_0 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_21" depart="12843.24">
+        <route edges="east_recto_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_22" depart="12940.54">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_23" depart="13037.84">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_24" depart="13135.14">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_25" depart="13232.43">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_26" depart="13329.73">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="10800_27" depart="13427.03">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="10800_28" depart="13524.32">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_29" depart="13621.62">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_30" depart="13718.92">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_31" depart="13816.22">
+        <route edges="west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_32" depart="13913.51">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_33" depart="14010.81">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="10800_34" depart="14108.11">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="10800_35" depart="14205.41">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="10800_36" depart="14302.70">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+<!-- begin="14400.0" end="18000.0" -->
+    <vehicle id="14400_0" depart="14400.00">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_1" depart="14497.30">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_2" depart="14594.59">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="14400_3" depart="14691.89">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_4" depart="14789.19">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_5" depart="14886.49">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_6" depart="14983.78">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_7" depart="15081.08">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_8" depart="15178.38">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="14400_9" depart="15275.68">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_10" depart="15372.97">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_11" depart="15470.27">
+        <route edges="south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_12" depart="15567.57">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_13" depart="15664.86">
+        <route edges="south_corrales_0 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_14" depart="15762.16">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_15" depart="15859.46">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_16" depart="15956.76">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_17" depart="16054.05">
+        <route edges="east_florentino_0 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_18" depart="16151.35">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="14400_19" depart="16248.65">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_20" depart="16345.95">
+        <route edges="south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="14400_21" depart="16443.24">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="14400_22" depart="16540.54">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_23" depart="16637.84">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="14400_24" depart="16735.14">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_25" depart="16832.43">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="14400_26" depart="16929.73">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_27" depart="17027.03">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_28" depart="17124.32">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_29" depart="17221.62">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_30" depart="17318.92">
+        <route edges="west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_31" depart="17416.22">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_32" depart="17513.51">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="14400_33" depart="17610.81">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="14400_34" depart="17708.11">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="14400_35" depart="17805.41">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="14400_36" depart="17902.70">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+<!-- begin="18000.0" end="21600.0" -->
+    <vehicle id="18000_0" depart="18000.00">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_1" depart="18073.47">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_2" depart="18146.94">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_3" depart="18220.41">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_4" depart="18293.88">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_5" depart="18367.35">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="18000_6" depart="18440.82">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_7" depart="18514.29">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_8" depart="18587.76">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_9" depart="18661.22">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_10" depart="18734.69">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_11" depart="18808.16">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="18000_12" depart="18881.63">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_13" depart="18955.10">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_14" depart="19028.57">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="18000_15" depart="19102.04">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_16" depart="19175.51">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_17" depart="19248.98">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_18" depart="19322.45">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_19" depart="19395.92">
+        <route edges="north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="18000_20" depart="19469.39">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_21" depart="19542.86">
+        <route edges="east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_22" depart="19616.33">
+        <route edges="south_corrales_0 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_23" depart="19689.80">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="18000_24" depart="19763.27">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_25" depart="19836.73">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_26" depart="19910.20">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_27" depart="19983.67">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_28" depart="20057.14">
+        <route edges="west_luna_2 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_29" depart="20130.61">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="18000_30" depart="20204.08">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_31" depart="20277.55">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="18000_32" depart="20351.02">
+        <route edges="east_florentino_0 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_33" depart="20424.49">
+        <route edges="west_recto_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="18000_34" depart="20497.96">
+        <route edges="east_luna_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_35" depart="20571.43">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_36" depart="20644.90">
+        <route edges="south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_37" depart="20718.37">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_38" depart="20791.84">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_39" depart="20865.31">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="18000_40" depart="20938.78">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="18000_41" depart="21012.24">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_42" depart="21085.71">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_43" depart="21159.18">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="18000_44" depart="21232.65">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="18000_45" depart="21306.12">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_46" depart="21379.59">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="18000_47" depart="21453.06">
+        <route edges="west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="18000_48" depart="21526.53">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+<!-- begin="21600.0" end="25200.0" -->
+    <vehicle id="21600_0" depart="21600.00">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_1" depart="21683.72">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_2" depart="21767.44">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_3" depart="21851.16">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_4" depart="21934.88">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_5" depart="22018.60">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_6" depart="22102.33">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_7" depart="22186.05">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_8" depart="22269.77">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_9" depart="22353.49">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_10" depart="22437.21">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_11" depart="22520.93">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_12" depart="22604.65">
+        <route edges="north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="21600_13" depart="22688.37">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_14" depart="22772.09">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_15" depart="22855.81">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_16" depart="22939.53">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_17" depart="23023.26">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="21600_18" depart="23106.98">
+        <route edges="south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="21600_19" depart="23190.70">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_20" depart="23274.42">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="21600_21" depart="23358.14">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_22" depart="23441.86">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_23" depart="23525.58">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_24" depart="23609.30">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_25" depart="23693.02">
+        <route edges="south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="21600_26" depart="23776.74">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_27" depart="23860.47">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_28" depart="23944.19">
+        <route edges="east_florentino_0 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_29" depart="24027.91">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="21600_30" depart="24111.63">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_31" depart="24195.35">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_32" depart="24279.07">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="21600_33" depart="24362.79">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_34" depart="24446.51">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_35" depart="24530.23">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_36" depart="24613.95">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_37" depart="24697.67">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="21600_38" depart="24781.40">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_39" depart="24865.12">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="21600_40" depart="24948.84">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="21600_41" depart="25032.56">
+        <route edges="north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="21600_42" depart="25116.28">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+<!-- begin="25200.0" end="28800.0" -->
+    <vehicle id="25200_0" depart="25200.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_1" depart="25267.92">
+        <route edges="north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_2" depart="25335.85">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_3" depart="25403.77">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_4" depart="25471.70">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_5" depart="25539.62">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_6" depart="25607.55">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_7" depart="25675.47">
+        <route edges="west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="25200_8" depart="25743.40">
+        <route edges="west_recto_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="25200_9" depart="25811.32">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_10" depart="25879.25">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_11" depart="25947.17">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_12" depart="26015.09">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_13" depart="26083.02">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_14" depart="26150.94">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_15" depart="26218.87">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_16" depart="26286.79">
+        <route edges="east_luna_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_17" depart="26354.72">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_18" depart="26422.64">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_19" depart="26490.57">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_20" depart="26558.49">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_21" depart="26626.42">
+        <route edges="east_florentino_0 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_22" depart="26694.34">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_23" depart="26762.26">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_24" depart="26830.19">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_25" depart="26898.11">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_26" depart="26966.04">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_27" depart="27033.96">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_28" depart="27101.89">
+        <route edges="north_osmena_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_29" depart="27169.81">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_30" depart="27237.74">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="25200_31" depart="27305.66">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="25200_32" depart="27373.58">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_33" depart="27441.51">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_34" depart="27509.43">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_35" depart="27577.36">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_36" depart="27645.28">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_37" depart="27713.21">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="25200_38" depart="27781.13">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_39" depart="27849.06">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_40" depart="27916.98">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="25200_41" depart="27984.91">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_42" depart="28052.83">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_43" depart="28120.75">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_44" depart="28188.68">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_45" depart="28256.60">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="25200_46" depart="28324.53">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_47" depart="28392.45">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="25200_48" depart="28460.38">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="25200_49" depart="28528.30">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="25200_50" depart="28596.23">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="25200_51" depart="28664.15">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="25200_52" depart="28732.08">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+<!-- begin="28800.0" end="32400.0" -->
+    <vehicle id="28800_0" depart="28800.00">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_1" depart="28873.47">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_2" depart="28946.94">
+        <route edges="east_florentino_0 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_3" depart="29020.41">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_4" depart="29093.88">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_5" depart="29167.35">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_6" depart="29240.82">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_7" depart="29314.29">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_8" depart="29387.76">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_9" depart="29461.22">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_10" depart="29534.69">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_11" depart="29608.16">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_12" depart="29681.63">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_13" depart="29755.10">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_14" depart="29828.57">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_15" depart="29902.04">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_16" depart="29975.51">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_17" depart="30048.98">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_18" depart="30122.45">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_19" depart="30195.92">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_20" depart="30269.39">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_21" depart="30342.86">
+        <route edges="west_recto_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_22" depart="30416.33">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_23" depart="30489.80">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_24" depart="30563.27">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_25" depart="30636.73">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_26" depart="30710.20">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_27" depart="30783.67">
+        <route edges="south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_28" depart="30857.14">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_29" depart="30930.61">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_30" depart="31004.08">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_31" depart="31077.55">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="28800_32" depart="31151.02">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_33" depart="31224.49">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_34" depart="31297.96">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_35" depart="31371.43">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_36" depart="31444.90">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="28800_37" depart="31518.37">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_38" depart="31591.84">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_39" depart="31665.31">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_40" depart="31738.78">
+        <route edges="west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="28800_41" depart="31812.24">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="28800_42" depart="31885.71">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="28800_43" depart="31959.18">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_44" depart="32032.65">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="28800_45" depart="32106.12">
+        <route edges="east_recto_0 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_46" depart="32179.59">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="28800_47" depart="32253.06">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="28800_48" depart="32326.53">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+<!-- begin="32400.0" end="36000.0" -->
+    <vehicle id="32400_0" depart="32400.00">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="32400_1" depart="32464.29">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="32400_2" depart="32528.57">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_3" depart="32592.86">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_4" depart="32657.14">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_5" depart="32721.43">
+        <route edges="north_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="32400_6" depart="32785.71">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_7" depart="32850.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_8" depart="32914.29">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_9" depart="32978.57">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_10" depart="33042.86">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_11" depart="33107.14">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_12" depart="33171.43">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_13" depart="33235.71">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="32400_14" depart="33300.00">
+        <route edges="west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_15" depart="33364.29">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_16" depart="33428.57">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_17" depart="33492.86">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_18" depart="33557.14">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_19" depart="33621.43">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_20" depart="33685.71">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_21" depart="33750.00">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_22" depart="33814.29">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_23" depart="33878.57">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_24" depart="33942.86">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_25" depart="34007.14">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_26" depart="34071.43">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_27" depart="34135.71">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_28" depart="34200.00">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_29" depart="34264.29">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_30" depart="34328.57">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_31" depart="34392.86">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_32" depart="34457.14">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_33" depart="34521.43">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_34" depart="34585.71">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_35" depart="34650.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_36" depart="34714.29">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_37" depart="34778.57">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_38" depart="34842.86">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_39" depart="34907.14">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_40" depart="34971.43">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_41" depart="35035.71">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_42" depart="35100.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_43" depart="35164.29">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_44" depart="35228.57">
+        <route edges="south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_45" depart="35292.86">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_46" depart="35357.14">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="32400_47" depart="35421.43">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_48" depart="35485.71">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="32400_49" depart="35550.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="32400_50" depart="35614.29">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="32400_51" depart="35678.57">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_52" depart="35742.86">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="32400_53" depart="35807.14">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_54" depart="35871.43">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="32400_55" depart="35935.71">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+<!-- begin="36000.0" end="39600.0" -->
+    <vehicle id="36000_0" depart="36000.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_1" depart="36063.16">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="36000_2" depart="36126.32">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_3" depart="36189.47">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_4" depart="36252.63">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_5" depart="36315.79">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_6" depart="36378.95">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_7" depart="36442.11">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_8" depart="36505.26">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_9" depart="36568.42">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_10" depart="36631.58">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_11" depart="36694.74">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_12" depart="36757.89">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_13" depart="36821.05">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_14" depart="36884.21">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_15" depart="36947.37">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_16" depart="37010.53">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_17" depart="37073.68">
+        <route edges="east_florentino_0 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_18" depart="37136.84">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_19" depart="37200.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_20" depart="37263.16">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_21" depart="37326.32">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_22" depart="37389.47">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_23" depart="37452.63">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_24" depart="37515.79">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_25" depart="37578.95">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_26" depart="37642.11">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_27" depart="37705.26">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="36000_28" depart="37768.42">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_29" depart="37831.58">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_30" depart="37894.74">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_31" depart="37957.89">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_32" depart="38021.05">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_33" depart="38084.21">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="36000_34" depart="38147.37">
+        <route edges="north_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="36000_35" depart="38210.53">
+        <route edges="south_corrales_0 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="36000_36" depart="38273.68">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_37" depart="38336.84">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_38" depart="38400.00">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="36000_39" depart="38463.16">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="36000_40" depart="38526.32">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_41" depart="38589.47">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_42" depart="38652.63">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_43" depart="38715.79">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="36000_44" depart="38778.95">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_45" depart="38842.11">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="36000_46" depart="38905.26">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_47" depart="38968.42">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_48" depart="39031.58">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_49" depart="39094.74">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_50" depart="39157.89">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_51" depart="39221.05">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="36000_52" depart="39284.21">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="36000_53" depart="39347.37">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_54" depart="39410.53">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="36000_55" depart="39473.68">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="36000_56" depart="39536.84">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+<!-- begin="39600.0" end="43200.0" -->
+    <vehicle id="39600_0" depart="39600.00">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_1" depart="39666.67">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_2" depart="39733.33">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_3" depart="39800.00">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_4" depart="39866.67">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_5" depart="39933.33">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_6" depart="40000.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_7" depart="40066.67">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_8" depart="40133.33">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_9" depart="40200.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_10" depart="40266.67">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_11" depart="40333.33">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_12" depart="40400.00">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_13" depart="40466.67">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_14" depart="40533.33">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_15" depart="40600.00">
+        <route edges="south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_16" depart="40666.67">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="39600_17" depart="40733.33">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="39600_18" depart="40800.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_19" depart="40866.67">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_20" depart="40933.33">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_21" depart="41000.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_22" depart="41066.67">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_23" depart="41133.33">
+        <route edges="north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="39600_24" depart="41200.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_25" depart="41266.67">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_26" depart="41333.33">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_27" depart="41400.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_28" depart="41466.67">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_29" depart="41533.33">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="39600_30" depart="41600.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_31" depart="41666.67">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_32" depart="41733.33">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_33" depart="41800.00">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_34" depart="41866.67">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_35" depart="41933.33">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_36" depart="42000.00">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="39600_37" depart="42066.67">
+        <route edges="south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="39600_38" depart="42133.33">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_39" depart="42200.00">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_40" depart="42266.67">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_41" depart="42333.33">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_42" depart="42400.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="39600_43" depart="42466.67">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_44" depart="42533.33">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_45" depart="42600.00">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="39600_46" depart="42666.67">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_47" depart="42733.33">
+        <route edges="south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_48" depart="42800.00">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_49" depart="42866.67">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_50" depart="42933.33">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_51" depart="43000.00">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="39600_52" depart="43066.67">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="39600_53" depart="43133.33">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+<!-- begin="43200.0" end="46800.0" -->
+    <vehicle id="43200_0" depart="43200.00">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_1" depart="43259.02">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_2" depart="43318.03">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="43200_3" depart="43377.05">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_4" depart="43436.07">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_5" depart="43495.08">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_6" depart="43554.10">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_7" depart="43613.11">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_8" depart="43672.13">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_9" depart="43731.15">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_10" depart="43790.16">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_11" depart="43849.18">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_12" depart="43908.20">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_13" depart="43967.21">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_14" depart="44026.23">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_15" depart="44085.25">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_16" depart="44144.26">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_17" depart="44203.28">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_18" depart="44262.30">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_19" depart="44321.31">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_20" depart="44380.33">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_21" depart="44439.34">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_22" depart="44498.36">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_23" depart="44557.38">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_24" depart="44616.39">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_25" depart="44675.41">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_26" depart="44734.43">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_27" depart="44793.44">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_28" depart="44852.46">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_29" depart="44911.48">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_30" depart="44970.49">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_31" depart="45029.51">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_32" depart="45088.52">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_33" depart="45147.54">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_34" depart="45206.56">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_35" depart="45265.57">
+        <route edges="south_osmena_0 south_osmena_1 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_36" depart="45324.59">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_37" depart="45383.61">
+        <route edges="west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_38" depart="45442.62">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_39" depart="45501.64">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_40" depart="45560.66">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_41" depart="45619.67">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_42" depart="45678.69">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_43" depart="45737.70">
+        <route edges="east_florentino_0 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_44" depart="45796.72">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_45" depart="45855.74">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_46" depart="45914.75">
+        <route edges="north_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="43200_47" depart="45973.77">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="43200_48" depart="46032.79">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_49" depart="46091.80">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="43200_50" depart="46150.82">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_51" depart="46209.84">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_52" depart="46268.85">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="43200_53" depart="46327.87">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_54" depart="46386.89">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_55" depart="46445.90">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_56" depart="46504.92">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="43200_57" depart="46563.93">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_58" depart="46622.95">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="43200_59" depart="46681.97">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="43200_60" depart="46740.98">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 east_recto_3"/>
+    </vehicle>
+<!-- begin="46800.0" end="50400.0" -->
+    <vehicle id="46800_0" depart="46800.00">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_1" depart="46863.16">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_2" depart="46926.32">
+        <route edges="north_osmena_0 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_3" depart="46989.47">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_4" depart="47052.63">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_5" depart="47115.79">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_6" depart="47178.95">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_7" depart="47242.11">
+        <route edges="south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_8" depart="47305.26">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_9" depart="47368.42">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_10" depart="47431.58">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_11" depart="47494.74">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_12" depart="47557.89">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_13" depart="47621.05">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_14" depart="47684.21">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_15" depart="47747.37">
+        <route edges="east_recto_0 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_16" depart="47810.53">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_17" depart="47873.68">
+        <route edges="south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="46800_18" depart="47936.84">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_19" depart="48000.00">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_20" depart="48063.16">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_21" depart="48126.32">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_22" depart="48189.47">
+        <route edges="east_florentino_0 south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_23" depart="48252.63">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_24" depart="48315.79">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="46800_25" depart="48378.95">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_26" depart="48442.11">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_27" depart="48505.26">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_28" depart="48568.42">
+        <route edges="west_luna_1 south_roa_1 west_recto_2 north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_29" depart="48631.58">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_30" depart="48694.74">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_31" depart="48757.89">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_32" depart="48821.05">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_33" depart="48884.21">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_34" depart="48947.37">
+        <route edges="west_recto_1 north_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="46800_35" depart="49010.53">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_36" depart="49073.68">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_37" depart="49136.84">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_38" depart="49200.00">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_39" depart="49263.16">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_40" depart="49326.32">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_41" depart="49389.47">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_42" depart="49452.63">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_43" depart="49515.79">
+        <route edges="west_luna_0 west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="46800_44" depart="49578.95">
+        <route edges="north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_45" depart="49642.11">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_46" depart="49705.26">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_47" depart="49768.42">
+        <route edges="south_osmena_0 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="46800_48" depart="49831.58">
+        <route edges="south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_49" depart="49894.74">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_50" depart="49957.89">
+        <route edges="east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="46800_51" depart="50021.05">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_52" depart="50084.21">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_53" depart="50147.37">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_54" depart="50210.53">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="46800_55" depart="50273.68">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="46800_56" depart="50336.84">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+<!-- begin="50400.0" end="54000.0" -->
+    <vehicle id="50400_0" depart="50400.00">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_1" depart="50461.02">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_2" depart="50522.03">
+        <route edges="west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_3" depart="50583.05">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_4" depart="50644.07">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_5" depart="50705.08">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_6" depart="50766.10">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_7" depart="50827.12">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_8" depart="50888.14">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_9" depart="50949.15">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_10" depart="51010.17">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_11" depart="51071.19">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_12" depart="51132.20">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_13" depart="51193.22">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_14" depart="51254.24">
+        <route edges="south_roa_0 south_roa_1 west_recto_2 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="50400_15" depart="51315.25">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_16" depart="51376.27">
+        <route edges="east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="50400_17" depart="51437.29">
+        <route edges="north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_18" depart="51498.31">
+        <route edges="north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_19" depart="51559.32">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="50400_20" depart="51620.34">
+        <route edges="south_roa_0 west_luna_2 south_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="50400_21" depart="51681.36">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_22" depart="51742.37">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_23" depart="51803.39">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_24" depart="51864.41">
+        <route edges="south_osmena_2 east_recto_1 east_recto_2 north_corrales_1 north_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_25" depart="51925.42">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_26" depart="51986.44">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_27" depart="52047.46">
+        <route edges="south_corrales_0 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_28" depart="52108.47">
+        <route edges="west_luna_1 west_luna_2 south_osmena_1 south_osmena_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_29" depart="52169.49">
+        <route edges="east_florentino_0 south_osmena_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_30" depart="52230.51">
+        <route edges="east_luna_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_31" depart="52291.53">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_32" depart="52352.54">
+        <route edges="west_recto_1 north_roa_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_33" depart="52413.56">
+        <route edges="north_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_34" depart="52474.58">
+        <route edges="east_luna_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="50400_35" depart="52535.59">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_36" depart="52596.61">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_37" depart="52657.63">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_38" depart="52718.64">
+        <route edges="south_roa_0 east_luna_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="50400_39" depart="52779.66">
+        <route edges="north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_40" depart="52840.68">
+        <route edges="west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_41" depart="52901.69">
+        <route edges="east_recto_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="50400_42" depart="52962.71">
+        <route edges="north_osmena_0 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_43" depart="53023.73">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_44" depart="53084.75">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_45" depart="53145.76">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 south_corrales_2"/>
+    </vehicle>
+    <vehicle id="50400_46" depart="53206.78">
+        <route edges="east_luna_0 south_roa_1 west_recto_2 south_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_47" depart="53267.80">
+        <route edges="north_osmena_0 north_osmena_1 west_florentino_0"/>
+    </vehicle>
+    <vehicle id="50400_48" depart="53328.81">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_49" depart="53389.83">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 east_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_50" depart="53450.85">
+        <route edges="south_roa_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_51" depart="53511.86">
+        <route edges="west_luna_1 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_52" depart="53572.88">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_53" depart="53633.90">
+        <route edges="south_roa_0 east_luna_1 south_corrales_1 west_recto_1 west_recto_2 west_recto_3"/>
+    </vehicle>
+    <vehicle id="50400_54" depart="53694.92">
+        <route edges="north_osmena_1 north_osmena_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_55" depart="53755.93">
+        <route edges="south_roa_0 west_luna_2 north_osmena_3"/>
+    </vehicle>
+    <vehicle id="50400_56" depart="53816.95">
+        <route edges="east_recto_0 east_recto_1 east_recto_2 north_corrales_1 east_luna_2"/>
+    </vehicle>
+    <vehicle id="50400_57" depart="53877.97">
+        <route edges="east_luna_0 east_luna_1 south_corrales_1 west_recto_1 north_roa_0 north_roa_1"/>
+    </vehicle>
+    <vehicle id="50400_58" depart="53938.98">
+        <route edges="west_luna_0 west_luna_1 west_luna_2 north_osmena_3"/>
+    </vehicle>
+</routes>

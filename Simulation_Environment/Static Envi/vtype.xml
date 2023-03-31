@@ -1,0 +1,12 @@
+<additional>
+    <vType accel="3.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="15.0" guiShape="bicycle" color="255,0,0" id="bicycle_tricycle"/>
+    <vType accel="0.4" decel="2.0" sigma="0.5" length="15.0" minGap="2.5" maxSpeed="30.0" guiShape="bus" color="0,0,255" id="buses"/>
+    <vType accel="0.8" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="30.0" guiShape="passenger" color="0,0,255" id="cars_SUV"/>
+    <vType accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" id="jeepney"/>
+    <vType accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" id="smallTrucks"/> 
+    <vType accel="0.4" decel="3.0" sigma="0.5" length="12.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" id="largeTrucks"/>
+    <vType accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" id="motorcycles_scooters"/>
+    <vType accel="2.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" id="motorela"/>
+    <vType accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" id="taxi"/>
+    <vType accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" id="others"/>
+</additional>

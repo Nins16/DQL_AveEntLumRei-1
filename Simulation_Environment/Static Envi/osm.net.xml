@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2022-10-22 18:40:32 by Eclipse SUMO netedit Version 1.10.0
+<!-- generated on 2023-03-31 17:21:38 by Eclipse SUMO netedit Version 1.15.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
+        <sumo-net-file value="D:\School Documents\Thesis\DQL_AveEntLumRei\Simulation_Environment\Main MADDPG\osm.net.xml"/>
     </input>
 
     <output>
-        <output-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
+        <output-file value="D:\School Documents\Thesis\DQL_AveEntLumRei\Simulation_Environment\Main MADDPG\osm.net.xml"/>
         <output.street-names value="true"/>
     </output>
 
@@ -16,23 +16,19 @@
         <geometry.min-radius.fix.railways value="false"/>
         <geometry.max-grade.fix value="false"/>
         <offset.disable-normalization value="true"/>
-        <lefthand value="false"/>
+        <lefthand value="0"/>
     </processing>
 
     <junctions>
         <no-turnarounds value="true"/>
         <junctions.corner-detail value="5"/>
-        <junctions.limit-turn-speed value="5.5"/>
-        <rectangular-lane-cut value="false"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
     </junctions>
 
     <pedestrian>
-        <walkingareas value="false"/>
+        <walkingareas value="0"/>
     </pedestrian>
-
-    <report>
-        <aggregate-warnings value="5"/>
-    </report>
 
 </configuration>
 -->
@@ -41,6 +37,7 @@
 
     <location netOffset="-680716.80,-937251.29" convBoundary="728.72,669.78,1506.41,1294.14" origBoundary="124.641664,8.475486,124.656136,8.490905" projParameter="+proj=utm +zone=51 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
 
+    <type id="edgeType_0"/>
     <type id="highway.bridleway" priority="1" numLanes="1" speed="2.78" allow="pedestrian" oneway="1" width="2.00"/>
     <type id="highway.bus_guideway" priority="1" numLanes="1" speed="27.78" allow="bus" oneway="1"/>
     <type id="highway.cycleway" priority="1" numLanes="1" speed="8.33" allow="bicycle" oneway="1" width="1.00"/>
@@ -93,52 +90,51 @@
         <lane id=":corrales_recto_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="32.29" shape="973.29,1170.89 963.45,1140.26"/>
     </edge>
     <edge id=":corrales_recto_3" function="internal">
-        <lane id=":corrales_recto_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.60" length="9.77" shape="973.29,1170.89 971.59,1163.90 971.89,1161.34"/>
-    </edge>
-    <edge id=":corrales_recto_16" function="internal">
-        <lane id=":corrales_recto_16_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.60" length="13.38" shape="971.89,1161.34 972.22,1158.52 975.19,1154.74 980.49,1152.56"/>
-    </edge>
-    <edge id=":corrales_recto_4" function="internal">
-        <lane id=":corrales_recto_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.99" length="11.77" shape="981.84,1158.84 979.53,1159.91 978.34,1161.91 978.26,1164.83 979.29,1168.67"/>
-    </edge>
-    <edge id=":corrales_recto_5" function="internal">
-        <lane id=":corrales_recto_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="22.28" shape="981.84,1158.84 975.91,1160.39 971.62,1161.96 967.13,1163.64 960.64,1165.49"/>
-        <lane id=":corrales_recto_5_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="22.28" shape="981.17,1155.72 975.24,1157.26 970.92,1158.84 966.41,1160.53 959.89,1162.38"/>
-    </edge>
-    <edge id=":corrales_recto_7" function="internal">
-        <lane id=":corrales_recto_7_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="26.20" shape="981.17,1155.72 975.33,1155.75 970.43,1153.18 966.47,1148.02 963.45,1140.26"/>
-    </edge>
-    <edge id=":corrales_recto_8" function="internal">
-        <lane id=":corrales_recto_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.79" length="16.45" shape="969.57,1138.54 971.53,1143.84 973.89,1147.42 976.65,1149.29 979.82,1149.43"/>
-    </edge>
-    <edge id=":corrales_recto_9" function="internal">
-        <lane id=":corrales_recto_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="31.79" shape="969.57,1138.54 979.29,1168.67"/>
-        <lane id=":corrales_recto_9_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="31.79" shape="966.49,1139.41 976.29,1169.78"/>
-    </edge>
-    <edge id=":corrales_recto_11" function="internal">
-        <lane id=":corrales_recto_11_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="10.32" shape="966.49,1139.41 968.21,1148.35 968.12,1149.56"/>
-    </edge>
-    <edge id=":corrales_recto_17" function="internal">
-        <lane id=":corrales_recto_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="16.68" shape="968.12,1149.56 967.69,1155.15 964.91,1159.83 959.89,1162.38"/>
-    </edge>
-    <edge id=":corrales_recto_12" function="internal">
-        <lane id=":corrales_recto_12_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.32" length="8.99" shape="956.37,1147.75 958.70,1146.92 960.15,1145.54 960.70,1143.61 960.37,1141.13"/>
-    </edge>
-    <edge id=":corrales_recto_13" function="internal">
-        <lane id=":corrales_recto_13_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.71" shape="956.37,1147.75 963.52,1147.34 968.75,1148.52 973.66,1149.73 979.82,1149.43"/>
-        <lane id=":corrales_recto_13_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.71" shape="957.12,1150.86 964.24,1150.46 969.45,1151.64 974.33,1152.85 980.49,1152.56"/>
-    </edge>
-    <edge id=":corrales_recto_15" function="internal">
-        <lane id=":corrales_recto_15_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="12.47" shape="957.87,1153.98 963.42,1154.09 968.34,1156.77 969.18,1157.78"/>
+        <lane id=":corrales_recto_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.66" length="7.39" shape="973.29,1170.89 971.62,1163.90 971.64,1163.69"/>
     </edge>
     <edge id=":corrales_recto_18" function="internal">
-        <lane id=":corrales_recto_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="14.05" shape="969.18,1157.78 972.63,1162.00 976.29,1169.78"/>
+        <lane id=":corrales_recto_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.66" length="16.09" shape="971.64,1163.69 972.33,1158.50 975.44,1154.68 980.94,1152.46"/>
     </edge>
-    <edge id=":florentino_0" function="internal">
-        <lane id=":florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="1374.86,822.89 1376.18,823.45 1376.72,824.17 1376.48,825.03 1375.44,826.03"/>
+    <edge id=":corrales_recto_4" function="internal">
+        <lane id=":corrales_recto_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.25" length="9.15" shape="982.95,1161.85 980.57,1162.73 979.17,1164.17 978.75,1166.15 979.29,1168.67"/>
     </edge>
-    <edge id=":luna_0" function="internal">
-        <lane id=":luna_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="729.50,904.28 728.06,904.16 727.32,903.66 727.28,902.76 727.94,901.48"/>
+    <edge id=":corrales_recto_5" function="internal">
+        <lane id=":corrales_recto_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="22.70" shape="982.95,1161.85 976.46,1163.53 972.14,1165.12 967.83,1166.76 961.38,1168.60"/>
+        <lane id=":corrales_recto_5_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="22.70" shape="982.28,1158.72 975.77,1160.40 971.43,1162.00 967.11,1163.64 960.64,1165.49"/>
+        <lane id=":corrales_recto_5_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="22.70" shape="981.61,1155.59 975.08,1157.28 970.72,1158.88 966.38,1160.53 959.89,1162.38"/>
+    </edge>
+    <edge id=":corrales_recto_8" function="internal">
+        <lane id=":corrales_recto_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.03" length="5.68" shape="981.61,1155.59 975.93,1155.67"/>
+    </edge>
+    <edge id=":corrales_recto_19" function="internal">
+        <lane id=":corrales_recto_19_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.03" length="20.85" shape="975.93,1155.67 975.58,1155.68 970.54,1153.15 966.50,1148.01 963.45,1140.26"/>
+    </edge>
+    <edge id=":corrales_recto_9" function="internal">
+        <lane id=":corrales_recto_9_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="8.18" length="14.14" shape="969.57,1138.54 971.19,1142.48 973.40,1145.08 976.20,1146.32 979.60,1146.20"/>
+    </edge>
+    <edge id=":corrales_recto_10" function="internal">
+        <lane id=":corrales_recto_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="31.79" shape="969.57,1138.54 979.29,1168.67"/>
+        <lane id=":corrales_recto_10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="31.79" shape="966.49,1139.41 976.29,1169.78"/>
+    </edge>
+    <edge id=":corrales_recto_12" function="internal">
+        <lane id=":corrales_recto_12_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="5.53" shape="966.49,1139.41 967.54,1144.83"/>
+    </edge>
+    <edge id=":corrales_recto_20" function="internal">
+        <lane id=":corrales_recto_20_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="21.48" shape="967.54,1144.83 968.21,1148.35 967.69,1155.15 964.91,1159.83 959.89,1162.38"/>
+    </edge>
+    <edge id=":corrales_recto_13" function="internal">
+        <lane id=":corrales_recto_13_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.32" length="8.99" shape="956.37,1147.75 958.70,1146.92 960.15,1145.54 960.70,1143.61 960.37,1141.13"/>
+    </edge>
+    <edge id=":corrales_recto_14" function="internal">
+        <lane id=":corrales_recto_14_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.28" shape="956.37,1147.75 963.22,1146.90 968.00,1147.04 972.77,1147.15 979.60,1146.20"/>
+        <lane id=":corrales_recto_14_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.28" shape="957.12,1150.86 963.94,1150.02 968.71,1150.16 973.47,1150.28 980.27,1149.33"/>
+        <lane id=":corrales_recto_14_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="23.28" shape="957.87,1153.98 964.67,1153.13 969.42,1153.28 974.16,1153.40 980.94,1152.46"/>
+    </edge>
+    <edge id=":corrales_recto_17" function="internal">
+        <lane id=":corrales_recto_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="11.35" shape="957.87,1153.98 963.42,1154.09 968.34,1156.77 968.47,1156.92"/>
+    </edge>
+    <edge id=":corrales_recto_21" function="internal">
+        <lane id=":corrales_recto_21_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="15.17" shape="968.47,1156.92 972.63,1162.00 976.29,1169.78"/>
     </edge>
     <edge id=":luna_corrales_0" function="internal">
         <lane id=":luna_corrales_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="7.59" length="12.40" shape="843.78,855.14 841.52,852.07 839.08,850.32 836.47,849.90 833.68,850.80"/>
@@ -148,61 +144,25 @@
         <lane id=":luna_corrales_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="24.24" shape="846.56,853.55 843.20,847.84 840.27,843.09 837.20,838.44 833.40,833.01"/>
     </edge>
     <edge id=":luna_corrales_3" function="internal">
-        <lane id=":luna_corrales_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.59" shape="846.56,853.55 844.07,847.47 844.17,846.45"/>
-    </edge>
-    <edge id=":luna_corrales_18" function="internal">
-        <lane id=":luna_corrales_18_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.96" shape="844.17,846.45 844.51,842.79 847.89,839.51 854.19,837.63"/>
+        <lane id=":luna_corrales_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="5.85" length="9.12" shape="855.15,843.96 852.60,844.72 851.24,846.05 851.05,847.94 852.04,850.41"/>
     </edge>
     <edge id=":luna_corrales_4" function="internal">
-        <lane id=":luna_corrales_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="5.85" length="9.12" shape="855.15,843.96 852.60,844.72 851.24,846.05 851.05,847.94 852.04,850.41"/>
+        <lane id=":luna_corrales_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="23.26" shape="855.15,843.96 848.86,844.98 844.00,846.14 839.35,847.92 833.68,850.80"/>
+        <lane id=":luna_corrales_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="23.26" shape="854.67,840.80 848.21,841.88 842.99,843.16 837.98,845.06 832.15,847.99"/>
     </edge>
-    <edge id=":luna_corrales_5" function="internal">
-        <lane id=":luna_corrales_5_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="23.26" shape="855.15,843.96 848.86,844.98 844.00,846.14 839.35,847.92 833.68,850.80"/>
-        <lane id=":luna_corrales_5_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="23.26" shape="854.67,840.80 848.21,841.88 842.99,843.16 837.98,845.06 832.15,847.99"/>
+    <edge id=":luna_corrales_6" function="internal">
+        <lane id=":luna_corrales_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="16.84" shape="838.61,829.29 841.36,832.14 844.79,833.95 848.91,834.73 853.71,834.47"/>
     </edge>
     <edge id=":luna_corrales_7" function="internal">
-        <lane id=":luna_corrales_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="8.46" shape="854.67,840.80 848.02,841.11 846.26,840.75"/>
-    </edge>
-    <edge id=":luna_corrales_19" function="internal">
-        <lane id=":luna_corrales_19_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.45" shape="846.26,840.75 842.26,839.92 837.39,837.22 833.40,833.01"/>
-    </edge>
-    <edge id=":luna_corrales_8" function="internal">
-        <lane id=":luna_corrales_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="16.84" shape="838.61,829.29 841.36,832.14 844.79,833.95 848.91,834.73 853.71,834.47"/>
+        <lane id=":luna_corrales_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="24.87" shape="838.61,829.29 842.46,834.81 845.63,839.65 848.65,844.59 852.04,850.41"/>
+        <lane id=":luna_corrales_7_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="24.87" shape="836.01,831.15 839.83,836.62 842.95,841.38 845.91,846.23 849.26,852.00"/>
     </edge>
     <edge id=":luna_corrales_9" function="internal">
-        <lane id=":luna_corrales_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="24.87" shape="838.61,829.29 842.46,834.81 845.63,839.65 848.65,844.59 852.04,850.41"/>
-        <lane id=":luna_corrales_9_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="24.87" shape="836.01,831.15 839.83,836.62 842.95,841.38 845.91,846.23 849.26,852.00"/>
+        <lane id=":luna_corrales_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.26" length="9.04" shape="829.08,842.38 831.09,840.87 832.05,839.11 831.95,837.11 830.80,834.87"/>
     </edge>
-    <edge id=":luna_corrales_11" function="internal">
-        <lane id=":luna_corrales_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.26" shape="836.01,831.15 838.60,836.18 838.68,837.78"/>
-    </edge>
-    <edge id=":luna_corrales_12" function="internal">
-        <lane id=":luna_corrales_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="836.01,831.15 836.05,832.59 835.63,833.38"/>
-    </edge>
-    <edge id=":luna_corrales_20" function="internal">
-        <lane id=":luna_corrales_20_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="13.03" shape="838.68,837.78 838.82,840.66 836.67,844.60 832.15,847.99"/>
-    </edge>
-    <edge id=":luna_corrales_21" function="internal">
-        <lane id=":luna_corrales_21_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="835.63,833.38 834.75,833.52 833.40,833.01"/>
-    </edge>
-    <edge id=":luna_corrales_13" function="internal">
-        <lane id=":luna_corrales_13_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.26" length="9.04" shape="829.08,842.38 831.09,840.87 832.05,839.11 831.95,837.11 830.80,834.87"/>
-    </edge>
-    <edge id=":luna_corrales_14" function="internal">
-        <lane id=":luna_corrales_14_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="25.48" shape="829.08,842.38 835.24,839.33 840.98,837.18 846.93,835.66 853.71,834.47"/>
-        <lane id=":luna_corrales_14_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="25.48" shape="830.61,845.19 836.61,842.19 841.98,840.17 847.57,838.77 854.19,837.63"/>
-    </edge>
-    <edge id=":luna_corrales_16" function="internal">
-        <lane id=":luna_corrales_16_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.33" shape="830.61,845.19 835.98,843.31 837.61,843.48"/>
-    </edge>
-    <edge id=":luna_corrales_17" function="internal">
-        <lane id=":luna_corrales_17_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="830.61,845.19 832.05,845.31 832.78,845.82"/>
-    </edge>
-    <edge id=":luna_corrales_22" function="internal">
-        <lane id=":luna_corrales_22_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.17" shape="837.61,843.48 840.88,843.82 845.31,846.72 849.26,852.00"/>
-    </edge>
-    <edge id=":luna_corrales_23" function="internal">
-        <lane id=":luna_corrales_23_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="832.78,845.82 832.82,846.72 832.15,847.99"/>
+    <edge id=":luna_corrales_10" function="internal">
+        <lane id=":luna_corrales_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="25.48" shape="829.08,842.38 835.24,839.33 840.98,837.18 846.93,835.66 853.71,834.47"/>
+        <lane id=":luna_corrales_10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="25.48" shape="830.61,845.19 836.61,842.19 841.98,840.17 847.57,838.77 854.19,837.63"/>
     </edge>
     <edge id=":luna_osmena_0" function="internal">
         <lane id=":luna_osmena_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.95" length="9.83" shape="1257.07,796.52 1256.22,794.21 1254.71,792.65 1252.52,791.86 1249.65,791.82"/>
@@ -212,26 +172,26 @@
         <lane id=":luna_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.82" shape="1260.21,795.93 1256.45,775.47"/>
     </edge>
     <edge id=":luna_osmena_3" function="internal">
-        <lane id=":luna_osmena_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1260.21,795.93 1260.78,794.60 1261.49,794.06"/>
+        <lane id=":luna_osmena_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="1.44" shape="1260.21,795.93 1260.78,794.60"/>
     </edge>
     <edge id=":luna_osmena_10" function="internal">
-        <lane id=":luna_osmena_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1261.49,794.06 1262.35,794.31 1263.36,795.34"/>
+        <lane id=":luna_osmena_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="3.23" shape="1260.78,794.60 1261.49,794.06 1262.35,794.31 1263.36,795.34"/>
     </edge>
     <edge id=":luna_osmena_4" function="internal">
         <lane id=":luna_osmena_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.78" shape="1262.75,774.33 1266.50,794.75"/>
         <lane id=":luna_osmena_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.78" shape="1259.60,774.90 1263.36,795.34"/>
     </edge>
     <edge id=":luna_osmena_6" function="internal">
-        <lane id=":luna_osmena_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.01" shape="1259.60,774.90 1259.80,780.41 1259.24,781.80"/>
+        <lane id=":luna_osmena_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="4.88" shape="1259.60,774.90 1259.78,779.77"/>
     </edge>
     <edge id=":luna_osmena_7" function="internal">
-        <lane id=":luna_osmena_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1259.60,774.90 1259.03,776.22 1258.31,776.76"/>
+        <lane id=":luna_osmena_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="1.44" shape="1259.60,774.90 1259.03,776.22"/>
     </edge>
     <edge id=":luna_osmena_11" function="internal">
-        <lane id=":luna_osmena_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="12.90" shape="1259.24,781.80 1258.15,784.53 1254.65,787.28 1249.31,788.64"/>
+        <lane id=":luna_osmena_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.03" shape="1259.78,779.77 1259.80,780.41 1258.15,784.53 1254.65,787.28 1249.31,788.64"/>
     </edge>
     <edge id=":luna_osmena_12" function="internal">
-        <lane id=":luna_osmena_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1258.31,776.76 1257.45,776.51 1256.45,775.47"/>
+        <lane id=":luna_osmena_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="3.23" shape="1259.03,776.22 1258.31,776.76 1257.45,776.51 1256.45,775.47"/>
     </edge>
     <edge id=":luna_osmena_8" function="internal">
         <lane id=":luna_osmena_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.36" length="9.04" shape="1248.63,782.27 1251.06,781.65 1252.64,780.41 1253.39,778.54 1253.30,776.04"/>
@@ -240,192 +200,176 @@
         <lane id=":luna_osmena_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="19.57" shape="1248.97,785.45 1254.48,785.58 1258.71,787.27 1261.67,790.52 1263.36,795.34"/>
     </edge>
     <edge id=":luna_roa_0" function="internal">
-        <lane id=":luna_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.74" length="9.41" shape="1081.26,815.86 1080.40,813.34 1079.01,811.66 1077.08,810.81 1074.62,810.81"/>
+        <lane id=":luna_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.86" length="9.79" shape="1078.18,816.77 1077.29,814.06 1075.87,812.24 1073.92,811.32 1071.45,811.28"/>
     </edge>
     <edge id=":luna_roa_1" function="internal">
-        <lane id=":luna_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.36" shape="1081.26,815.86 1080.44,811.19 1079.55,805.31 1078.77,799.43 1078.28,794.71"/>
-    </edge>
-    <edge id=":luna_roa_2" function="internal">
-        <lane id=":luna_roa_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="8.39" shape="1081.26,815.86 1080.78,810.44 1081.51,807.58"/>
-    </edge>
-    <edge id=":luna_roa_15" function="internal">
-        <lane id=":luna_roa_15_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="8.99" shape="1081.51,807.58 1081.80,806.43 1084.30,803.82 1088.31,802.61"/>
+        <lane id=":luna_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.94" shape="1078.18,816.77 1076.98,810.62 1076.20,805.89 1075.63,801.14 1075.08,794.89"/>
+        <lane id=":luna_roa_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.94" shape="1081.32,816.15 1080.13,810.05 1079.36,805.45 1078.81,800.82 1078.27,794.63"/>
     </edge>
     <edge id=":luna_roa_3" function="internal">
-        <lane id=":luna_roa_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.32" length="9.04" shape="1088.99,808.97 1086.56,809.59 1084.98,810.84 1084.26,812.72 1084.40,815.23"/>
-    </edge>
-    <edge id=":luna_roa_4" function="internal">
-        <lane id=":luna_roa_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.55" shape="1088.99,808.97 1074.62,810.81"/>
-        <lane id=":luna_roa_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.55" shape="1088.65,805.79 1074.14,807.64"/>
-    </edge>
-    <edge id=":luna_roa_6" function="internal">
-        <lane id=":luna_roa_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.38" shape="1088.65,805.79 1084.48,805.48 1083.46,804.84"/>
+        <lane id=":luna_roa_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.12" shape="1081.32,816.15 1081.04,811.03"/>
     </edge>
     <edge id=":luna_roa_16" function="internal">
-        <lane id=":luna_roa_16_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="11.95" shape="1083.46,804.84 1081.36,803.52 1079.29,799.94 1078.28,794.71"/>
+        <lane id=":luna_roa_16_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.94" shape="1081.04,811.03 1081.01,810.58 1082.61,806.42 1086.11,803.65 1091.50,802.27"/>
+    </edge>
+    <edge id=":luna_roa_4" function="internal">
+        <lane id=":luna_roa_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.32" length="9.04" shape="1092.18,808.63 1089.75,809.25 1088.18,810.50 1087.46,812.38 1087.59,814.89"/>
+    </edge>
+    <edge id=":luna_roa_5" function="internal">
+        <lane id=":luna_roa_5_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.97" shape="1092.18,808.63 1071.45,811.28"/>
+        <lane id=":luna_roa_5_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.97" shape="1091.84,805.45 1070.97,808.12"/>
     </edge>
     <edge id=":luna_roa_7" function="internal">
-        <lane id=":luna_roa_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.57" length="9.39" shape="1081.46,794.45 1082.04,796.87 1083.32,798.51 1085.29,799.36 1087.97,799.43"/>
-    </edge>
-    <edge id=":luna_roa_8" function="internal">
-        <lane id=":luna_roa_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.99" shape="1081.46,794.45 1081.96,799.11 1082.71,804.87 1083.58,810.61 1084.40,815.23"/>
-    </edge>
-    <edge id=":luna_roa_9" function="internal">
-        <lane id=":luna_roa_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.50" shape="1081.46,794.45 1081.37,799.75 1080.71,801.85"/>
-    </edge>
-    <edge id=":luna_roa_10" function="internal">
-        <lane id=":luna_roa_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1081.46,794.45 1080.76,795.71 1080.00,796.18"/>
+        <lane id=":luna_roa_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="4.51" shape="1091.84,805.45 1087.33,805.31"/>
     </edge>
     <edge id=":luna_roa_17" function="internal">
-        <lane id=":luna_roa_17_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="9.32" shape="1080.71,801.85 1080.12,803.72 1077.71,806.35 1074.14,807.64"/>
+        <lane id=":luna_roa_17_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.40" shape="1087.33,805.31 1086.28,805.28 1082.16,803.42 1079.49,799.87 1078.27,794.63"/>
     </edge>
-    <edge id=":luna_roa_18" function="internal">
-        <lane id=":luna_roa_18_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1080.00,796.18 1079.17,795.84 1078.28,794.71"/>
+    <edge id=":luna_roa_8" function="internal">
+        <lane id=":luna_roa_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.57" length="9.40" shape="1084.65,794.11 1085.23,796.53 1086.51,798.17 1088.48,799.02 1091.16,799.09"/>
+    </edge>
+    <edge id=":luna_roa_9" function="internal">
+        <lane id=":luna_roa_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.19" shape="1084.65,794.11 1085.17,800.18 1085.69,804.56 1086.42,808.91 1087.59,814.89"/>
+        <lane id=":luna_roa_9_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.19" shape="1081.46,794.37 1081.99,800.50 1082.52,805.00 1083.27,809.48 1084.46,815.52"/>
     </edge>
     <edge id=":luna_roa_11" function="internal">
-        <lane id=":luna_roa_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.78" length="9.37" shape="1073.19,801.31 1075.59,800.59 1077.24,799.24 1078.13,797.29 1078.28,794.71"/>
+        <lane id=":luna_roa_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.04" shape="1081.46,794.37 1081.19,799.40"/>
+    </edge>
+    <edge id=":luna_roa_18" function="internal">
+        <lane id=":luna_roa_18_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.39" shape="1081.19,799.40 1081.17,799.74 1079.33,803.82 1075.93,806.61 1070.97,808.12"/>
     </edge>
     <edge id=":luna_roa_12" function="internal">
-        <lane id=":luna_roa_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.83" shape="1073.19,801.31 1087.97,799.43"/>
-        <lane id=":luna_roa_12_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.83" shape="1073.66,804.48 1088.31,802.61"/>
+        <lane id=":luna_roa_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.86" length="9.62" shape="1070.02,801.79 1072.42,801.05 1074.06,799.65 1074.95,797.60 1075.08,794.89"/>
     </edge>
-    <edge id=":luna_roa_14" function="internal">
-        <lane id=":luna_roa_14_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.27" shape="1073.66,804.48 1077.46,804.68 1078.72,805.45"/>
+    <edge id=":luna_roa_13" function="internal">
+        <lane id=":luna_roa_13_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.25" shape="1070.02,801.79 1091.16,799.09"/>
+        <lane id=":luna_roa_13_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="21.25" shape="1070.50,804.96 1091.50,802.27"/>
+    </edge>
+    <edge id=":luna_roa_15" function="internal">
+        <lane id=":luna_roa_15_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="5.18" shape="1070.50,804.96 1075.68,804.97"/>
     </edge>
     <edge id=":luna_roa_19" function="internal">
-        <lane id=":luna_roa_19_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="11.72" shape="1078.72,805.45 1080.51,806.54 1082.82,810.05 1084.40,815.23"/>
+        <lane id=":luna_roa_19_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.56" shape="1075.68,804.97 1079.73,806.73 1082.66,810.24 1084.46,815.52"/>
     </edge>
     <edge id=":osmena_florentino_0" function="internal">
-        <lane id=":osmena_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.46" shape="1267.52,852.14 1264.81,837.92"/>
-        <lane id=":osmena_florentino_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.46" shape="1270.66,851.53 1267.96,837.33"/>
+        <lane id=":osmena_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.86" shape="1268.12,855.28 1264.22,834.78"/>
+        <lane id=":osmena_florentino_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.86" shape="1271.26,854.67 1267.37,834.19"/>
     </edge>
     <edge id=":osmena_florentino_2" function="internal">
-        <lane id=":osmena_florentino_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.70" length="5.24" shape="1270.66,851.53 1270.68,847.63 1271.32,846.46"/>
+        <lane id=":osmena_florentino_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="9.30" length="4.99" shape="1271.26,854.67 1271.04,849.69"/>
     </edge>
-    <edge id=":osmena_florentino_10" function="internal">
-        <lane id=":osmena_florentino_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.70" length="11.72" shape="1271.32,846.46 1272.40,844.51 1275.82,842.17 1280.94,840.62"/>
+    <edge id=":osmena_florentino_8" function="internal">
+        <lane id=":osmena_florentino_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="9.30" length="14.55" shape="1271.04,849.69 1271.03,849.39 1272.58,845.29 1275.92,842.36 1281.05,840.60"/>
     </edge>
     <edge id=":osmena_florentino_3" function="internal">
-        <lane id=":osmena_florentino_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.51" length="9.04" shape="1281.44,843.79 1279.08,844.60 1277.54,845.96 1276.83,847.86 1276.94,850.32"/>
+        <lane id=":osmena_florentino_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.51" length="9.04" shape="1282.04,846.93 1279.68,847.74 1278.15,849.10 1277.43,851.01 1277.55,853.46"/>
     </edge>
     <edge id=":osmena_florentino_4" function="internal">
-        <lane id=":osmena_florentino_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.68" length="16.95" shape="1281.44,843.79 1276.15,844.24 1272.15,843.32 1269.41,841.02 1267.96,837.33"/>
+        <lane id=":osmena_florentino_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="9.28" length="19.54" shape="1281.55,843.77 1276.18,844.04 1272.02,842.53 1269.09,839.25 1267.37,834.19"/>
     </edge>
     <edge id=":osmena_florentino_5" function="internal">
-        <lane id=":osmena_florentino_5_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.51" shape="1281.44,843.79 1280.13,843.18 1279.61,842.45 1279.66,842.29"/>
-    </edge>
-    <edge id=":osmena_florentino_11" function="internal">
-        <lane id=":osmena_florentino_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.17" shape="1279.66,842.29 1279.88,841.60 1280.94,840.62"/>
+        <lane id=":osmena_florentino_5_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.59" length="9.35" shape="1273.66,833.01 1274.48,835.37 1275.90,836.90 1277.92,837.59 1280.55,837.44"/>
     </edge>
     <edge id=":osmena_florentino_6" function="internal">
-        <lane id=":osmena_florentino_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.54" length="9.19" shape="1274.25,836.16 1275.06,838.52 1276.44,840.05 1278.40,840.76 1280.94,840.62"/>
-    </edge>
-    <edge id=":osmena_florentino_7" function="internal">
-        <lane id=":osmena_florentino_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.42" shape="1274.25,836.16 1276.94,850.32"/>
-        <lane id=":osmena_florentino_7_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="14.42" shape="1271.10,836.75 1273.80,850.92"/>
-    </edge>
-    <edge id=":osmena_florentino_9" function="internal">
-        <lane id=":osmena_florentino_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1271.10,836.75 1270.54,838.07 1269.82,838.61"/>
-    </edge>
-    <edge id=":osmena_florentino_12" function="internal">
-        <lane id=":osmena_florentino_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1269.82,838.61 1268.96,838.37 1267.96,837.33"/>
+        <lane id=":osmena_florentino_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.83" shape="1273.66,833.01 1277.55,853.46"/>
+        <lane id=":osmena_florentino_6_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.83" shape="1270.51,833.60 1274.41,854.07"/>
     </edge>
     <edge id=":recto_osmena_0" function="internal">
-        <lane id=":recto_osmena_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="7.79" length="13.14" shape="1316.27,1098.43 1314.90,1094.30 1313.06,1091.54 1310.76,1090.13 1307.99,1090.08"/>
+        <lane id=":recto_osmena_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="7.03" length="10.49" shape="1316.27,1098.43 1315.22,1095.66 1313.59,1093.86 1311.40,1093.04 1308.65,1093.18"/>
     </edge>
     <edge id=":recto_osmena_1" function="internal">
         <lane id=":recto_osmena_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.46" shape="1316.27,1098.43 1309.75,1070.66"/>
         <lane id=":recto_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.46" shape="1319.38,1097.70 1312.89,1070.06"/>
     </edge>
     <edge id=":recto_osmena_3" function="internal">
-        <lane id=":recto_osmena_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="6.95" shape="1319.38,1097.70 1318.52,1090.80"/>
-    </edge>
-    <edge id=":recto_osmena_4" function="internal">
-        <lane id=":recto_osmena_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.14" shape="1319.38,1097.70 1319.89,1096.34 1320.42,1095.89"/>
+        <lane id=":recto_osmena_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="3.27" shape="1319.38,1097.70 1318.98,1094.45"/>
     </edge>
     <edge id=":recto_osmena_18" function="internal">
-        <lane id=":recto_osmena_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="15.94" shape="1318.52,1090.80 1318.50,1090.64 1319.57,1085.22 1322.59,1081.45 1327.58,1079.33"/>
+        <lane id=":recto_osmena_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="19.62" shape="1318.98,1094.45 1318.50,1090.64 1319.57,1085.22 1322.59,1081.45 1327.58,1079.33"/>
     </edge>
-    <edge id=":recto_osmena_19" function="internal">
-        <lane id=":recto_osmena_19_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.53" shape="1320.42,1095.89 1320.57,1095.77 1321.44,1095.97 1322.50,1096.96"/>
+    <edge id=":recto_osmena_4" function="internal">
+        <lane id=":recto_osmena_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.43" length="9.02" shape="1329.82,1089.59 1327.49,1090.43 1326.01,1091.81 1325.39,1093.74 1325.61,1096.22"/>
     </edge>
     <edge id=":recto_osmena_5" function="internal">
-        <lane id=":recto_osmena_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.43" length="9.02" shape="1329.82,1089.59 1327.49,1090.43 1326.01,1091.81 1325.39,1093.74 1325.61,1096.22"/>
-    </edge>
-    <edge id=":recto_osmena_6" function="internal">
-        <lane id=":recto_osmena_6_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.94" shape="1329.82,1089.59 1323.27,1090.30 1318.56,1089.88 1314.02,1089.44 1307.99,1090.08"/>
-        <lane id=":recto_osmena_6_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.94" shape="1329.14,1086.47 1322.60,1087.17 1317.90,1086.75 1313.36,1086.31 1307.33,1086.95"/>
+        <lane id=":recto_osmena_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="21.42" shape="1329.82,1089.59 1308.65,1093.18"/>
+        <lane id=":recto_osmena_5_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="21.42" shape="1329.14,1086.47 1308.00,1090.05"/>
+        <lane id=":recto_osmena_5_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="19.45" length="21.42" shape="1328.39,1083.35 1307.35,1086.92"/>
     </edge>
     <edge id=":recto_osmena_8" function="internal">
-        <lane id=":recto_osmena_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="5.37" shape="1328.39,1083.35 1323.02,1083.47"/>
+        <lane id=":recto_osmena_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="4.27" shape="1328.39,1083.35 1324.12,1083.45"/>
+    </edge>
+    <edge id=":recto_osmena_19" function="internal">
+        <lane id=":recto_osmena_19_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="18.98" shape="1324.12,1083.45 1322.76,1083.48 1318.29,1081.30 1315.01,1076.83 1312.89,1070.06"/>
     </edge>
     <edge id=":recto_osmena_9" function="internal">
-        <lane id=":recto_osmena_9_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="3.99" length="3.00" shape="1328.39,1083.35 1326.68,1082.65 1325.97,1081.74"/>
-    </edge>
-    <edge id=":recto_osmena_20" function="internal">
-        <lane id=":recto_osmena_20_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="17.88" shape="1323.02,1083.47 1322.76,1083.48 1318.29,1081.30 1315.01,1076.83 1312.89,1070.06"/>
-    </edge>
-    <edge id=":recto_osmena_21" function="internal">
-        <lane id=":recto_osmena_21_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="3.99" length="3.00" shape="1325.97,1081.74 1326.27,1080.64 1327.58,1079.33"/>
+        <lane id=":recto_osmena_9_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.58" length="9.42" shape="1319.17,1068.84 1320.01,1071.18 1321.47,1072.67 1323.53,1073.30 1326.21,1073.07"/>
     </edge>
     <edge id=":recto_osmena_10" function="internal">
-        <lane id=":recto_osmena_10_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.58" length="9.42" shape="1319.17,1068.84 1320.01,1071.18 1321.47,1072.67 1323.53,1073.30 1326.21,1073.07"/>
+        <lane id=":recto_osmena_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.19" shape="1319.17,1068.84 1325.61,1096.22"/>
+        <lane id=":recto_osmena_10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.19" shape="1316.03,1069.45 1322.50,1096.96"/>
     </edge>
-    <edge id=":recto_osmena_11" function="internal">
-        <lane id=":recto_osmena_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.19" shape="1319.17,1068.84 1325.61,1096.22"/>
-        <lane id=":recto_osmena_11_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.19" shape="1316.03,1069.45 1322.50,1096.96"/>
+    <edge id=":recto_osmena_12" function="internal">
+        <lane id=":recto_osmena_12_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.91" length="3.19" shape="1316.03,1069.45 1316.29,1072.63"/>
+    </edge>
+    <edge id=":recto_osmena_20" function="internal">
+        <lane id=":recto_osmena_20_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.91" length="18.88" shape="1316.29,1072.63 1316.58,1076.19 1315.31,1081.34 1312.24,1084.92 1307.35,1086.92"/>
     </edge>
     <edge id=":recto_osmena_13" function="internal">
-        <lane id=":recto_osmena_13_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="6.76" shape="1316.03,1069.45 1316.58,1076.19"/>
-    </edge>
-    <edge id=":recto_osmena_22" function="internal">
-        <lane id=":recto_osmena_22_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="15.34" shape="1316.58,1076.19 1315.31,1081.35 1312.23,1084.94 1307.33,1086.95"/>
+        <lane id=":recto_osmena_13_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.60" length="9.23" shape="1305.39,1077.52 1307.71,1076.66 1309.21,1075.24 1309.89,1073.24 1309.75,1070.66"/>
     </edge>
     <edge id=":recto_osmena_14" function="internal">
-        <lane id=":recto_osmena_14_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="7.43" length="11.95" shape="1306.00,1080.66 1308.28,1079.61 1309.67,1077.59 1310.15,1074.61 1309.75,1070.66"/>
-    </edge>
-    <edge id=":recto_osmena_15" function="internal">
-        <lane id=":recto_osmena_15_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.38" shape="1306.00,1080.66 1326.90,1076.20"/>
-        <lane id=":recto_osmena_15_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.38" shape="1306.66,1083.79 1327.58,1079.33"/>
+        <lane id=":recto_osmena_14_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.32" shape="1305.39,1077.52 1326.21,1073.07"/>
+        <lane id=":recto_osmena_14_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.32" shape="1306.04,1080.65 1326.90,1076.20"/>
+        <lane id=":recto_osmena_14_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.32" shape="1306.69,1083.78 1327.58,1079.33"/>
     </edge>
     <edge id=":recto_osmena_17" function="internal">
-        <lane id=":recto_osmena_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="4.38" shape="1306.66,1083.79 1311.04,1083.69"/>
+        <lane id=":recto_osmena_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="1.97" shape="1306.69,1083.78 1308.67,1083.74"/>
     </edge>
-    <edge id=":recto_osmena_23" function="internal">
-        <lane id=":recto_osmena_23_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="18.85" shape="1311.04,1083.69 1312.20,1083.67 1316.68,1085.82 1320.11,1090.25 1322.50,1096.96"/>
-    </edge>
-    <edge id=":roa_0" function="internal">
-        <lane id=":roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="1072.16,719.54 1072.86,718.28 1073.63,717.81 1074.46,718.15 1075.35,719.28"/>
+    <edge id=":recto_osmena_21" function="internal">
+        <lane id=":recto_osmena_21_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="21.23" shape="1308.67,1083.74 1312.21,1083.66 1316.69,1085.82 1320.12,1090.25 1322.50,1096.96"/>
     </edge>
     <edge id=":roa_recto_0" function="internal">
-        <lane id=":roa_recto_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.49" length="9.03" shape="1143.32,1108.76 1144.14,1111.09 1145.52,1112.60 1147.44,1113.27 1149.92,1113.12"/>
+        <lane id=":roa_recto_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="20.72" shape="1155.68,1124.99 1135.42,1129.26"/>
+        <lane id=":roa_recto_0_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="20.72" shape="1155.02,1121.86 1134.75,1126.13"/>
+        <lane id=":roa_recto_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="20.72" shape="1154.37,1118.73 1134.08,1123.00"/>
     </edge>
-    <edge id=":roa_recto_1" function="internal">
-        <lane id=":roa_recto_1_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.55" length="9.08" shape="1135.83,1116.08 1138.15,1115.23 1139.65,1113.83 1140.32,1111.88 1140.18,1109.39"/>
+    <edge id=":roa_recto_3" function="internal">
+        <lane id=":roa_recto_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.83" length="3.96" shape="1154.37,1118.73 1150.41,1118.83"/>
     </edge>
-    <edge id=":roa_recto_2" function="internal">
-        <lane id=":roa_recto_2_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="14.38" shape="1135.83,1116.08 1149.92,1113.12"/>
-        <lane id=":roa_recto_2_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="14.38" shape="1136.50,1119.21 1150.57,1116.25"/>
+    <edge id=":roa_recto_11" function="internal">
+        <lane id=":roa_recto_11_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.83" length="18.10" shape="1150.41,1118.83 1149.01,1118.87 1144.75,1116.83 1141.60,1112.62 1139.55,1106.23"/>
     </edge>
-    <edge id=":south_corrales_0" function="internal">
-        <lane id=":south_corrales_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="792.66,775.93 792.61,774.49 793.03,773.70 793.91,773.56 795.26,774.07"/>
+    <edge id=":roa_recto_4" function="internal">
+        <lane id=":roa_recto_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.49" length="9.03" shape="1145.82,1104.97 1146.65,1107.30 1148.02,1108.81 1149.95,1109.48 1152.42,1109.33"/>
     </edge>
-    <edge id=":south_osmena_0" function="internal">
-        <lane id=":south_osmena_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="1237.43,670.06 1238.00,668.74 1238.72,668.21 1239.57,668.46 1240.57,669.50"/>
+    <edge id=":roa_recto_5" function="internal">
+        <lane id=":roa_recto_5_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="10.92" length="27.08" shape="1145.82,1104.97 1146.49,1113.05 1144.86,1119.27 1140.95,1123.63 1134.75,1126.13"/>
+        <lane id=":roa_recto_5_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.88" length="21.98" shape="1142.68,1105.60 1143.27,1112.28 1142.03,1117.41 1138.97,1120.99 1134.08,1123.00"/>
+    </edge>
+    <edge id=":roa_recto_7" function="internal">
+        <lane id=":roa_recto_7_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.57" length="9.13" shape="1132.07,1113.62 1134.39,1112.76 1135.89,1111.34 1136.56,1109.38 1136.41,1106.86"/>
+    </edge>
+    <edge id=":roa_recto_8" function="internal">
+        <lane id=":roa_recto_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="20.77" shape="1132.07,1113.62 1152.42,1109.33"/>
+        <lane id=":roa_recto_8_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="20.77" shape="1132.74,1116.74 1153.07,1112.46"/>
+        <lane id=":roa_recto_8_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="20.77" shape="1133.41,1119.87 1153.72,1115.59"/>
     </edge>
 
     <edge id="east_florentino_0" from="florentino" to="osmena_florentino" name="Florentino" priority="4" type="highway.unclassified" shape="1375.15,824.46 1356.19,828.01 1327.36,833.25 1278.48,842.73 1270.82,843.94">
-        <lane id="east_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.67" shape="1375.44,826.03 1356.48,829.58 1327.66,834.82 1281.44,843.79">
+        <lane id="east_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.61" shape="1376.03,829.18 1357.06,832.73 1328.25,837.97 1282.04,846.93">
+            <param key="origId" value="88191070"/>
+        </lane>
+        <lane id="east_florentino_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.61" shape="1375.44,826.03 1356.48,829.58 1327.66,834.82 1281.55,843.77">
             <param key="origId" value="88191070"/>
         </lane>
     </edge>
     <edge id="east_luna_0" from="luna_osmena" to="luna_roa" priority="10" type="highway.tertiary">
-        <lane id="east_luna_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="161.58" shape="1249.65,791.82 1088.99,808.97"/>
-        <lane id="east_luna_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="161.58" shape="1249.31,788.64 1088.65,805.79"/>
+        <lane id="east_luna_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="158.36" shape="1249.65,791.82 1092.18,808.63"/>
+        <lane id="east_luna_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="158.36" shape="1249.31,788.64 1091.84,805.45"/>
     </edge>
     <edge id="east_luna_1" from="luna_roa" to="luna_corrales" priority="10" type="highway.tertiary">
-        <lane id="east_luna_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="221.96" shape="1074.62,810.81 855.15,843.96"/>
-        <lane id="east_luna_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="221.96" shape="1074.14,807.64 854.67,840.80"/>
+        <lane id="east_luna_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="218.76" shape="1071.45,811.28 855.15,843.96"/>
+        <lane id="east_luna_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="218.76" shape="1070.97,808.12 854.67,840.80"/>
     </edge>
     <edge id="east_luna_2" from="luna_corrales" to="luna" name="General Antonio Luna Street" priority="10" type="highway.tertiary" shape="841.22,841.21 747.89,892.25 728.72,902.88">
         <lane id="east_luna_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="117.06" shape="833.68,850.80 750.21,896.45 731.05,907.08">
@@ -448,18 +392,24 @@
         <param key="origTo" value="9676069461"/>
         <param key="ref" value="9"/>
     </edge>
-    <edge id="east_recto_1" from="recto_osmena" to="corrales_recto" priority="13" type="highway.trunk">
-        <lane id="east_recto_1_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="333.33" shape="1307.99,1090.08 981.84,1158.84"/>
-        <lane id="east_recto_1_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="333.33" shape="1307.33,1086.95 981.17,1155.72"/>
+    <edge id="east_recto_1" from="recto_osmena" to="roa_recto" priority="13" type="highway.trunk">
+        <lane id="east_recto_1_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="156.24" shape="1308.65,1093.18 1155.68,1124.99"/>
+        <lane id="east_recto_1_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="156.24" shape="1308.00,1090.05 1155.02,1121.86"/>
+        <lane id="east_recto_1_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="156.24" shape="1307.35,1086.92 1154.37,1118.73"/>
     </edge>
-    <edge id="east_recto_2" from="corrales_recto" to="west_recto" name="Claro M. Recto Avenue" priority="13" type="highway.trunk" spreadType="center" shape="970.26,1163.17 892.65,1181.87">
-        <lane id="east_recto_2_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="961.38,1168.60 893.65,1184.92">
+    <edge id="east_recto_2" from="roa_recto" to="corrales_recto" priority="13" type="highway.trunk">
+        <lane id="east_recto_2_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="155.92" shape="1135.42,1129.26 982.95,1161.85"/>
+        <lane id="east_recto_2_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="155.92" shape="1134.75,1126.13 982.28,1158.72"/>
+        <lane id="east_recto_2_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="155.92" shape="1134.08,1123.00 981.61,1155.59"/>
+    </edge>
+    <edge id="east_recto_3" from="corrales_recto" to="west_recto" name="Claro M. Recto Avenue" priority="13" type="highway.trunk" spreadType="center" shape="970.26,1163.17 892.65,1181.87">
+        <lane id="east_recto_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="961.38,1168.60 893.65,1184.92">
             <param key="origId" value="182624929"/>
         </lane>
-        <lane id="east_recto_2_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="960.64,1165.49 892.96,1181.80">
+        <lane id="east_recto_3_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="960.64,1165.49 892.96,1181.80">
             <param key="origId" value="182624929"/>
         </lane>
-        <lane id="east_recto_2_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="959.89,1162.38 892.27,1178.67">
+        <lane id="east_recto_3_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.61" shape="959.89,1162.38 892.27,1178.67">
             <param key="origId" value="182624929"/>
         </lane>
         <param key="origFrom" value="1929876935"/>
@@ -491,14 +441,14 @@
         <param key="origTo" value="1901481373"/>
     </edge>
     <edge id="north_osmena_1" from="recto_osmena" to="osmena_florentino" priority="11" type="highway.secondary">
-        <lane id="north_osmena_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="222.57" shape="1309.75,1070.66 1267.52,852.14"/>
-        <lane id="north_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="222.57" shape="1312.89,1070.06 1270.66,851.53"/>
+        <lane id="north_osmena_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="219.37" shape="1309.75,1070.66 1268.12,855.28"/>
+        <lane id="north_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="219.37" shape="1312.89,1070.06 1271.26,854.67"/>
     </edge>
     <edge id="north_osmena_2" from="osmena_florentino" to="luna_osmena" name="Sergio Osmeña Street" priority="11" type="highway.secondary">
-        <lane id="north_osmena_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="42.12" shape="1264.81,837.92 1257.07,796.52">
+        <lane id="north_osmena_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="38.92" shape="1264.22,834.78 1257.07,796.52">
             <param key="origId" value="182107014"/>
         </lane>
-        <lane id="north_osmena_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="42.12" shape="1267.96,837.33 1260.21,795.93">
+        <lane id="north_osmena_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="38.92" shape="1267.37,834.19 1260.21,795.93">
             <param key="origId" value="182107014"/>
         </lane>
     </edge>
@@ -511,10 +461,14 @@
         </lane>
     </edge>
     <edge id="north_roa_0" from="roa_recto" to="luna_roa" priority="10" type="highway.tertiary">
-        <lane id="north_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="299.38" shape="1140.18,1109.39 1081.26,815.86"/>
+        <lane id="north_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="295.87" shape="1136.41,1106.86 1078.18,816.77"/>
+        <lane id="north_roa_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="295.87" shape="1139.55,1106.23 1081.32,816.15"/>
     </edge>
     <edge id="north_roa_1" from="luna_roa" to="roa" name="Captain Vicente Roa Street" priority="10" type="highway.tertiary" shape="1080.72,805.03 1074.72,731.26">
-        <lane id="north_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.42" shape="1078.28,794.71 1072.16,719.54">
+        <lane id="north_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.34" shape="1075.08,794.89 1068.97,719.80">
+            <param key="origId" value="182107018"/>
+        </lane>
+        <lane id="north_roa_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.34" shape="1078.27,794.63 1072.16,719.54">
             <param key="origId" value="182107018"/>
         </lane>
         <param key="origTo" value="7654740370"/>
@@ -544,16 +498,16 @@
         </lane>
     </edge>
     <edge id="south_osmena_1" from="luna_osmena" to="osmena_florentino" name="Sergio Osmeña Street" priority="11" type="highway.secondary">
-        <lane id="south_osmena_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="42.12" shape="1266.50,794.75 1274.25,836.16">
+        <lane id="south_osmena_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="38.92" shape="1266.50,794.75 1273.66,833.01">
             <param key="origId" value="182107014"/>
         </lane>
-        <lane id="south_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="42.12" shape="1263.36,795.34 1271.10,836.75">
+        <lane id="south_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="38.92" shape="1263.36,795.34 1270.51,833.60">
             <param key="origId" value="182107014"/>
         </lane>
     </edge>
     <edge id="south_osmena_2" from="osmena_florentino" to="recto_osmena" priority="11" type="highway.secondary">
-        <lane id="south_osmena_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="222.57" shape="1276.94,850.32 1319.17,1068.84"/>
-        <lane id="south_osmena_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="222.57" shape="1273.80,850.92 1316.03,1069.45"/>
+        <lane id="south_osmena_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="219.37" shape="1277.55,853.46 1319.17,1068.84"/>
+        <lane id="south_osmena_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="219.37" shape="1274.41,854.07 1316.03,1069.45"/>
     </edge>
     <edge id="south_osmena_3" from="recto_osmena" to="north_osmena" name="Sergio Osmeña Extension" priority="12" type="highway.secondary" shape="1319.01,1089.18 1337.30,1166.32 1338.69,1176.04 1339.60,1186.88 1339.91,1197.81">
         <lane id="south_osmena_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="103.19" shape="1325.61,1096.22 1342.02,1165.42 1343.46,1175.50 1344.39,1186.61 1344.71,1197.67">
@@ -565,16 +519,23 @@
         <param key="origFrom" value="1901481373"/>
     </edge>
     <edge id="south_roa_0" from="roa" to="luna_roa" name="Captain Vicente Roa Street" priority="10" type="highway.tertiary" shape="1074.72,731.26 1080.72,805.03">
-        <lane id="south_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.42" shape="1075.35,719.28 1081.46,794.45">
+        <lane id="south_roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.34" shape="1078.54,719.02 1084.65,794.11">
+            <param key="origId" value="182107018"/>
+        </lane>
+        <lane id="south_roa_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="75.34" shape="1075.35,719.28 1081.46,794.37">
             <param key="origId" value="182107018"/>
         </lane>
         <param key="origFrom" value="7654740370"/>
     </edge>
     <edge id="south_roa_1" from="luna_roa" to="roa_recto" priority="10" type="highway.tertiary">
-        <lane id="south_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="299.38" shape="1084.40,815.23 1143.32,1108.76"/>
+        <lane id="south_roa_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="295.87" shape="1087.59,814.89 1145.82,1104.97"/>
+        <lane id="south_roa_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="295.87" shape="1084.46,815.52 1142.68,1105.60"/>
     </edge>
     <edge id="west_florentino_0" from="osmena_florentino" to="florentino" name="Florentino" priority="4" type="highway.unclassified" shape="1270.82,843.94 1278.48,842.73 1327.36,833.25 1356.19,828.01 1375.15,824.46">
-        <lane id="west_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.58" shape="1280.94,840.62 1327.06,831.68 1355.90,826.44 1374.86,822.89">
+        <lane id="west_florentino_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.42" shape="1280.55,837.44 1326.47,828.53 1355.32,823.29 1374.27,819.74">
+            <param key="origId" value="88191070"/>
+        </lane>
+        <lane id="west_florentino_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="95.42" shape="1281.05,840.60 1327.06,831.68 1355.90,826.44 1374.86,822.89">
             <param key="origId" value="88191070"/>
         </lane>
     </edge>
@@ -587,12 +548,12 @@
         </lane>
     </edge>
     <edge id="west_luna_1" from="luna_corrales" to="luna_roa" priority="10" type="highway.tertiary">
-        <lane id="west_luna_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="221.96" shape="853.71,834.47 1073.19,801.31"/>
-        <lane id="west_luna_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="221.96" shape="854.19,837.63 1073.66,804.48"/>
+        <lane id="west_luna_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="218.76" shape="853.71,834.47 1070.02,801.79"/>
+        <lane id="west_luna_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="218.76" shape="854.19,837.63 1070.50,804.96"/>
     </edge>
     <edge id="west_luna_2" from="luna_roa" to="luna_osmena" priority="10" type="highway.tertiary">
-        <lane id="west_luna_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="161.58" shape="1087.97,799.43 1248.63,782.27"/>
-        <lane id="west_luna_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="161.58" shape="1088.31,802.61 1248.97,785.45"/>
+        <lane id="west_luna_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="158.36" shape="1091.16,799.09 1248.63,782.27"/>
+        <lane id="west_luna_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="158.36" shape="1091.50,802.27 1248.97,785.45"/>
     </edge>
     <edge id="west_recto_0" from="west_recto" to="corrales_recto" name="Claro M. Recto Avenue" priority="13" type="highway.trunk" spreadType="center" shape="888.89,1164.38 951.66,1151.94 967.20,1148.87">
         <lane id="west_recto_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="69.31" shape="888.44,1161.21 951.04,1148.80 956.37,1147.75">
@@ -608,12 +569,14 @@
         <param key="ref" value="9"/>
     </edge>
     <edge id="west_recto_1" from="corrales_recto" to="roa_recto" priority="13" type="highway.trunk">
-        <lane id="west_recto_1_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="159.53" shape="979.82,1149.43 1135.83,1116.08"/>
-        <lane id="west_recto_1_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="159.53" shape="980.49,1152.56 1136.50,1119.21"/>
+        <lane id="west_recto_1_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="155.92" shape="979.60,1146.20 1132.07,1113.62"/>
+        <lane id="west_recto_1_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="155.92" shape="980.27,1149.33 1132.74,1116.74"/>
+        <lane id="west_recto_1_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="155.92" shape="980.94,1152.46 1133.41,1119.87"/>
     </edge>
     <edge id="west_recto_2" from="roa_recto" to="recto_osmena" priority="13" type="highway.trunk">
-        <lane id="west_recto_2_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="159.43" shape="1149.92,1113.12 1306.00,1080.66"/>
-        <lane id="west_recto_2_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="159.43" shape="1150.57,1116.25 1306.66,1083.79"/>
+        <lane id="west_recto_2_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="156.24" shape="1152.42,1109.33 1305.39,1077.52"/>
+        <lane id="west_recto_2_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="156.24" shape="1153.07,1112.46 1306.04,1080.65"/>
+        <lane id="west_recto_2_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="156.24" shape="1153.72,1115.59 1306.69,1083.78"/>
     </edge>
     <edge id="west_recto_3" from="recto_osmena" to="east_recto" priority="13" type="highway.trunk" shape="1317.07,1083.26 1506.41,1041.89">
         <lane id="west_recto_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="180.94" shape="1326.21,1073.07 1503.06,1034.43"/>
@@ -622,84 +585,163 @@
     </edge>
 
     <tlLogic id="corrales_recto_tl" type="static" programID="0" offset="0">
-        <phase duration="33" state="rrrrGGGrrrrrGGGg"/>
-        <phase duration="6"  state="rrrryyyrrrrryyyg"/>
-        <phase duration="33" state="rrrrrrrGrrrrrrrG"/>
-        <phase duration="6"  state="rrrrrrryrrrrrrry"/>
-        <phase duration="33" state="GGGgrrrrGGGgrrrr"/>
-        <phase duration="6"  state="yyyyrrrryyyyrrrr"/>
+        <phase duration="39" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="6"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="39" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="6"  state="yyyyrrrrryyyyrrrrr"/>
+    </tlLogic>
+    <tlLogic id="corrales_recto_tl" type="static" programID="1" offset="0">
+        <phase duration="39" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="6"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="39" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="6"  state="yyyyrrrrryyyyrrrrr"/>
+    </tlLogic>
+    <tlLogic id="corrales_recto_tl" type="static" programID="2" offset="0">
+        <phase duration="39" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="6"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="39" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="6"  state="yyyyrrrrryyyyrrrrr"/>
+    </tlLogic>
+    <tlLogic id="corrales_recto_tl" type="static" programID="3" offset="0">
+        <phase duration="39" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="6"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="39" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="6"  state="yyyyrrrrryyyyrrrrr"/>
+    </tlLogic>
+    <tlLogic id="corrales_recto_tl" type="static" programID="4" offset="0">
+        <phase duration="39" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="6"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="39" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="6"  state="yyyyrrrrryyyyrrrrr"/>
     </tlLogic>
     <tlLogic id="luna_corrales_tl" type="static" programID="0" offset="0">
-        <phase duration="39" state="GGGgrrrrGGGggrrrrr"/>
-        <phase duration="6"  state="yyyyrrrryyyyyrrrrr"/>
-        <phase duration="39" state="rrrrGGGgrrrrrGGGgg"/>
-        <phase duration="6"  state="rrrryyyyrrrrryyyyy"/>
+        <phase duration="3600" state="oooooooooooooooooo"/>
+    </tlLogic>
+    <tlLogic id="luna_corrales_tl" type="static" programID="1" offset="0">
+        <phase duration="17" state="GGGosrroGGGoosrroo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+        <phase duration="12" state="srroGGGosrrooGGGoo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+    </tlLogic>
+    <tlLogic id="luna_corrales_tl" type="static" programID="2" offset="0">
+        <phase duration="27" state="GGGosrroGGGoosrroo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+        <phase duration="22" state="srroGGGosrrooGGGoo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+    </tlLogic>
+    <tlLogic id="luna_corrales_tl" type="static" programID="3" offset="0">
+        <phase duration="17" state="GGGosrroGGGoosrroo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+        <phase duration="22" state="srroGGGosrrooGGGoo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+    </tlLogic>
+    <tlLogic id="luna_corrales_tl" type="static" programID="4" offset="0">
+        <phase duration="22" state="GGGosrroGGGoosrroo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
+        <phase duration="17" state="srroGGGosrrooGGGoo"/>
+        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
     </tlLogic>
     <tlLogic id="luna_roa_tl" type="static" programID="0" offset="0">
-        <phase duration="40" state="rrrGGGgrrrrGGGg"/>
-        <phase duration="5"  state="rrryyyyrrrryyyy"/>
-        <phase duration="40" state="GGgrrrrGGggrrrr"/>
-        <phase duration="5"  state="yyyrrrryyyyrrrr"/>
+        <phase duration="42" state="rrrrGGGgrrrrGGGg"/>
+        <phase duration="3"  state="rrrryyyyrrrryyyy"/>
+        <phase duration="42" state="GGGgrrrrGGGgrrrr"/>
+        <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
+    </tlLogic>
+    <tlLogic id="luna_roa_tl" type="static" programID="1" offset="0">
+        <phase duration="42" state="rrrrGGGgrrrrGGGg"/>
+        <phase duration="3"  state="rrrryyyyrrrryyyy"/>
+        <phase duration="42" state="GGGgrrrrGGGgrrrr"/>
+        <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
+    </tlLogic>
+    <tlLogic id="luna_roa_tl" type="static" programID="2" offset="0">
+        <phase duration="42" state="rrrrGGGgrrrrGGGg"/>
+        <phase duration="3"  state="rrrryyyyrrrryyyy"/>
+        <phase duration="42" state="GGGgrrrrGGGgrrrr"/>
+        <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
+    </tlLogic>
+    <tlLogic id="luna_roa_tl" type="static" programID="3" offset="0">
+        <phase duration="42" state="rrrrGGGgrrrrGGGg"/>
+        <phase duration="3"  state="rrrryyyyrrrryyyy"/>
+        <phase duration="42" state="GGGgrrrrGGGgrrrr"/>
+        <phase duration="3"  state="yyyyrrrryyyyrrrr"/>
     </tlLogic>
     <tlLogic id="osmena_florentino_tl" type="static" programID="0" offset="0">
-        <phase duration="39" state="GGgrrrGGGg"/>
-        <phase duration="6"  state="yyyrrryyyy"/>
-        <phase duration="39" state="rrrGGgGrrr"/>
-        <phase duration="6"  state="rrryyyyrrr"/>
+        <phase duration="42" state="GGgrrGGG"/>
+        <phase duration="3"  state="yyyrryyy"/>
+        <phase duration="42" state="rrrGGGrr"/>
+        <phase duration="3"  state="rrryyyrr"/>
+    </tlLogic>
+    <tlLogic id="osmena_florentino_tl" type="static" programID="1" offset="0">
+        <phase duration="42" state="GGgrrGGG"/>
+        <phase duration="3"  state="yyyrryyy"/>
+        <phase duration="42" state="rrrGGGrr"/>
+        <phase duration="3"  state="rrryyyrr"/>
     </tlLogic>
     <tlLogic id="recto_osmena_tl" type="static" programID="0" offset="0">
-        <phase duration="33" state="rrrrrGGGggrrrrGGGr"/>
-        <phase duration="6"  state="rrrrryyyggrrrryyyr"/>
-        <phase duration="33" state="rrrrrrrrGGrrrrrrrG"/>
-        <phase duration="6"  state="rrrrrrrryyrrrrrrry"/>
-        <phase duration="33" state="GGGggrrrrrGGGgrrrr"/>
-        <phase duration="6"  state="yyyyyrrrrryyyyrrrr"/>
+        <phase duration="42" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="3"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="41" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="3"  state="yyyyrrrrryyyyrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+    <tlLogic id="recto_osmena_tl" type="static" programID="1" offset="0">
+        <phase duration="42" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="3"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="41" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="3"  state="yyyyrrrrryyyyrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+    <tlLogic id="recto_osmena_tl" type="static" programID="2" offset="0">
+        <phase duration="42" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="3"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="41" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="3"  state="yyyyrrrrryyyyrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+    <tlLogic id="recto_osmena_tl" type="static" programID="3" offset="0">
+        <phase duration="42" state="rrrrGGGGgrrrrGGGGg"/>
+        <phase duration="3"  state="rrrryyyyyrrrryyyyy"/>
+        <phase duration="41" state="GGGgrrrrrGGGgrrrrr"/>
+        <phase duration="3"  state="yyyyrrrrryyyyrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrrrrrrrr"/>
     </tlLogic>
 
-    <junction id="corrales_recto" type="traffic_light" x="969.69" y="1156.50" incLanes="north_corrales_0_0 north_corrales_0_1 east_recto_1_0 east_recto_1_1 south_corrales_1_0 south_corrales_1_1 west_recto_0_0 west_recto_0_1 west_recto_0_2" intLanes=":corrales_recto_0_0 :corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_16_0 :corrales_recto_4_0 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_7_0 :corrales_recto_8_0 :corrales_recto_9_0 :corrales_recto_9_1 :corrales_recto_17_0 :corrales_recto_12_0 :corrales_recto_13_0 :corrales_recto_13_1 :corrales_recto_18_0" shape="968.79,1172.55 980.80,1168.12 980.13,1165.99 979.82,1164.20 979.87,1162.75 980.28,1161.63 981.05,1160.85 982.17,1160.41 979.49,1147.86 976.21,1147.28 974.76,1145.99 973.42,1144.03 972.21,1141.40 971.11,1138.10 958.83,1141.57 959.00,1143.79 958.66,1144.65 958.05,1145.33 957.16,1145.85 955.99,1146.19 961.76,1170.16 965.05,1169.82 966.34,1170.07 967.39,1170.61 968.21,1171.44">
-        <request index="0"  response="0000000000000000" foes="0000000000000000" cont="0"/>
-        <request index="1"  response="1111000011100000" foes="1111100011100000" cont="0"/>
-        <request index="2"  response="1111000011100000" foes="1111100011100000" cont="0"/>
-        <request index="3"  response="1110011011100000" foes="1110011011100000" cont="1"/>
-        <request index="4"  response="0000000000000000" foes="0000011000000000" cont="0"/>
-        <request index="5"  response="0000100000001000" foes="1000111000001110" cont="0"/>
-        <request index="6"  response="0000100000001000" foes="1000111000001110" cont="0"/>
-        <request index="7"  response="0110100000001000" foes="0110111000001110" cont="0"/>
-        <request index="8"  response="0110000000000000" foes="0110000000000000" cont="0"/>
-        <request index="9"  response="1110000011110000" foes="1110000011111000" cont="0"/>
-        <request index="10" response="1110000011110000" foes="1110000011111000" cont="0"/>
-        <request index="11" response="1110000011100110" foes="1110000011100110" cont="1"/>
-        <request index="12" response="0000000000000000" foes="0000000000000110" cont="0"/>
-        <request index="13" response="0000100000001000" foes="0000111110001110" cont="0"/>
-        <request index="14" response="0000100000001000" foes="0000111110001110" cont="0"/>
-        <request index="15" response="0000100001101000" foes="0000111001101110" cont="1"/>
+    <junction id="corrales_recto" type="traffic_light" x="969.69" y="1156.50" incLanes="north_corrales_0_0 north_corrales_0_1 east_recto_2_0 east_recto_2_1 east_recto_2_2 south_corrales_1_0 south_corrales_1_1 west_recto_0_0 west_recto_0_1 west_recto_0_2" intLanes=":corrales_recto_0_0 :corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_18_0 :corrales_recto_4_0 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_5_2 :corrales_recto_19_0 :corrales_recto_9_0 :corrales_recto_10_0 :corrales_recto_10_1 :corrales_recto_20_0 :corrales_recto_13_0 :corrales_recto_14_0 :corrales_recto_14_1 :corrales_recto_14_2 :corrales_recto_21_0" shape="968.79,1172.55 980.80,1168.12 980.44,1165.88 980.70,1165.01 981.27,1164.31 982.12,1163.78 983.28,1163.41 979.27,1144.64 975.72,1144.47 974.26,1143.64 973.01,1142.30 971.96,1140.45 971.11,1138.10 958.83,1141.57 959.00,1143.79 958.66,1144.65 958.05,1145.33 957.16,1145.85 955.99,1146.19 961.76,1170.16 965.05,1169.82 966.34,1170.07 967.39,1170.61 968.21,1171.44">
+        <request index="0"  response="000000000011100000" foes="000000000011100000" cont="0"/>
+        <request index="1"  response="111110000111100000" foes="111111000111100000" cont="0"/>
+        <request index="2"  response="111110000111100000" foes="111111000111100000" cont="0"/>
+        <request index="3"  response="111100110111100000" foes="111100110111100000" cont="1"/>
+        <request index="4"  response="000000000000000000" foes="000000110000000000" cont="0"/>
+        <request index="5"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="6"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="7"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="8"  response="011101000000001000" foes="011101110000001110" cont="1"/>
+        <request index="9"  response="011100000000000000" foes="011100000000000000" cont="0"/>
+        <request index="10" response="111100000111110000" foes="111100000111111000" cont="0"/>
+        <request index="11" response="111100000111110000" foes="111100000111111000" cont="0"/>
+        <request index="12" response="111100000111100110" foes="111100000111100110" cont="1"/>
+        <request index="13" response="000000000000000000" foes="000000000000000110" cont="0"/>
+        <request index="14" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="15" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="16" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="17" response="000001000011101000" foes="000001110011101110" cont="1"/>
     </junction>
-    <junction id="east_recto" type="dead_end" x="1505.58" y="1045.79" incLanes="west_recto_3_0 west_recto_3_1 west_recto_3_2" intLanes="" shape="1505.55,1045.59 1507.05,1055.07 1502.76,1032.86 1504.80,1042.24"/>
-    <junction id="florentino" type="priority" x="1375.15" y="824.46" incLanes="west_florentino_0_0" intLanes=":florentino_0_0" shape="1375.15,824.46 1374.56,821.31 1375.15,824.46">
-        <request index="0" response="0" foes="0" cont="0"/>
-    </junction>
-    <junction id="luna" type="priority" x="728.72" y="902.88" incLanes="east_luna_2_0 east_luna_2_1" intLanes=":luna_0_0" shape="728.72,902.88 731.82,908.48 728.72,902.88">
-        <request index="0" response="0" foes="0" cont="0"/>
-    </junction>
-    <junction id="luna_corrales" type="traffic_light" x="841.22" y="841.21" incLanes="north_corrales_1_0 north_corrales_1_1 east_luna_1_0 east_luna_1_1 south_corrales_0_0 south_corrales_0_1 west_luna_0_0 west_luna_0_1" intLanes=":luna_corrales_0_0 :luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_18_0 :luna_corrales_4_0 :luna_corrales_5_0 :luna_corrales_5_1 :luna_corrales_19_0 :luna_corrales_8_0 :luna_corrales_9_0 :luna_corrales_9_1 :luna_corrales_20_0 :luna_corrales_21_0 :luna_corrales_13_0 :luna_corrales_14_0 :luna_corrales_14_1 :luna_corrales_22_0 :luna_corrales_23_0" shape="842.40,855.94 853.42,849.61 852.76,847.62 852.92,846.86 853.41,846.26 854.23,845.82 855.39,845.54 853.47,832.89 850.51,833.15 847.82,833.01 845.42,832.46 843.30,831.50 841.47,830.14 839.91,828.36 829.50,835.80 830.40,837.82 830.36,838.72 830.00,839.55 829.32,840.30 828.31,840.98 834.45,852.21 837.28,851.56 838.62,851.94 839.93,852.80 841.18,854.14">
-        <request index="0"  response="000000000000000000" foes="000000000001100000" cont="0"/>
-        <request index="1"  response="010000000010000000" foes="011111100011100000" cont="0"/>
-        <request index="2"  response="010000000010000000" foes="011111100011100000" cont="0"/>
-        <request index="3"  response="010000011010000000" foes="011100011011100000" cont="1"/>
-        <request index="4"  response="000000011000000000" foes="000000011000000000" cont="0"/>
-        <request index="5"  response="000000111000001111" foes="110000111000001111" cont="0"/>
-        <request index="6"  response="000000111000001111" foes="110000111000001111" cont="0"/>
-        <request index="7"  response="001100111000001110" foes="001101111000001110" cont="1"/>
-        <request index="8"  response="000000000000000000" foes="001100000000000000" cont="0"/>
-        <request index="9"  response="010000000010000000" foes="011100000011111000" cont="0"/>
-        <request index="10" response="010000000010000000" foes="011100000011111000" cont="0"/>
-        <request index="11" response="010000000010000110" foes="111100000011100110" cont="1"/>
-        <request index="12" response="000000000010000110" foes="000000000010000110" cont="1"/>
-        <request index="13" response="000000000000000110" foes="000000000000000110" cont="0"/>
-        <request index="14" response="000000111100001110" foes="000000111110001110" cont="0"/>
-        <request index="15" response="000000111100001110" foes="000000111110001110" cont="0"/>
-        <request index="16" response="000000111001101110" foes="000000111001101110" cont="1"/>
-        <request index="17" response="000000100001100000" foes="000000100001100000" cont="1"/>
+    <junction id="east_recto" type="dead_end" x="1505.58" y="1045.79" incLanes="west_recto_3_0 west_recto_3_1 west_recto_3_2" intLanes="" shape="1505.55,1045.59 1507.05,1055.07 1502.76,1032.86 1504.80,1042.24" fringe="outer"/>
+    <junction id="florentino" type="dead_end" x="1375.15" y="824.46" incLanes="west_florentino_0_0 west_florentino_0_1" intLanes="" shape="1375.15,824.46 1373.97,818.17 1375.15,824.46" fringe="outer"/>
+    <junction id="luna" type="dead_end" x="728.72" y="902.88" incLanes="east_luna_2_0 east_luna_2_1" intLanes="" shape="728.72,902.88 731.82,908.48 728.72,902.88" fringe="outer"/>
+    <junction id="luna_corrales" type="traffic_light" x="841.22" y="841.21" incLanes="north_corrales_1_0 north_corrales_1_1 east_luna_1_0 east_luna_1_1 south_corrales_0_0 south_corrales_0_1 west_luna_0_0 west_luna_0_1" intLanes=":luna_corrales_0_0 :luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_3_0 :luna_corrales_4_0 :luna_corrales_4_1 :luna_corrales_6_0 :luna_corrales_7_0 :luna_corrales_7_1 :luna_corrales_9_0 :luna_corrales_10_0 :luna_corrales_10_1" shape="842.40,855.94 853.42,849.61 852.76,847.62 852.92,846.86 853.41,846.26 854.23,845.82 855.39,845.54 853.47,832.89 850.51,833.15 847.82,833.01 845.42,832.46 843.30,831.50 841.47,830.14 839.91,828.36 829.50,835.80 830.40,837.82 830.36,838.72 830.00,839.55 829.32,840.30 828.31,840.98 834.45,852.21 837.28,851.56 838.62,851.94 839.93,852.80 841.18,854.14">
+        <request index="0"  response="000000110000" foes="000000110000" cont="0"/>
+        <request index="1"  response="000000000000" foes="111000110000" cont="0"/>
+        <request index="2"  response="000000000000" foes="111000110000" cont="0"/>
+        <request index="3"  response="000110000000" foes="000110000000" cont="0"/>
+        <request index="4"  response="000110000111" foes="000110000111" cont="0"/>
+        <request index="5"  response="000110000111" foes="000110000111" cont="0"/>
+        <request index="6"  response="110000000000" foes="110000000000" cont="0"/>
+        <request index="7"  response="000000000000" foes="110000111000" cont="0"/>
+        <request index="8"  response="000000000000" foes="110000111000" cont="0"/>
+        <request index="9"  response="000000000110" foes="000000000110" cont="0"/>
+        <request index="10" response="000111000110" foes="000111000110" cont="0"/>
+        <request index="11" response="000111000110" foes="000111000110" cont="0"/>
     </junction>
     <junction id="luna_osmena" type="priority" x="1259.96" y="785.89" incLanes="north_osmena_2_0 north_osmena_2_1 south_osmena_0_0 south_osmena_0_1 west_luna_2_0 west_luna_2_1" intLanes=":luna_osmena_0_0 :luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_10_0 :luna_osmena_4_0 :luna_osmena_4_1 :luna_osmena_11_0 :luna_osmena_12_0 :luna_osmena_8_0 :luna_osmena_9_0" shape="1255.49,796.81 1268.07,794.46 1264.33,774.05 1251.73,776.32 1251.68,778.55 1251.27,779.38 1250.59,780.01 1249.66,780.44 1248.46,780.68 1249.82,793.41 1252.65,793.55 1253.71,794.00 1254.54,794.69 1255.13,795.63">
         <request index="0" response="0000000000" foes="0000000000" cont="0"/>
@@ -713,243 +755,220 @@
         <request index="8" response="0000000110" foes="0000000110" cont="0"/>
         <request index="9" response="0001110110" foes="0001111110" cont="0"/>
     </junction>
-    <junction id="luna_roa" type="traffic_light" x="1080.72" y="805.03" incLanes="north_roa_0_0 east_luna_0_0 east_luna_0_1 south_roa_0_0 west_luna_1_0 west_luna_1_1" intLanes=":luna_roa_0_0 :luna_roa_1_0 :luna_roa_15_0 :luna_roa_3_0 :luna_roa_4_0 :luna_roa_4_1 :luna_roa_16_0 :luna_roa_7_0 :luna_roa_8_0 :luna_roa_17_0 :luna_roa_18_0 :luna_roa_11_0 :luna_roa_12_0 :luna_roa_12_1 :luna_roa_19_0" shape="1079.69,816.17 1085.97,814.91 1085.97,812.69 1086.37,811.86 1087.04,811.24 1087.96,810.80 1089.16,810.57 1087.80,797.84 1085.31,797.66 1084.41,797.19 1083.73,796.48 1083.28,795.53 1083.06,794.32 1076.68,794.84 1076.42,797.28 1075.92,798.20 1075.18,798.91 1074.18,799.42 1072.95,799.73 1074.86,812.39 1077.15,812.54 1078.04,813.04 1078.76,813.80 1079.31,814.85">
-        <request index="0"  response="000000000110000" foes="000000000110000" cont="0"/>
-        <request index="1"  response="111100001110000" foes="111111001110000" cont="0"/>
-        <request index="2"  response="111000101110000" foes="111000101110000" cont="1"/>
-        <request index="3"  response="000000000000000" foes="100000100000000" cont="0"/>
-        <request index="4"  response="000001000000100" foes="100001100000111" cont="0"/>
-        <request index="5"  response="000001000000100" foes="100001100000111" cont="0"/>
-        <request index="6"  response="011101000000100" foes="011111100000110" cont="1"/>
-        <request index="7"  response="011000000000000" foes="011000000000000" cont="0"/>
-        <request index="8"  response="111000001111000" foes="111000001111100" cont="0"/>
-        <request index="9"  response="111000001110010" foes="111000001110010" cont="1"/>
-        <request index="10" response="000100001000010" foes="000100001000010" cont="1"/>
-        <request index="11" response="000000000000000" foes="000010001000010" cont="0"/>
-        <request index="12" response="000001000000100" foes="000001111000110" cont="0"/>
-        <request index="13" response="000001000000100" foes="000001111000110" cont="0"/>
-        <request index="14" response="000001000111100" foes="000001100111110" cont="1"/>
+    <junction id="luna_roa" type="traffic_light" x="1080.72" y="805.03" incLanes="north_roa_0_0 north_roa_0_1 east_luna_0_0 east_luna_0_1 south_roa_0_0 south_roa_0_1 west_luna_1_0 west_luna_1_1" intLanes=":luna_roa_0_0 :luna_roa_1_0 :luna_roa_1_1 :luna_roa_16_0 :luna_roa_4_0 :luna_roa_5_0 :luna_roa_5_1 :luna_roa_17_0 :luna_roa_8_0 :luna_roa_9_0 :luna_roa_9_1 :luna_roa_18_0 :luna_roa_12_0 :luna_roa_13_0 :luna_roa_13_1 :luna_roa_19_0" shape="1076.61,817.09 1089.16,814.57 1089.17,812.34 1089.57,811.52 1090.23,810.90 1091.16,810.46 1092.35,810.22 1090.99,797.50 1088.50,797.32 1087.59,796.85 1086.91,796.14 1086.46,795.19 1086.24,793.98 1073.48,795.02 1073.24,797.63 1072.74,798.60 1072.00,799.36 1071.01,799.89 1069.78,800.21 1071.69,812.87 1074.00,813.07 1074.90,813.62 1075.64,814.48 1076.21,815.63">
+        <request index="0"  response="0000000001100000" foes="0000000001100000" cont="0"/>
+        <request index="1"  response="1111000011100000" foes="1111100011100000" cont="0"/>
+        <request index="2"  response="1111000011100000" foes="1111100011100000" cont="0"/>
+        <request index="3"  response="1110011011100000" foes="1110011011100000" cont="1"/>
+        <request index="4"  response="0000000000000000" foes="0000011000000000" cont="0"/>
+        <request index="5"  response="0000100000001000" foes="1000111000001111" cont="0"/>
+        <request index="6"  response="0000100000001000" foes="1000111000001111" cont="0"/>
+        <request index="7"  response="0110100000001000" foes="0110111000001110" cont="1"/>
+        <request index="8"  response="0110000000000000" foes="0110000000000000" cont="0"/>
+        <request index="9"  response="1110000011110000" foes="1110000011111000" cont="0"/>
+        <request index="10" response="1110000011110000" foes="1110000011111000" cont="0"/>
+        <request index="11" response="1110000011100110" foes="1110000011100110" cont="1"/>
+        <request index="12" response="0000000000000000" foes="0000000000000110" cont="0"/>
+        <request index="13" response="0000100000001000" foes="0000111110001110" cont="0"/>
+        <request index="14" response="0000100000001000" foes="0000111110001110" cont="0"/>
+        <request index="15" response="0000100001101000" foes="0000111001101110" cont="1"/>
     </junction>
-    <junction id="north_corrales" type="dead_end" x="1020.44" y="1294.14" incLanes="south_corrales_2_0 south_corrales_2_1" intLanes="" shape="1020.44,1294.14 1026.44,1291.93 1020.44,1294.14"/>
-    <junction id="north_osmena" type="dead_end" x="1339.91" y="1197.81" incLanes="south_osmena_3_0 south_osmena_3_1" intLanes="" shape="1339.91,1197.81 1346.31,1197.63 1339.91,1197.81"/>
-    <junction id="osmena_florentino" type="traffic_light" x="1270.82" y="843.94" incLanes="north_osmena_1_0 north_osmena_1_1 east_florentino_0_0 south_osmena_1_0 south_osmena_1_1" intLanes=":osmena_florentino_0_0 :osmena_florentino_0_1 :osmena_florentino_10_0 :osmena_florentino_3_0 :osmena_florentino_4_0 :osmena_florentino_11_0 :osmena_florentino_6_0 :osmena_florentino_7_0 :osmena_florentino_7_1 :osmena_florentino_12_0" shape="1265.94,852.44 1278.51,850.01 1278.53,847.77 1278.93,846.91 1279.59,846.22 1280.51,845.71 1281.69,845.37 1280.69,839.04 1278.31,839.04 1277.41,838.65 1276.69,837.98 1276.16,837.06 1275.82,835.86 1263.24,838.22">
-        <request index="0" response="0000000000" foes="1000010000" cont="0"/>
-        <request index="1" response="0000000000" foes="1000010000" cont="0"/>
-        <request index="2" response="0111000000" foes="0111110000" cont="1"/>
-        <request index="3" response="0110000000" foes="0110000000" cont="0"/>
-        <request index="4" response="0110000111" foes="1110000111" cont="0"/>
-        <request index="5" response="0001000100" foes="0001000100" cont="1"/>
-        <request index="6" response="0000000000" foes="0000100100" cont="0"/>
-        <request index="7" response="0000000000" foes="0000011100" cont="0"/>
-        <request index="8" response="0000000000" foes="0000011100" cont="0"/>
-        <request index="9" response="0000010011" foes="0000010011" cont="1"/>
+    <junction id="north_corrales" type="dead_end" x="1020.44" y="1294.14" incLanes="south_corrales_2_0 south_corrales_2_1" intLanes="" shape="1020.44,1294.14 1026.44,1291.93 1020.44,1294.14" fringe="outer"/>
+    <junction id="north_osmena" type="dead_end" x="1339.91" y="1197.81" incLanes="south_osmena_3_0 south_osmena_3_1" intLanes="" shape="1339.91,1197.81 1346.31,1197.63 1339.91,1197.81" fringe="outer"/>
+    <junction id="osmena_florentino" type="traffic_light" x="1270.82" y="843.94" incLanes="north_osmena_1_0 north_osmena_1_1 east_florentino_0_0 east_florentino_0_1 south_osmena_1_0 south_osmena_1_1" intLanes=":osmena_florentino_0_0 :osmena_florentino_0_1 :osmena_florentino_8_0 :osmena_florentino_3_0 :osmena_florentino_4_0 :osmena_florentino_5_0 :osmena_florentino_6_0 :osmena_florentino_6_1" shape="1266.55,855.58 1279.12,853.16 1279.14,850.91 1279.54,850.05 1280.20,849.36 1281.12,848.85 1282.29,848.51 1280.30,835.86 1277.81,835.88 1276.87,835.49 1276.12,834.83 1275.58,833.91 1275.23,832.72 1262.65,835.07">
+        <request index="0" response="00000000" foes="00010000" cont="0"/>
+        <request index="1" response="00000000" foes="00010000" cont="0"/>
+        <request index="2" response="11000000" foes="11010000" cont="1"/>
+        <request index="3" response="11000000" foes="11000000" cont="0"/>
+        <request index="4" response="11000111" foes="11000111" cont="0"/>
+        <request index="5" response="00000000" foes="00000000" cont="0"/>
+        <request index="6" response="00000000" foes="00011100" cont="0"/>
+        <request index="7" response="00000000" foes="00011100" cont="0"/>
     </junction>
-    <junction id="recto_osmena" type="traffic_light" x="1317.07" y="1083.26" incLanes="north_osmena_0_0 north_osmena_0_1 east_recto_0_0 east_recto_0_1 east_recto_0_2 south_osmena_2_0 south_osmena_2_1 west_recto_2_0 west_recto_2_1" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_18_0 :recto_osmena_19_0 :recto_osmena_5_0 :recto_osmena_6_0 :recto_osmena_6_1 :recto_osmena_20_0 :recto_osmena_21_0 :recto_osmena_10_0 :recto_osmena_11_0 :recto_osmena_11_1 :recto_osmena_22_0 :recto_osmena_14_0 :recto_osmena_15_0 :recto_osmena_15_1 :recto_osmena_23_0" shape="1314.71,1098.80 1327.17,1095.85 1327.09,1093.60 1327.46,1092.73 1328.09,1092.03 1328.99,1091.51 1330.17,1091.16 1325.87,1071.51 1323.36,1071.60 1322.41,1071.24 1321.65,1070.61 1321.10,1069.71 1320.74,1068.54 1308.18,1070.97 1308.50,1073.22 1308.53,1075.12 1308.26,1076.65 1307.69,1077.83 1306.83,1078.64 1305.67,1079.09 1308.32,1091.65 1311.02,1092.02 1312.16,1092.96 1313.15,1094.41 1314.00,1096.35" rightOfWay="edgePriority">
-        <request index="0"  response="000000000011000000" foes="000000000011000000" cont="0"/>
-        <request index="1"  response="111100000111000000" foes="111110000111000000" cont="0"/>
-        <request index="2"  response="111100000111000000" foes="111110000111000000" cont="0"/>
-        <request index="3"  response="111001100111000000" foes="111001101111000000" cont="1"/>
-        <request index="4"  response="100001100000000000" foes="100001100000000000" cont="1"/>
-        <request index="5"  response="000000000000000000" foes="000001100000000000" cont="0"/>
-        <request index="6"  response="100010000000001000" foes="100011100000001111" cont="0"/>
-        <request index="7"  response="100010000000001000" foes="100011100000001111" cont="0"/>
-        <request index="8"  response="011000000000000000" foes="011011100000001110" cont="1"/>
-        <request index="9"  response="011000000000001000" foes="011000000000001000" cont="1"/>
-        <request index="10" response="000000000000000000" foes="000000000000000000" cont="0"/>
-        <request index="11" response="111000000111100000" foes="111000000111111000" cont="0"/>
-        <request index="12" response="111000000111100000" foes="111000000111111000" cont="0"/>
-        <request index="13" response="111000000111000110" foes="111000000111000110" cont="1"/>
-        <request index="14" response="000000000000000000" foes="000000000000000110" cont="0"/>
-        <request index="15" response="000010000000001000" foes="000011101100001110" cont="0"/>
-        <request index="16" response="000010000000001000" foes="000011101100001110" cont="0"/>
-        <request index="17" response="000000000011000000" foes="000011100011011110" cont="1"/>
+    <junction id="recto_osmena" type="traffic_light" x="1317.07" y="1083.26" incLanes="north_osmena_0_0 north_osmena_0_1 east_recto_0_0 east_recto_0_1 east_recto_0_2 south_osmena_2_0 south_osmena_2_1 west_recto_2_0 west_recto_2_1 west_recto_2_2" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_18_0 :recto_osmena_4_0 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_19_0 :recto_osmena_9_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_20_0 :recto_osmena_13_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_21_0" shape="1314.71,1098.80 1327.17,1095.85 1327.09,1093.60 1327.46,1092.73 1328.09,1092.03 1328.99,1091.51 1330.17,1091.16 1325.87,1071.51 1323.36,1071.60 1322.41,1071.24 1321.65,1070.61 1321.10,1069.71 1320.74,1068.54 1308.18,1070.97 1308.19,1073.37 1307.80,1074.30 1307.15,1075.04 1306.24,1075.59 1305.07,1075.95 1308.97,1094.75 1311.64,1094.78 1312.69,1095.29 1313.55,1096.13 1314.23,1097.30" rightOfWay="edgePriority">
+        <request index="0"  response="000000000011100000" foes="000000000011100000" cont="0"/>
+        <request index="1"  response="111110000111100000" foes="111111000111100000" cont="0"/>
+        <request index="2"  response="111110000111100000" foes="111111000111100000" cont="0"/>
+        <request index="3"  response="111100110111100000" foes="111100110111100000" cont="1"/>
+        <request index="4"  response="000000000000000000" foes="000000110000000000" cont="0"/>
+        <request index="5"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="6"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="7"  response="000001000000001000" foes="100001110000001111" cont="0"/>
+        <request index="8"  response="011100000000000000" foes="011101110000001110" cont="1"/>
+        <request index="9"  response="011100000000000000" foes="011100000000000000" cont="0"/>
+        <request index="10" response="111100000111110000" foes="111100000111111000" cont="0"/>
+        <request index="11" response="111100000111110000" foes="111100000111111000" cont="0"/>
+        <request index="12" response="111100000111100110" foes="111100000111100110" cont="1"/>
+        <request index="13" response="000000000000000000" foes="000000000000000110" cont="0"/>
+        <request index="14" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="15" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="16" response="000001000000001000" foes="000001111100001110" cont="0"/>
+        <request index="17" response="000000000011100000" foes="000001110011101110" cont="1"/>
     </junction>
-    <junction id="roa" type="priority" x="1073.75" y="719.41" incLanes="north_roa_1_0" intLanes=":roa_0_0" shape="1073.76,719.41 1070.57,719.67 1073.76,719.41">
-        <request index="0" response="0" foes="0" cont="0"/>
+    <junction id="roa" type="dead_end" x="1073.75" y="719.41" incLanes="north_roa_1_0 north_roa_1_1" intLanes="" shape="1073.76,719.41 1067.38,719.93 1073.76,719.41" fringe="outer"/>
+    <junction id="roa_recto" type="priority" x="1143.80" y="1119.29" incLanes="east_recto_1_0 east_recto_1_1 east_recto_1_2 south_roa_1_0 south_roa_1_1 west_recto_1_0 west_recto_1_1 west_recto_1_2" intLanes=":roa_recto_0_0 :roa_recto_0_1 :roa_recto_0_2 :roa_recto_11_0 :roa_recto_4_0 :roa_recto_5_0 :roa_recto_5_1 :roa_recto_7_0 :roa_recto_8_0 :roa_recto_8_1 :roa_recto_8_2" shape="1156.00,1126.56 1152.09,1107.76 1149.83,1107.78 1148.96,1107.39 1148.26,1106.74 1147.74,1105.83 1147.39,1104.65 1134.84,1107.17 1134.86,1109.51 1134.47,1110.41 1133.82,1111.14 1132.91,1111.68 1131.74,1112.05 1135.75,1130.83">
+        <request index="0"  response="00000000000" foes="00001100000" cont="0"/>
+        <request index="1"  response="00000000000" foes="00001100000" cont="0"/>
+        <request index="2"  response="00000000000" foes="00001100000" cont="0"/>
+        <request index="3"  response="11100000000" foes="11101100000" cont="1"/>
+        <request index="4"  response="11100000000" foes="11100000000" cont="0"/>
+        <request index="5"  response="11100001111" foes="11100001111" cont="0"/>
+        <request index="6"  response="11100001111" foes="11100001111" cont="0"/>
+        <request index="7"  response="00000000000" foes="00000000000" cont="0"/>
+        <request index="8"  response="00000000000" foes="00001111000" cont="0"/>
+        <request index="9"  response="00000000000" foes="00001111000" cont="0"/>
+        <request index="10" response="00000000000" foes="00001111000" cont="0"/>
     </junction>
-    <junction id="roa_recto" type="priority" x="1143.80" y="1119.29" incLanes="south_roa_1_0 west_recto_1_0 west_recto_1_1" intLanes=":roa_recto_0_0 :roa_recto_1_0 :roa_recto_2_0 :roa_recto_2_1" shape="1150.89,1117.82 1149.59,1111.55 1147.33,1111.57 1146.46,1111.18 1145.76,1110.53 1145.24,1109.62 1144.89,1108.44 1138.61,1109.70 1138.62,1112.01 1138.23,1112.90 1137.58,1113.61 1136.67,1114.15 1135.50,1114.52 1136.84,1120.78">
-        <request index="0" response="1100" foes="1100" cont="0"/>
-        <request index="1" response="0000" foes="0000" cont="0"/>
-        <request index="2" response="0000" foes="0001" cont="0"/>
-        <request index="3" response="0000" foes="0001" cont="0"/>
-    </junction>
-    <junction id="south_corrales" type="priority" x="793.96" y="775.00" incLanes="north_corrales_2_0 north_corrales_2_1" intLanes=":south_corrales_0_0" shape="793.96,775.00 788.75,778.72 793.96,775.00">
-        <request index="0" response="0" foes="0" cont="0"/>
-    </junction>
-    <junction id="south_osmena" type="priority" x="1239.00" y="669.78" incLanes="north_osmena_3_0 north_osmena_3_1" intLanes=":south_osmena_0_0" shape="1239.00,669.78 1232.70,670.92 1239.00,669.78">
-        <request index="0" response="0" foes="0" cont="0"/>
-    </junction>
-    <junction id="west_recto" type="dead_end" x="890.77" y="1173.12" incLanes="east_recto_2_0 east_recto_2_1 east_recto_2_2" intLanes="" shape="889.97,1169.06 888.10,1159.64 893.99,1186.48 891.74,1177.15"/>
+    <junction id="south_corrales" type="dead_end" x="793.96" y="775.00" incLanes="north_corrales_2_0 north_corrales_2_1" intLanes="" shape="793.96,775.00 788.75,778.72 793.96,775.00" fringe="outer"/>
+    <junction id="south_osmena" type="dead_end" x="1239.00" y="669.78" incLanes="north_osmena_3_0 north_osmena_3_1" intLanes="" shape="1239.00,669.78 1232.70,670.92 1239.00,669.78" fringe="outer"/>
+    <junction id="west_recto" type="dead_end" x="890.77" y="1173.12" incLanes="east_recto_3_0 east_recto_3_1 east_recto_3_2" intLanes="" shape="889.97,1169.06 888.10,1159.64 893.99,1186.48 891.74,1177.15" fringe="outer"/>
 
-    <junction id=":corrales_recto_16_0" type="internal" x="971.89" y="1161.34" incLanes=":corrales_recto_3_0 south_corrales_1_0 south_corrales_1_1" intLanes=":corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_7_0 :corrales_recto_8_0 :corrales_recto_9_0 :corrales_recto_9_1 :corrales_recto_13_0 :corrales_recto_13_1 :corrales_recto_15_0"/>
-    <junction id=":corrales_recto_17_0" type="internal" x="968.12" y="1149.56" incLanes=":corrales_recto_11_0 north_corrales_0_0 north_corrales_0_1" intLanes=":corrales_recto_0_0 :corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_7_0 :corrales_recto_13_0 :corrales_recto_13_1 :corrales_recto_15_0"/>
-    <junction id=":corrales_recto_18_0" type="internal" x="969.18" y="1157.78" incLanes=":corrales_recto_15_0 east_recto_1_0 east_recto_1_1" intLanes=":corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_3_0 :corrales_recto_4_0 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_9_0 :corrales_recto_9_1 :corrales_recto_11_0"/>
-    <junction id=":luna_corrales_18_0" type="internal" x="844.17" y="846.45" incLanes=":luna_corrales_3_0 south_corrales_0_0 south_corrales_0_1" intLanes=":luna_corrales_5_0 :luna_corrales_5_1 :luna_corrales_7_0 :luna_corrales_8_0 :luna_corrales_9_0 :luna_corrales_9_1 :luna_corrales_14_0 :luna_corrales_14_1 :luna_corrales_16_0"/>
-    <junction id=":luna_corrales_19_0" type="internal" x="846.26" y="840.75" incLanes=":luna_corrales_7_0 west_luna_0_0 west_luna_0_1" intLanes=":luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_3_0 :luna_corrales_9_0 :luna_corrales_9_1 :luna_corrales_11_0 :luna_corrales_12_0 :luna_corrales_13_0 :luna_corrales_14_0 :luna_corrales_14_1"/>
-    <junction id=":luna_corrales_20_0" type="internal" x="838.68" y="837.78" incLanes=":luna_corrales_11_0 north_corrales_1_0 north_corrales_1_1" intLanes=":luna_corrales_0_0 :luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_5_0 :luna_corrales_5_1 :luna_corrales_7_0 :luna_corrales_14_0 :luna_corrales_14_1 :luna_corrales_16_0 :luna_corrales_17_0"/>
-    <junction id=":luna_corrales_21_0" type="internal" x="835.63" y="833.38" incLanes=":luna_corrales_12_0 east_luna_1_1 north_corrales_1_0 north_corrales_1_1 west_luna_0_0" intLanes=":luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_7_0 :luna_corrales_13_0"/>
-    <junction id=":luna_corrales_22_0" type="internal" x="837.61" y="843.48" incLanes=":luna_corrales_16_0 east_luna_1_0 east_luna_1_1" intLanes=":luna_corrales_1_0 :luna_corrales_1_1 :luna_corrales_3_0 :luna_corrales_4_0 :luna_corrales_5_0 :luna_corrales_5_1 :luna_corrales_9_0 :luna_corrales_9_1 :luna_corrales_11_0"/>
-    <junction id=":luna_corrales_23_0" type="internal" x="832.78" y="845.82" incLanes=":luna_corrales_17_0 east_luna_1_0 east_luna_1_1 north_corrales_1_0 south_corrales_0_1" intLanes=":luna_corrales_0_0 :luna_corrales_5_0 :luna_corrales_5_1 :luna_corrales_11_0"/>
-    <junction id=":luna_osmena_10_0" type="internal" x="1261.49" y="794.06" incLanes=":luna_osmena_3_0 south_osmena_0_0 south_osmena_0_1 west_luna_2_1" intLanes=":luna_osmena_4_0 :luna_osmena_4_1 :luna_osmena_9_0"/>
-    <junction id=":luna_osmena_11_0" type="internal" x="1259.24" y="781.80" incLanes=":luna_osmena_6_0 north_osmena_2_0 north_osmena_2_1" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_9_0"/>
-    <junction id=":luna_osmena_12_0" type="internal" x="1258.31" y="776.76" incLanes=":luna_osmena_7_0 north_osmena_2_0 north_osmena_2_1 west_luna_2_0" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_8_0"/>
-    <junction id=":luna_roa_15_0" type="internal" x="1081.51" y="807.58" incLanes=":luna_roa_2_0 south_roa_0_0" intLanes=":luna_roa_4_0 :luna_roa_4_1 :luna_roa_6_0 :luna_roa_7_0 :luna_roa_8_0 :luna_roa_12_0 :luna_roa_12_1 :luna_roa_14_0"/>
-    <junction id=":luna_roa_16_0" type="internal" x="1083.46" y="804.84" incLanes=":luna_roa_6_0 west_luna_1_0 west_luna_1_1" intLanes=":luna_roa_1_0 :luna_roa_2_0 :luna_roa_8_0 :luna_roa_9_0 :luna_roa_10_0 :luna_roa_11_0 :luna_roa_12_0 :luna_roa_12_1"/>
-    <junction id=":luna_roa_17_0" type="internal" x="1080.71" y="801.85" incLanes=":luna_roa_9_0 north_roa_0_0" intLanes=":luna_roa_0_0 :luna_roa_1_0 :luna_roa_4_0 :luna_roa_4_1 :luna_roa_6_0 :luna_roa_12_0 :luna_roa_12_1 :luna_roa_14_0"/>
-    <junction id=":luna_roa_18_0" type="internal" x="1080.00" y="796.18" incLanes=":luna_roa_10_0 east_luna_0_1 north_roa_0_0 west_luna_1_0" intLanes=":luna_roa_1_0 :luna_roa_6_0 :luna_roa_11_0"/>
-    <junction id=":luna_roa_19_0" type="internal" x="1078.72" y="805.45" incLanes=":luna_roa_14_0 east_luna_0_0 east_luna_0_1" intLanes=":luna_roa_1_0 :luna_roa_2_0 :luna_roa_3_0 :luna_roa_4_0 :luna_roa_4_1 :luna_roa_8_0 :luna_roa_9_0"/>
-    <junction id=":osmena_florentino_10_0" type="internal" x="1271.32" y="846.46" incLanes=":osmena_florentino_2_0 south_osmena_1_0 south_osmena_1_1" intLanes=":osmena_florentino_4_0 :osmena_florentino_5_0 :osmena_florentino_6_0 :osmena_florentino_7_0 :osmena_florentino_7_1"/>
-    <junction id=":osmena_florentino_11_0" type="internal" x="1279.66" y="842.29" incLanes=":osmena_florentino_5_0 north_osmena_1_1 south_osmena_1_0" intLanes=":osmena_florentino_2_0 :osmena_florentino_6_0"/>
-    <junction id=":osmena_florentino_12_0" type="internal" x="1269.82" y="838.61" incLanes=":osmena_florentino_9_0 east_florentino_0_0 north_osmena_1_0 north_osmena_1_1" intLanes=":osmena_florentino_0_0 :osmena_florentino_0_1 :osmena_florentino_4_0"/>
-    <junction id=":recto_osmena_18_0" type="internal" x="1318.52" y="1090.80" incLanes=":recto_osmena_3_0 east_recto_0_2 south_osmena_2_0 south_osmena_2_1 west_recto_2_1" intLanes=":recto_osmena_6_0 :recto_osmena_6_1 :recto_osmena_8_0 :recto_osmena_9_0 :recto_osmena_10_0 :recto_osmena_11_0 :recto_osmena_11_1 :recto_osmena_15_0 :recto_osmena_15_1 :recto_osmena_17_0"/>
-    <junction id=":recto_osmena_19_0" type="internal" x="1320.42" y="1095.89" incLanes=":recto_osmena_4_0 east_recto_0_0 south_osmena_2_0 south_osmena_2_1 west_recto_2_1" intLanes=":recto_osmena_5_0 :recto_osmena_11_0 :recto_osmena_11_1 :recto_osmena_17_0"/>
-    <junction id=":recto_osmena_20_0" type="internal" x="1323.02" y="1083.47" incLanes=":recto_osmena_8_0 west_recto_2_0 west_recto_2_1" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_11_0 :recto_osmena_11_1 :recto_osmena_13_0 :recto_osmena_14_0 :recto_osmena_15_0 :recto_osmena_15_1"/>
-    <junction id=":recto_osmena_21_0" type="internal" x="1325.97" y="1081.74" incLanes=":recto_osmena_9_0 north_osmena_0_1 south_osmena_2_0 west_recto_2_0 west_recto_2_1" intLanes=":recto_osmena_3_0 :recto_osmena_10_0 :recto_osmena_15_0 :recto_osmena_15_1"/>
-    <junction id=":recto_osmena_22_0" type="internal" x="1316.58" y="1076.19" incLanes=":recto_osmena_13_0 east_recto_0_2 north_osmena_0_0 north_osmena_0_1 west_recto_2_1" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_6_0 :recto_osmena_6_1 :recto_osmena_8_0 :recto_osmena_15_0 :recto_osmena_15_1 :recto_osmena_17_0"/>
-    <junction id=":recto_osmena_23_0" type="internal" x="1311.04" y="1083.69" incLanes=":recto_osmena_17_0" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_4_0 :recto_osmena_5_0 :recto_osmena_6_0 :recto_osmena_6_1 :recto_osmena_11_0 :recto_osmena_11_1 :recto_osmena_13_0"/>
+    <junction id=":corrales_recto_18_0" type="internal" x="971.64" y="1163.69" incLanes=":corrales_recto_3_0 south_corrales_1_0 south_corrales_1_1" intLanes=":corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_5_2 :corrales_recto_8_0 :corrales_recto_9_0 :corrales_recto_10_0 :corrales_recto_10_1 :corrales_recto_14_0 :corrales_recto_14_1 :corrales_recto_14_2 :corrales_recto_17_0"/>
+    <junction id=":corrales_recto_19_0" type="internal" x="975.93" y="1155.67" incLanes=":corrales_recto_8_0 west_recto_0_0 west_recto_0_1 west_recto_0_2" intLanes=":corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_3_0 :corrales_recto_10_0 :corrales_recto_10_1 :corrales_recto_12_0 :corrales_recto_13_0 :corrales_recto_14_0 :corrales_recto_14_1 :corrales_recto_14_2"/>
+    <junction id=":corrales_recto_20_0" type="internal" x="967.54" y="1144.83" incLanes=":corrales_recto_12_0 north_corrales_0_0 north_corrales_0_1" intLanes=":corrales_recto_0_0 :corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_5_2 :corrales_recto_8_0 :corrales_recto_14_0 :corrales_recto_14_1 :corrales_recto_14_2 :corrales_recto_17_0"/>
+    <junction id=":corrales_recto_21_0" type="internal" x="968.47" y="1156.92" incLanes=":corrales_recto_17_0 east_recto_2_0 east_recto_2_1 east_recto_2_2" intLanes=":corrales_recto_1_0 :corrales_recto_1_1 :corrales_recto_3_0 :corrales_recto_4_0 :corrales_recto_5_0 :corrales_recto_5_1 :corrales_recto_5_2 :corrales_recto_10_0 :corrales_recto_10_1 :corrales_recto_12_0"/>
+    <junction id=":luna_osmena_10_0" type="internal" x="1260.78" y="794.60" incLanes=":luna_osmena_3_0 south_osmena_0_0 south_osmena_0_1 west_luna_2_1" intLanes=":luna_osmena_4_0 :luna_osmena_4_1 :luna_osmena_9_0"/>
+    <junction id=":luna_osmena_11_0" type="internal" x="1259.78" y="779.77" incLanes=":luna_osmena_6_0 north_osmena_2_0 north_osmena_2_1" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_9_0"/>
+    <junction id=":luna_osmena_12_0" type="internal" x="1259.03" y="776.22" incLanes=":luna_osmena_7_0 north_osmena_2_0 north_osmena_2_1 west_luna_2_0" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_8_0"/>
+    <junction id=":luna_roa_16_0" type="internal" x="1081.04" y="811.03" incLanes=":luna_roa_3_0 south_roa_0_0 south_roa_0_1" intLanes=":luna_roa_5_0 :luna_roa_5_1 :luna_roa_7_0 :luna_roa_8_0 :luna_roa_9_0 :luna_roa_9_1 :luna_roa_13_0 :luna_roa_13_1 :luna_roa_15_0"/>
+    <junction id=":luna_roa_17_0" type="internal" x="1087.33" y="805.31" incLanes=":luna_roa_7_0 west_luna_1_0 west_luna_1_1" intLanes=":luna_roa_1_0 :luna_roa_1_1 :luna_roa_3_0 :luna_roa_9_0 :luna_roa_9_1 :luna_roa_11_0 :luna_roa_12_0 :luna_roa_13_0 :luna_roa_13_1"/>
+    <junction id=":luna_roa_18_0" type="internal" x="1081.19" y="799.40" incLanes=":luna_roa_11_0 north_roa_0_0 north_roa_0_1" intLanes=":luna_roa_0_0 :luna_roa_1_0 :luna_roa_1_1 :luna_roa_5_0 :luna_roa_5_1 :luna_roa_7_0 :luna_roa_13_0 :luna_roa_13_1 :luna_roa_15_0"/>
+    <junction id=":luna_roa_19_0" type="internal" x="1075.68" y="804.97" incLanes=":luna_roa_15_0 east_luna_0_0 east_luna_0_1" intLanes=":luna_roa_1_0 :luna_roa_1_1 :luna_roa_3_0 :luna_roa_4_0 :luna_roa_5_0 :luna_roa_5_1 :luna_roa_9_0 :luna_roa_9_1 :luna_roa_11_0"/>
+    <junction id=":osmena_florentino_8_0" type="internal" x="1271.04" y="849.69" incLanes=":osmena_florentino_2_0 south_osmena_1_0 south_osmena_1_1" intLanes=":osmena_florentino_4_0 :osmena_florentino_6_0 :osmena_florentino_6_1"/>
+    <junction id=":recto_osmena_18_0" type="internal" x="1318.98" y="1094.45" incLanes=":recto_osmena_3_0 east_recto_0_2 south_osmena_2_0 south_osmena_2_1 west_recto_2_2" intLanes=":recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_9_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
+    <junction id=":recto_osmena_19_0" type="internal" x="1324.12" y="1083.45" incLanes=":recto_osmena_8_0 west_recto_2_0 west_recto_2_1 west_recto_2_2" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0 :recto_osmena_13_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2"/>
+    <junction id=":recto_osmena_20_0" type="internal" x="1316.29" y="1072.63" incLanes=":recto_osmena_12_0 east_recto_0_2 north_osmena_0_0 north_osmena_0_1 west_recto_2_2" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
+    <junction id=":recto_osmena_21_0" type="internal" x="1308.67" y="1083.74" incLanes=":recto_osmena_17_0 east_recto_0_0 east_recto_0_1 east_recto_0_2" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_4_0 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0"/>
+    <junction id=":roa_recto_11_0" type="internal" x="1150.41" y="1118.83" incLanes=":roa_recto_3_0 west_recto_1_0 west_recto_1_1 west_recto_1_2" intLanes=":roa_recto_5_0 :roa_recto_5_1 :roa_recto_8_0 :roa_recto_8_1 :roa_recto_8_2"/>
 
     <connection from="east_florentino_0" to="south_osmena_2" fromLane="0" toLane="0" via=":osmena_florentino_3_0" tl="osmena_florentino_tl" linkIndex="3" dir="r" state="o"/>
-    <connection from="east_florentino_0" to="north_osmena_2" fromLane="0" toLane="1" via=":osmena_florentino_4_0" tl="osmena_florentino_tl" linkIndex="4" dir="l" state="o"/>
-    <connection from="east_florentino_0" to="west_florentino_0" fromLane="0" toLane="0" via=":osmena_florentino_5_0" tl="osmena_florentino_tl" linkIndex="5" dir="t" state="o"/>
-    <connection from="east_luna_0" to="south_roa_1" fromLane="0" toLane="0" via=":luna_roa_3_0" tl="luna_roa_tl" linkIndex="3" dir="r" state="O"/>
-    <connection from="east_luna_0" to="east_luna_1" fromLane="0" toLane="0" via=":luna_roa_4_0" tl="luna_roa_tl" linkIndex="4" dir="s" state="O"/>
-    <connection from="east_luna_0" to="east_luna_1" fromLane="1" toLane="1" via=":luna_roa_4_1" tl="luna_roa_tl" linkIndex="5" dir="s" state="O"/>
-    <connection from="east_luna_0" to="north_roa_1" fromLane="1" toLane="0" via=":luna_roa_6_0" tl="luna_roa_tl" linkIndex="6" dir="l" state="o"/>
-    <connection from="east_luna_1" to="south_corrales_1" fromLane="0" toLane="0" via=":luna_corrales_4_0" tl="luna_corrales_tl" linkIndex="4" dir="r" state="o"/>
-    <connection from="east_luna_1" to="east_luna_2" fromLane="0" toLane="0" via=":luna_corrales_5_0" tl="luna_corrales_tl" linkIndex="5" dir="s" state="o"/>
-    <connection from="east_luna_1" to="east_luna_2" fromLane="1" toLane="1" via=":luna_corrales_5_1" tl="luna_corrales_tl" linkIndex="6" dir="s" state="o"/>
-    <connection from="east_luna_1" to="north_corrales_2" fromLane="1" toLane="1" via=":luna_corrales_7_0" tl="luna_corrales_tl" linkIndex="7" dir="l" state="o"/>
-    <connection from="east_luna_2" to="west_luna_0" fromLane="1" toLane="1" via=":luna_0_0" dir="t" state="M"/>
-    <connection from="east_recto_0" to="south_osmena_3" fromLane="0" toLane="0" via=":recto_osmena_5_0" tl="recto_osmena_tl" linkIndex="5" dir="r" state="O"/>
-    <connection from="east_recto_0" to="east_recto_1" fromLane="0" toLane="0" via=":recto_osmena_6_0" tl="recto_osmena_tl" linkIndex="6" dir="s" state="O"/>
-    <connection from="east_recto_0" to="east_recto_1" fromLane="1" toLane="1" via=":recto_osmena_6_1" tl="recto_osmena_tl" linkIndex="7" dir="s" state="O"/>
+    <connection from="east_florentino_0" to="north_osmena_2" fromLane="1" toLane="1" via=":osmena_florentino_4_0" tl="osmena_florentino_tl" linkIndex="4" dir="l" state="o"/>
+    <connection from="east_luna_0" to="south_roa_1" fromLane="0" toLane="0" via=":luna_roa_4_0" tl="luna_roa_tl" linkIndex="4" dir="r" state="O"/>
+    <connection from="east_luna_0" to="east_luna_1" fromLane="0" toLane="0" via=":luna_roa_5_0" tl="luna_roa_tl" linkIndex="5" dir="s" state="O"/>
+    <connection from="east_luna_0" to="east_luna_1" fromLane="1" toLane="1" via=":luna_roa_5_1" tl="luna_roa_tl" linkIndex="6" dir="s" state="O"/>
+    <connection from="east_luna_0" to="north_roa_1" fromLane="1" toLane="1" via=":luna_roa_7_0" tl="luna_roa_tl" linkIndex="7" dir="l" state="o"/>
+    <connection from="east_luna_1" to="south_corrales_1" fromLane="0" toLane="0" via=":luna_corrales_3_0" tl="luna_corrales_tl" linkIndex="4" dir="r" state="o"/>
+    <connection from="east_luna_1" to="east_luna_2" fromLane="0" toLane="0" via=":luna_corrales_4_0" tl="luna_corrales_tl" linkIndex="5" dir="s" state="o"/>
+    <connection from="east_luna_1" to="east_luna_2" fromLane="1" toLane="1" via=":luna_corrales_4_1" tl="luna_corrales_tl" linkIndex="6" dir="s" state="o"/>
+    <connection from="east_recto_0" to="south_osmena_3" fromLane="0" toLane="0" via=":recto_osmena_4_0" tl="recto_osmena_tl" linkIndex="4" dir="r" state="O"/>
+    <connection from="east_recto_0" to="east_recto_1" fromLane="0" toLane="0" via=":recto_osmena_5_0" tl="recto_osmena_tl" linkIndex="5" dir="s" state="O"/>
+    <connection from="east_recto_0" to="east_recto_1" fromLane="1" toLane="1" via=":recto_osmena_5_1" tl="recto_osmena_tl" linkIndex="6" dir="s" state="O"/>
+    <connection from="east_recto_0" to="east_recto_1" fromLane="2" toLane="2" via=":recto_osmena_5_2" tl="recto_osmena_tl" linkIndex="7" dir="s" state="O"/>
     <connection from="east_recto_0" to="north_osmena_1" fromLane="2" toLane="1" via=":recto_osmena_8_0" tl="recto_osmena_tl" linkIndex="8" dir="l" state="o"/>
-    <connection from="east_recto_0" to="west_recto_3" fromLane="2" toLane="2" via=":recto_osmena_9_0" tl="recto_osmena_tl" linkIndex="9" dir="t" state="o"/>
-    <connection from="east_recto_1" to="south_corrales_2" fromLane="0" toLane="0" via=":corrales_recto_4_0" tl="corrales_recto_tl" linkIndex="4" dir="r" state="O"/>
-    <connection from="east_recto_1" to="east_recto_2" fromLane="0" toLane="1" via=":corrales_recto_5_0" tl="corrales_recto_tl" linkIndex="5" dir="s" state="O"/>
-    <connection from="east_recto_1" to="east_recto_2" fromLane="1" toLane="2" via=":corrales_recto_5_1" tl="corrales_recto_tl" linkIndex="6" dir="s" state="O"/>
-    <connection from="east_recto_1" to="north_corrales_1" fromLane="1" toLane="1" via=":corrales_recto_7_0" tl="corrales_recto_tl" linkIndex="7" dir="l" state="o"/>
-    <connection from="north_corrales_0" to="east_recto_2" fromLane="0" toLane="0" via=":corrales_recto_0_0" tl="corrales_recto_tl" linkIndex="0" dir="r" state="O"/>
+    <connection from="east_recto_1" to="east_recto_2" fromLane="0" toLane="0" via=":roa_recto_0_0" dir="s" state="M"/>
+    <connection from="east_recto_1" to="east_recto_2" fromLane="1" toLane="1" via=":roa_recto_0_1" dir="s" state="M"/>
+    <connection from="east_recto_1" to="east_recto_2" fromLane="2" toLane="2" via=":roa_recto_0_2" dir="s" state="M"/>
+    <connection from="east_recto_1" to="north_roa_0" fromLane="2" toLane="1" via=":roa_recto_3_0" dir="l" state="m"/>
+    <connection from="east_recto_2" to="south_corrales_2" fromLane="0" toLane="0" via=":corrales_recto_4_0" tl="corrales_recto_tl" linkIndex="4" dir="r" state="O"/>
+    <connection from="east_recto_2" to="east_recto_3" fromLane="0" toLane="0" via=":corrales_recto_5_0" tl="corrales_recto_tl" linkIndex="5" dir="s" state="O"/>
+    <connection from="east_recto_2" to="east_recto_3" fromLane="1" toLane="1" via=":corrales_recto_5_1" tl="corrales_recto_tl" linkIndex="6" dir="s" state="O"/>
+    <connection from="east_recto_2" to="east_recto_3" fromLane="2" toLane="2" via=":corrales_recto_5_2" tl="corrales_recto_tl" linkIndex="7" dir="s" state="O"/>
+    <connection from="east_recto_2" to="north_corrales_1" fromLane="2" toLane="1" via=":corrales_recto_8_0" tl="corrales_recto_tl" linkIndex="8" dir="l" state="o"/>
+    <connection from="north_corrales_0" to="east_recto_3" fromLane="0" toLane="0" via=":corrales_recto_0_0" tl="corrales_recto_tl" linkIndex="0" dir="r" state="o"/>
     <connection from="north_corrales_0" to="north_corrales_1" fromLane="0" toLane="0" via=":corrales_recto_1_0" tl="corrales_recto_tl" linkIndex="1" dir="s" state="o"/>
     <connection from="north_corrales_0" to="north_corrales_1" fromLane="1" toLane="1" via=":corrales_recto_1_1" tl="corrales_recto_tl" linkIndex="2" dir="s" state="o"/>
-    <connection from="north_corrales_0" to="west_recto_1" fromLane="1" toLane="1" via=":corrales_recto_3_0" tl="corrales_recto_tl" linkIndex="3" dir="l" state="o"/>
+    <connection from="north_corrales_0" to="west_recto_1" fromLane="1" toLane="2" via=":corrales_recto_3_0" tl="corrales_recto_tl" linkIndex="3" dir="l" state="o"/>
     <connection from="north_corrales_1" to="east_luna_2" fromLane="0" toLane="0" via=":luna_corrales_0_0" tl="luna_corrales_tl" linkIndex="0" dir="r" state="O"/>
     <connection from="north_corrales_1" to="north_corrales_2" fromLane="0" toLane="0" via=":luna_corrales_1_0" tl="luna_corrales_tl" linkIndex="1" dir="s" state="O"/>
     <connection from="north_corrales_1" to="north_corrales_2" fromLane="1" toLane="1" via=":luna_corrales_1_1" tl="luna_corrales_tl" linkIndex="2" dir="s" state="O"/>
-    <connection from="north_corrales_1" to="west_luna_1" fromLane="1" toLane="1" via=":luna_corrales_3_0" tl="luna_corrales_tl" linkIndex="3" dir="l" state="o"/>
-    <connection from="north_corrales_2" to="south_corrales_0" fromLane="1" toLane="1" via=":south_corrales_0_0" dir="t" state="M"/>
     <connection from="north_osmena_0" to="east_recto_1" fromLane="0" toLane="0" via=":recto_osmena_0_0" tl="recto_osmena_tl" linkIndex="0" dir="r" state="o"/>
     <connection from="north_osmena_0" to="north_osmena_1" fromLane="0" toLane="0" via=":recto_osmena_1_0" tl="recto_osmena_tl" linkIndex="1" dir="s" state="o"/>
     <connection from="north_osmena_0" to="north_osmena_1" fromLane="1" toLane="1" via=":recto_osmena_1_1" tl="recto_osmena_tl" linkIndex="2" dir="s" state="o"/>
     <connection from="north_osmena_0" to="west_recto_3" fromLane="1" toLane="2" via=":recto_osmena_3_0" tl="recto_osmena_tl" linkIndex="3" dir="l" state="o"/>
-    <connection from="north_osmena_0" to="south_osmena_3" fromLane="1" toLane="1" via=":recto_osmena_4_0" tl="recto_osmena_tl" linkIndex="4" dir="t" state="o"/>
     <connection from="north_osmena_1" to="north_osmena_2" fromLane="0" toLane="0" via=":osmena_florentino_0_0" tl="osmena_florentino_tl" linkIndex="0" dir="s" state="O"/>
     <connection from="north_osmena_1" to="north_osmena_2" fromLane="1" toLane="1" via=":osmena_florentino_0_1" tl="osmena_florentino_tl" linkIndex="1" dir="s" state="O"/>
-    <connection from="north_osmena_1" to="west_florentino_0" fromLane="1" toLane="0" via=":osmena_florentino_2_0" tl="osmena_florentino_tl" linkIndex="2" dir="l" state="o"/>
+    <connection from="north_osmena_1" to="west_florentino_0" fromLane="1" toLane="1" via=":osmena_florentino_2_0" tl="osmena_florentino_tl" linkIndex="2" dir="l" state="o"/>
     <connection from="north_osmena_2" to="east_luna_0" fromLane="0" toLane="0" via=":luna_osmena_0_0" dir="r" state="M"/>
     <connection from="north_osmena_2" to="north_osmena_3" fromLane="0" toLane="0" via=":luna_osmena_1_0" dir="s" state="M"/>
     <connection from="north_osmena_2" to="north_osmena_3" fromLane="1" toLane="1" via=":luna_osmena_1_1" dir="s" state="M"/>
     <connection from="north_osmena_2" to="south_osmena_1" fromLane="1" toLane="1" via=":luna_osmena_3_0" dir="t" state="m"/>
-    <connection from="north_osmena_3" to="south_osmena_0" fromLane="1" toLane="1" via=":south_osmena_0_0" dir="t" state="M"/>
     <connection from="north_roa_0" to="east_luna_1" fromLane="0" toLane="0" via=":luna_roa_0_0" tl="luna_roa_tl" linkIndex="0" dir="r" state="o"/>
     <connection from="north_roa_0" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_1_0" tl="luna_roa_tl" linkIndex="1" dir="s" state="o"/>
-    <connection from="north_roa_0" to="west_luna_2" fromLane="0" toLane="1" via=":luna_roa_2_0" tl="luna_roa_tl" linkIndex="2" dir="l" state="o"/>
-    <connection from="north_roa_1" to="south_roa_0" fromLane="0" toLane="0" via=":roa_0_0" dir="t" state="M"/>
-    <connection from="south_corrales_0" to="west_luna_1" fromLane="0" toLane="0" via=":luna_corrales_8_0" tl="luna_corrales_tl" linkIndex="8" dir="r" state="O"/>
-    <connection from="south_corrales_0" to="south_corrales_1" fromLane="0" toLane="0" via=":luna_corrales_9_0" tl="luna_corrales_tl" linkIndex="9" dir="s" state="O"/>
-    <connection from="south_corrales_0" to="south_corrales_1" fromLane="1" toLane="1" via=":luna_corrales_9_1" tl="luna_corrales_tl" linkIndex="10" dir="s" state="O"/>
-    <connection from="south_corrales_0" to="east_luna_2" fromLane="1" toLane="1" via=":luna_corrales_11_0" tl="luna_corrales_tl" linkIndex="11" dir="l" state="o"/>
-    <connection from="south_corrales_0" to="north_corrales_2" fromLane="1" toLane="1" via=":luna_corrales_12_0" tl="luna_corrales_tl" linkIndex="12" dir="t" state="o"/>
-    <connection from="south_corrales_1" to="west_recto_1" fromLane="0" toLane="0" via=":corrales_recto_8_0" tl="corrales_recto_tl" linkIndex="8" dir="r" state="o"/>
-    <connection from="south_corrales_1" to="south_corrales_2" fromLane="0" toLane="0" via=":corrales_recto_9_0" tl="corrales_recto_tl" linkIndex="9" dir="s" state="o"/>
-    <connection from="south_corrales_1" to="south_corrales_2" fromLane="1" toLane="1" via=":corrales_recto_9_1" tl="corrales_recto_tl" linkIndex="10" dir="s" state="o"/>
-    <connection from="south_corrales_1" to="east_recto_2" fromLane="1" toLane="2" via=":corrales_recto_11_0" tl="corrales_recto_tl" linkIndex="11" dir="l" state="o"/>
+    <connection from="north_roa_0" to="north_roa_1" fromLane="1" toLane="1" via=":luna_roa_1_1" tl="luna_roa_tl" linkIndex="2" dir="s" state="o"/>
+    <connection from="north_roa_0" to="west_luna_2" fromLane="1" toLane="1" via=":luna_roa_3_0" tl="luna_roa_tl" linkIndex="3" dir="l" state="o"/>
+    <connection from="south_corrales_0" to="west_luna_1" fromLane="0" toLane="0" via=":luna_corrales_6_0" tl="luna_corrales_tl" linkIndex="8" dir="r" state="O"/>
+    <connection from="south_corrales_0" to="south_corrales_1" fromLane="0" toLane="0" via=":luna_corrales_7_0" tl="luna_corrales_tl" linkIndex="9" dir="s" state="O"/>
+    <connection from="south_corrales_0" to="south_corrales_1" fromLane="1" toLane="1" via=":luna_corrales_7_1" tl="luna_corrales_tl" linkIndex="10" dir="s" state="O"/>
+    <connection from="south_corrales_1" to="west_recto_1" fromLane="0" toLane="0" via=":corrales_recto_9_0" tl="corrales_recto_tl" linkIndex="9" dir="r" state="o"/>
+    <connection from="south_corrales_1" to="south_corrales_2" fromLane="0" toLane="0" via=":corrales_recto_10_0" tl="corrales_recto_tl" linkIndex="10" dir="s" state="o"/>
+    <connection from="south_corrales_1" to="south_corrales_2" fromLane="1" toLane="1" via=":corrales_recto_10_1" tl="corrales_recto_tl" linkIndex="11" dir="s" state="o"/>
+    <connection from="south_corrales_1" to="east_recto_3" fromLane="1" toLane="2" via=":corrales_recto_12_0" tl="corrales_recto_tl" linkIndex="12" dir="l" state="o"/>
     <connection from="south_osmena_0" to="south_osmena_1" fromLane="0" toLane="0" via=":luna_osmena_4_0" dir="s" state="M"/>
     <connection from="south_osmena_0" to="south_osmena_1" fromLane="1" toLane="1" via=":luna_osmena_4_1" dir="s" state="M"/>
     <connection from="south_osmena_0" to="east_luna_0" fromLane="1" toLane="1" via=":luna_osmena_6_0" dir="l" state="m"/>
     <connection from="south_osmena_0" to="north_osmena_3" fromLane="1" toLane="1" via=":luna_osmena_7_0" dir="t" state="m"/>
-    <connection from="south_osmena_1" to="west_florentino_0" fromLane="0" toLane="0" via=":osmena_florentino_6_0" tl="osmena_florentino_tl" linkIndex="6" dir="r" state="O"/>
-    <connection from="south_osmena_1" to="south_osmena_2" fromLane="0" toLane="0" via=":osmena_florentino_7_0" tl="osmena_florentino_tl" linkIndex="7" dir="s" state="O"/>
-    <connection from="south_osmena_1" to="south_osmena_2" fromLane="1" toLane="1" via=":osmena_florentino_7_1" tl="osmena_florentino_tl" linkIndex="8" dir="s" state="O"/>
-    <connection from="south_osmena_1" to="north_osmena_2" fromLane="1" toLane="1" via=":osmena_florentino_9_0" tl="osmena_florentino_tl" linkIndex="9" dir="t" state="o"/>
-    <connection from="south_osmena_2" to="west_recto_3" fromLane="0" toLane="0" via=":recto_osmena_10_0" tl="recto_osmena_tl" linkIndex="10" dir="r" state="O"/>
-    <connection from="south_osmena_2" to="south_osmena_3" fromLane="0" toLane="0" via=":recto_osmena_11_0" tl="recto_osmena_tl" linkIndex="11" dir="s" state="o"/>
-    <connection from="south_osmena_2" to="south_osmena_3" fromLane="1" toLane="1" via=":recto_osmena_11_1" tl="recto_osmena_tl" linkIndex="12" dir="s" state="o"/>
-    <connection from="south_osmena_2" to="east_recto_1" fromLane="1" toLane="1" via=":recto_osmena_13_0" tl="recto_osmena_tl" linkIndex="13" dir="l" state="o"/>
-    <connection from="south_roa_0" to="west_luna_2" fromLane="0" toLane="0" via=":luna_roa_7_0" tl="luna_roa_tl" linkIndex="7" dir="r" state="o"/>
-    <connection from="south_roa_0" to="south_roa_1" fromLane="0" toLane="0" via=":luna_roa_8_0" tl="luna_roa_tl" linkIndex="8" dir="s" state="o"/>
-    <connection from="south_roa_0" to="east_luna_1" fromLane="0" toLane="1" via=":luna_roa_9_0" tl="luna_roa_tl" linkIndex="9" dir="l" state="o"/>
-    <connection from="south_roa_0" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_10_0" tl="luna_roa_tl" linkIndex="10" dir="t" state="o"/>
-    <connection from="south_roa_1" to="west_recto_2" fromLane="0" toLane="0" via=":roa_recto_0_0" dir="r" state="m"/>
-    <connection from="west_florentino_0" to="east_florentino_0" fromLane="0" toLane="0" via=":florentino_0_0" dir="t" state="M"/>
-    <connection from="west_luna_0" to="north_corrales_2" fromLane="0" toLane="0" via=":luna_corrales_13_0" tl="luna_corrales_tl" linkIndex="13" dir="r" state="o"/>
-    <connection from="west_luna_0" to="west_luna_1" fromLane="0" toLane="0" via=":luna_corrales_14_0" tl="luna_corrales_tl" linkIndex="14" dir="s" state="o"/>
-    <connection from="west_luna_0" to="west_luna_1" fromLane="1" toLane="1" via=":luna_corrales_14_1" tl="luna_corrales_tl" linkIndex="15" dir="s" state="o"/>
-    <connection from="west_luna_0" to="south_corrales_1" fromLane="1" toLane="1" via=":luna_corrales_16_0" tl="luna_corrales_tl" linkIndex="16" dir="l" state="o"/>
-    <connection from="west_luna_0" to="east_luna_2" fromLane="1" toLane="1" via=":luna_corrales_17_0" tl="luna_corrales_tl" linkIndex="17" dir="t" state="o"/>
-    <connection from="west_luna_1" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_11_0" tl="luna_roa_tl" linkIndex="11" dir="r" state="O"/>
-    <connection from="west_luna_1" to="west_luna_2" fromLane="0" toLane="0" via=":luna_roa_12_0" tl="luna_roa_tl" linkIndex="12" dir="s" state="O"/>
-    <connection from="west_luna_1" to="west_luna_2" fromLane="1" toLane="1" via=":luna_roa_12_1" tl="luna_roa_tl" linkIndex="13" dir="s" state="O"/>
-    <connection from="west_luna_1" to="south_roa_1" fromLane="1" toLane="0" via=":luna_roa_14_0" tl="luna_roa_tl" linkIndex="14" dir="l" state="o"/>
+    <connection from="south_osmena_1" to="west_florentino_0" fromLane="0" toLane="0" via=":osmena_florentino_5_0" tl="osmena_florentino_tl" linkIndex="5" dir="r" state="O"/>
+    <connection from="south_osmena_1" to="south_osmena_2" fromLane="0" toLane="0" via=":osmena_florentino_6_0" tl="osmena_florentino_tl" linkIndex="6" dir="s" state="O"/>
+    <connection from="south_osmena_1" to="south_osmena_2" fromLane="1" toLane="1" via=":osmena_florentino_6_1" tl="osmena_florentino_tl" linkIndex="7" dir="s" state="O"/>
+    <connection from="south_osmena_2" to="west_recto_3" fromLane="0" toLane="0" via=":recto_osmena_9_0" tl="recto_osmena_tl" linkIndex="9" dir="r" state="o"/>
+    <connection from="south_osmena_2" to="south_osmena_3" fromLane="0" toLane="0" via=":recto_osmena_10_0" tl="recto_osmena_tl" linkIndex="10" dir="s" state="o"/>
+    <connection from="south_osmena_2" to="south_osmena_3" fromLane="1" toLane="1" via=":recto_osmena_10_1" tl="recto_osmena_tl" linkIndex="11" dir="s" state="o"/>
+    <connection from="south_osmena_2" to="east_recto_1" fromLane="1" toLane="2" via=":recto_osmena_12_0" tl="recto_osmena_tl" linkIndex="12" dir="l" state="o"/>
+    <connection from="south_roa_0" to="west_luna_2" fromLane="0" toLane="0" via=":luna_roa_8_0" tl="luna_roa_tl" linkIndex="8" dir="r" state="o"/>
+    <connection from="south_roa_0" to="south_roa_1" fromLane="0" toLane="0" via=":luna_roa_9_0" tl="luna_roa_tl" linkIndex="9" dir="s" state="o"/>
+    <connection from="south_roa_0" to="south_roa_1" fromLane="1" toLane="1" via=":luna_roa_9_1" tl="luna_roa_tl" linkIndex="10" dir="s" state="o"/>
+    <connection from="south_roa_0" to="east_luna_1" fromLane="1" toLane="1" via=":luna_roa_11_0" tl="luna_roa_tl" linkIndex="11" dir="l" state="o"/>
+    <connection from="south_roa_1" to="west_recto_2" fromLane="0" toLane="0" via=":roa_recto_4_0" dir="r" state="m"/>
+    <connection from="south_roa_1" to="east_recto_2" fromLane="0" toLane="1" via=":roa_recto_5_0" dir="l" state="m"/>
+    <connection from="south_roa_1" to="east_recto_2" fromLane="1" toLane="2" via=":roa_recto_5_1" dir="l" state="m"/>
+    <connection from="west_luna_0" to="north_corrales_2" fromLane="0" toLane="0" via=":luna_corrales_9_0" tl="luna_corrales_tl" linkIndex="13" dir="r" state="o"/>
+    <connection from="west_luna_0" to="west_luna_1" fromLane="0" toLane="0" via=":luna_corrales_10_0" tl="luna_corrales_tl" linkIndex="14" dir="s" state="o"/>
+    <connection from="west_luna_0" to="west_luna_1" fromLane="1" toLane="1" via=":luna_corrales_10_1" tl="luna_corrales_tl" linkIndex="15" dir="s" state="o"/>
+    <connection from="west_luna_1" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_12_0" tl="luna_roa_tl" linkIndex="12" dir="r" state="O"/>
+    <connection from="west_luna_1" to="west_luna_2" fromLane="0" toLane="0" via=":luna_roa_13_0" tl="luna_roa_tl" linkIndex="13" dir="s" state="O"/>
+    <connection from="west_luna_1" to="west_luna_2" fromLane="1" toLane="1" via=":luna_roa_13_1" tl="luna_roa_tl" linkIndex="14" dir="s" state="O"/>
+    <connection from="west_luna_1" to="south_roa_1" fromLane="1" toLane="1" via=":luna_roa_15_0" tl="luna_roa_tl" linkIndex="15" dir="l" state="o"/>
     <connection from="west_luna_2" to="north_osmena_3" fromLane="0" toLane="0" via=":luna_osmena_8_0" dir="r" state="m"/>
     <connection from="west_luna_2" to="south_osmena_1" fromLane="1" toLane="1" via=":luna_osmena_9_0" dir="l" state="m"/>
-    <connection from="west_recto_0" to="north_corrales_1" fromLane="0" toLane="0" via=":corrales_recto_12_0" tl="corrales_recto_tl" linkIndex="12" dir="r" state="O"/>
-    <connection from="west_recto_0" to="west_recto_1" fromLane="0" toLane="0" via=":corrales_recto_13_0" tl="corrales_recto_tl" linkIndex="13" dir="s" state="O"/>
-    <connection from="west_recto_0" to="west_recto_1" fromLane="1" toLane="1" via=":corrales_recto_13_1" tl="corrales_recto_tl" linkIndex="14" dir="s" state="O"/>
-    <connection from="west_recto_0" to="south_corrales_2" fromLane="2" toLane="1" via=":corrales_recto_15_0" tl="corrales_recto_tl" linkIndex="15" dir="l" state="o"/>
-    <connection from="west_recto_1" to="north_roa_0" fromLane="0" toLane="0" via=":roa_recto_1_0" dir="r" state="M"/>
-    <connection from="west_recto_1" to="west_recto_2" fromLane="0" toLane="0" via=":roa_recto_2_0" dir="s" state="M"/>
-    <connection from="west_recto_1" to="west_recto_2" fromLane="1" toLane="1" via=":roa_recto_2_1" dir="s" state="M"/>
-    <connection from="west_recto_2" to="north_osmena_1" fromLane="0" toLane="0" via=":recto_osmena_14_0" tl="recto_osmena_tl" linkIndex="14" dir="r" state="O"/>
-    <connection from="west_recto_2" to="west_recto_3" fromLane="0" toLane="1" via=":recto_osmena_15_0" tl="recto_osmena_tl" linkIndex="15" dir="s" state="O"/>
-    <connection from="west_recto_2" to="west_recto_3" fromLane="1" toLane="2" via=":recto_osmena_15_1" tl="recto_osmena_tl" linkIndex="16" dir="s" state="O"/>
-    <connection from="west_recto_2" to="south_osmena_3" fromLane="1" toLane="1" via=":recto_osmena_17_0" tl="recto_osmena_tl" linkIndex="17" dir="l" state="o"/>
+    <connection from="west_recto_0" to="north_corrales_1" fromLane="0" toLane="0" via=":corrales_recto_13_0" tl="corrales_recto_tl" linkIndex="13" dir="r" state="O"/>
+    <connection from="west_recto_0" to="west_recto_1" fromLane="0" toLane="0" via=":corrales_recto_14_0" tl="corrales_recto_tl" linkIndex="14" dir="s" state="O"/>
+    <connection from="west_recto_0" to="west_recto_1" fromLane="1" toLane="1" via=":corrales_recto_14_1" tl="corrales_recto_tl" linkIndex="15" dir="s" state="O"/>
+    <connection from="west_recto_0" to="west_recto_1" fromLane="2" toLane="2" via=":corrales_recto_14_2" tl="corrales_recto_tl" linkIndex="16" dir="s" state="O"/>
+    <connection from="west_recto_0" to="south_corrales_2" fromLane="2" toLane="1" via=":corrales_recto_17_0" tl="corrales_recto_tl" linkIndex="17" dir="l" state="o"/>
+    <connection from="west_recto_1" to="north_roa_0" fromLane="0" toLane="0" via=":roa_recto_7_0" dir="r" state="M"/>
+    <connection from="west_recto_1" to="west_recto_2" fromLane="0" toLane="0" via=":roa_recto_8_0" dir="s" state="M"/>
+    <connection from="west_recto_1" to="west_recto_2" fromLane="1" toLane="1" via=":roa_recto_8_1" dir="s" state="M"/>
+    <connection from="west_recto_1" to="west_recto_2" fromLane="2" toLane="2" via=":roa_recto_8_2" dir="s" state="M"/>
+    <connection from="west_recto_2" to="north_osmena_1" fromLane="0" toLane="0" via=":recto_osmena_13_0" tl="recto_osmena_tl" linkIndex="13" dir="r" state="O"/>
+    <connection from="west_recto_2" to="west_recto_3" fromLane="0" toLane="0" via=":recto_osmena_14_0" tl="recto_osmena_tl" linkIndex="14" dir="s" state="O"/>
+    <connection from="west_recto_2" to="west_recto_3" fromLane="1" toLane="1" via=":recto_osmena_14_1" tl="recto_osmena_tl" linkIndex="15" dir="s" state="O"/>
+    <connection from="west_recto_2" to="west_recto_3" fromLane="2" toLane="2" via=":recto_osmena_14_2" tl="recto_osmena_tl" linkIndex="16" dir="s" state="O"/>
+    <connection from="west_recto_2" to="south_osmena_3" fromLane="2" toLane="1" via=":recto_osmena_17_0" tl="recto_osmena_tl" linkIndex="17" dir="l" state="o"/>
 
-    <connection from=":corrales_recto_0" to="east_recto_2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":corrales_recto_0" to="east_recto_3" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":corrales_recto_1" to="north_corrales_1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":corrales_recto_1" to="north_corrales_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":corrales_recto_3" to="west_recto_1" fromLane="0" toLane="1" via=":corrales_recto_16_0" dir="l" state="m"/>
-    <connection from=":corrales_recto_16" to="west_recto_1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":corrales_recto_3" to="west_recto_1" fromLane="0" toLane="2" via=":corrales_recto_18_0" dir="l" state="m"/>
+    <connection from=":corrales_recto_18" to="west_recto_1" fromLane="0" toLane="2" dir="l" state="M"/>
     <connection from=":corrales_recto_4" to="south_corrales_2" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":corrales_recto_5" to="east_recto_2" fromLane="0" toLane="1" dir="s" state="M"/>
-    <connection from=":corrales_recto_5" to="east_recto_2" fromLane="1" toLane="2" dir="s" state="M"/>
-    <connection from=":corrales_recto_7" to="north_corrales_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":corrales_recto_8" to="west_recto_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":corrales_recto_9" to="south_corrales_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":corrales_recto_9" to="south_corrales_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":corrales_recto_11" to="east_recto_2" fromLane="0" toLane="2" via=":corrales_recto_17_0" dir="l" state="m"/>
-    <connection from=":corrales_recto_17" to="east_recto_2" fromLane="0" toLane="2" dir="l" state="M"/>
-    <connection from=":corrales_recto_12" to="north_corrales_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":corrales_recto_13" to="west_recto_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":corrales_recto_13" to="west_recto_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":corrales_recto_15" to="south_corrales_2" fromLane="0" toLane="1" via=":corrales_recto_18_0" dir="l" state="m"/>
-    <connection from=":corrales_recto_18" to="south_corrales_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":florentino_0" to="east_florentino_0" fromLane="0" toLane="0" dir="t" state="M"/>
-    <connection from=":luna_0" to="west_luna_0" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":corrales_recto_5" to="east_recto_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":corrales_recto_5" to="east_recto_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":corrales_recto_5" to="east_recto_3" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":corrales_recto_8" to="north_corrales_1" fromLane="0" toLane="1" via=":corrales_recto_19_0" dir="l" state="m"/>
+    <connection from=":corrales_recto_19" to="north_corrales_1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":corrales_recto_9" to="west_recto_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":corrales_recto_10" to="south_corrales_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":corrales_recto_10" to="south_corrales_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":corrales_recto_12" to="east_recto_3" fromLane="0" toLane="2" via=":corrales_recto_20_0" dir="l" state="m"/>
+    <connection from=":corrales_recto_20" to="east_recto_3" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":corrales_recto_13" to="north_corrales_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":corrales_recto_14" to="west_recto_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":corrales_recto_14" to="west_recto_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":corrales_recto_14" to="west_recto_1" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":corrales_recto_17" to="south_corrales_2" fromLane="0" toLane="1" via=":corrales_recto_21_0" dir="l" state="m"/>
+    <connection from=":corrales_recto_21" to="south_corrales_2" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":luna_corrales_0" to="east_luna_2" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":luna_corrales_1" to="north_corrales_2" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":luna_corrales_1" to="north_corrales_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_corrales_3" to="west_luna_1" fromLane="0" toLane="1" via=":luna_corrales_18_0" dir="l" state="m"/>
-    <connection from=":luna_corrales_18" to="west_luna_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_corrales_4" to="south_corrales_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_corrales_5" to="east_luna_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_corrales_5" to="east_luna_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_corrales_7" to="north_corrales_2" fromLane="0" toLane="1" via=":luna_corrales_19_0" dir="l" state="m"/>
-    <connection from=":luna_corrales_19" to="north_corrales_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_corrales_8" to="west_luna_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_corrales_9" to="south_corrales_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_corrales_9" to="south_corrales_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_corrales_11" to="east_luna_2" fromLane="0" toLane="1" via=":luna_corrales_20_0" dir="l" state="m"/>
-    <connection from=":luna_corrales_20" to="east_luna_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_corrales_12" to="north_corrales_2" fromLane="0" toLane="1" via=":luna_corrales_21_0" dir="t" state="m"/>
-    <connection from=":luna_corrales_21" to="north_corrales_2" fromLane="0" toLane="1" dir="t" state="M"/>
-    <connection from=":luna_corrales_13" to="north_corrales_2" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_corrales_14" to="west_luna_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_corrales_14" to="west_luna_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_corrales_16" to="south_corrales_1" fromLane="0" toLane="1" via=":luna_corrales_22_0" dir="l" state="m"/>
-    <connection from=":luna_corrales_22" to="south_corrales_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_corrales_17" to="east_luna_2" fromLane="0" toLane="1" via=":luna_corrales_23_0" dir="t" state="m"/>
-    <connection from=":luna_corrales_23" to="east_luna_2" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":luna_corrales_3" to="south_corrales_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_corrales_4" to="east_luna_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_corrales_4" to="east_luna_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_corrales_6" to="west_luna_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_corrales_7" to="south_corrales_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_corrales_7" to="south_corrales_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_corrales_9" to="north_corrales_2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_corrales_10" to="west_luna_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_corrales_10" to="west_luna_1" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":luna_osmena_0" to="east_luna_0" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":luna_osmena_1" to="north_osmena_3" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":luna_osmena_1" to="north_osmena_3" fromLane="1" toLane="1" dir="s" state="M"/>
@@ -965,67 +984,66 @@
     <connection from=":luna_osmena_9" to="south_osmena_1" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":luna_roa_0" to="east_luna_1" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":luna_roa_1" to="north_roa_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_roa_2" to="west_luna_2" fromLane="0" toLane="1" via=":luna_roa_15_0" dir="l" state="m"/>
-    <connection from=":luna_roa_15" to="west_luna_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_roa_3" to="south_roa_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_roa_4" to="east_luna_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_roa_4" to="east_luna_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_roa_6" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_16_0" dir="l" state="m"/>
-    <connection from=":luna_roa_16" to="north_roa_1" fromLane="0" toLane="0" dir="l" state="M"/>
-    <connection from=":luna_roa_7" to="west_luna_2" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_roa_8" to="south_roa_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_roa_9" to="east_luna_1" fromLane="0" toLane="1" via=":luna_roa_17_0" dir="l" state="m"/>
-    <connection from=":luna_roa_17" to="east_luna_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":luna_roa_10" to="north_roa_1" fromLane="0" toLane="0" via=":luna_roa_18_0" dir="t" state="m"/>
-    <connection from=":luna_roa_18" to="north_roa_1" fromLane="0" toLane="0" dir="t" state="M"/>
-    <connection from=":luna_roa_11" to="north_roa_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":luna_roa_12" to="west_luna_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":luna_roa_12" to="west_luna_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":luna_roa_14" to="south_roa_1" fromLane="0" toLane="0" via=":luna_roa_19_0" dir="l" state="m"/>
-    <connection from=":luna_roa_19" to="south_roa_1" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":luna_roa_1" to="north_roa_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_roa_3" to="west_luna_2" fromLane="0" toLane="1" via=":luna_roa_16_0" dir="l" state="m"/>
+    <connection from=":luna_roa_16" to="west_luna_2" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":luna_roa_4" to="south_roa_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_roa_5" to="east_luna_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_roa_5" to="east_luna_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_roa_7" to="north_roa_1" fromLane="0" toLane="1" via=":luna_roa_17_0" dir="l" state="m"/>
+    <connection from=":luna_roa_17" to="north_roa_1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":luna_roa_8" to="west_luna_2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_roa_9" to="south_roa_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_roa_9" to="south_roa_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_roa_11" to="east_luna_1" fromLane="0" toLane="1" via=":luna_roa_18_0" dir="l" state="m"/>
+    <connection from=":luna_roa_18" to="east_luna_1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":luna_roa_12" to="north_roa_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":luna_roa_13" to="west_luna_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":luna_roa_13" to="west_luna_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":luna_roa_15" to="south_roa_1" fromLane="0" toLane="1" via=":luna_roa_19_0" dir="l" state="m"/>
+    <connection from=":luna_roa_19" to="south_roa_1" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":osmena_florentino_0" to="north_osmena_2" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":osmena_florentino_0" to="north_osmena_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":osmena_florentino_2" to="west_florentino_0" fromLane="0" toLane="0" via=":osmena_florentino_10_0" dir="l" state="m"/>
-    <connection from=":osmena_florentino_10" to="west_florentino_0" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":osmena_florentino_2" to="west_florentino_0" fromLane="0" toLane="1" via=":osmena_florentino_8_0" dir="l" state="m"/>
+    <connection from=":osmena_florentino_8" to="west_florentino_0" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":osmena_florentino_3" to="south_osmena_2" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":osmena_florentino_4" to="north_osmena_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":osmena_florentino_5" to="west_florentino_0" fromLane="0" toLane="0" via=":osmena_florentino_11_0" dir="t" state="m"/>
-    <connection from=":osmena_florentino_11" to="west_florentino_0" fromLane="0" toLane="0" dir="t" state="M"/>
-    <connection from=":osmena_florentino_6" to="west_florentino_0" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":osmena_florentino_7" to="south_osmena_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":osmena_florentino_7" to="south_osmena_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":osmena_florentino_9" to="north_osmena_2" fromLane="0" toLane="1" via=":osmena_florentino_12_0" dir="t" state="m"/>
-    <connection from=":osmena_florentino_12" to="north_osmena_2" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":osmena_florentino_5" to="west_florentino_0" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":osmena_florentino_6" to="south_osmena_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":osmena_florentino_6" to="south_osmena_2" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":recto_osmena_0" to="east_recto_1" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":recto_osmena_1" to="north_osmena_1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":recto_osmena_1" to="north_osmena_1" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":recto_osmena_3" to="west_recto_3" fromLane="0" toLane="2" via=":recto_osmena_18_0" dir="l" state="m"/>
     <connection from=":recto_osmena_18" to="west_recto_3" fromLane="0" toLane="2" dir="l" state="M"/>
-    <connection from=":recto_osmena_4" to="south_osmena_3" fromLane="0" toLane="1" via=":recto_osmena_19_0" dir="t" state="m"/>
-    <connection from=":recto_osmena_19" to="south_osmena_3" fromLane="0" toLane="1" dir="t" state="M"/>
-    <connection from=":recto_osmena_5" to="south_osmena_3" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":recto_osmena_6" to="east_recto_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":recto_osmena_6" to="east_recto_1" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":recto_osmena_8" to="north_osmena_1" fromLane="0" toLane="1" via=":recto_osmena_20_0" dir="l" state="m"/>
-    <connection from=":recto_osmena_20" to="north_osmena_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":recto_osmena_9" to="west_recto_3" fromLane="0" toLane="2" via=":recto_osmena_21_0" dir="t" state="m"/>
-    <connection from=":recto_osmena_21" to="west_recto_3" fromLane="0" toLane="2" dir="t" state="M"/>
-    <connection from=":recto_osmena_10" to="west_recto_3" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":recto_osmena_11" to="south_osmena_3" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":recto_osmena_11" to="south_osmena_3" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":recto_osmena_13" to="east_recto_1" fromLane="0" toLane="1" via=":recto_osmena_22_0" dir="l" state="m"/>
-    <connection from=":recto_osmena_22" to="east_recto_1" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":recto_osmena_14" to="north_osmena_1" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":recto_osmena_15" to="west_recto_3" fromLane="0" toLane="1" dir="s" state="M"/>
-    <connection from=":recto_osmena_15" to="west_recto_3" fromLane="1" toLane="2" dir="s" state="M"/>
-    <connection from=":recto_osmena_17" to="south_osmena_3" fromLane="0" toLane="1" via=":recto_osmena_23_0" dir="l" state="m"/>
-    <connection from=":recto_osmena_23" to="south_osmena_3" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":roa_0" to="south_roa_0" fromLane="0" toLane="0" dir="t" state="M"/>
-    <connection from=":roa_recto_0" to="west_recto_2" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":roa_recto_1" to="north_roa_0" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":roa_recto_2" to="west_recto_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":roa_recto_2" to="west_recto_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":south_corrales_0" to="south_corrales_0" fromLane="0" toLane="1" dir="t" state="M"/>
-    <connection from=":south_osmena_0" to="south_osmena_0" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":recto_osmena_4" to="south_osmena_3" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":recto_osmena_5" to="east_recto_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":recto_osmena_5" to="east_recto_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":recto_osmena_5" to="east_recto_1" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":recto_osmena_8" to="north_osmena_1" fromLane="0" toLane="1" via=":recto_osmena_19_0" dir="l" state="m"/>
+    <connection from=":recto_osmena_19" to="north_osmena_1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":recto_osmena_9" to="west_recto_3" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":recto_osmena_10" to="south_osmena_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":recto_osmena_10" to="south_osmena_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":recto_osmena_12" to="east_recto_1" fromLane="0" toLane="2" via=":recto_osmena_20_0" dir="l" state="m"/>
+    <connection from=":recto_osmena_20" to="east_recto_1" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":recto_osmena_13" to="north_osmena_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":recto_osmena_14" to="west_recto_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":recto_osmena_14" to="west_recto_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":recto_osmena_14" to="west_recto_3" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":recto_osmena_17" to="south_osmena_3" fromLane="0" toLane="1" via=":recto_osmena_21_0" dir="l" state="m"/>
+    <connection from=":recto_osmena_21" to="south_osmena_3" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":roa_recto_0" to="east_recto_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":roa_recto_0" to="east_recto_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":roa_recto_0" to="east_recto_2" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":roa_recto_3" to="north_roa_0" fromLane="0" toLane="1" via=":roa_recto_11_0" dir="l" state="m"/>
+    <connection from=":roa_recto_11" to="north_roa_0" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":roa_recto_4" to="west_recto_2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":roa_recto_5" to="east_recto_2" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":roa_recto_5" to="east_recto_2" fromLane="1" toLane="2" dir="l" state="M"/>
+    <connection from=":roa_recto_7" to="north_roa_0" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":roa_recto_8" to="west_recto_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":roa_recto_8" to="west_recto_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":roa_recto_8" to="west_recto_2" fromLane="2" toLane="2" dir="s" state="M"/>
 
 </net>
