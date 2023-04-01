@@ -13,7 +13,7 @@ args = options.parse_args()
 
 GUI = args.gui
 
-ENVIRONMENT_PATH = "Simulation_Environment\Main MADDPG"
+ENVIRONMENT_PATH = "Simulation_Environment\Static Envi"
 SCHEDULER = Path(f"{ENVIRONMENT_PATH}\\traffic plans.csv")
 
 

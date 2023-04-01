@@ -39,7 +39,7 @@ MAX_SIZE=1000
 
 #Parameters for Sumo Environment
 BUFFER_YELLOW = 4   #4 seconds for transition 'y' phase
-DIR = Path("Simulation_Environment\Main MADDPG")
+DIR = Path("Simulation_Environment\Static Envi")
 CYCLE_LENGTH = 120  #Cycle Length
 SIMULATION_TIME = 57600
 
