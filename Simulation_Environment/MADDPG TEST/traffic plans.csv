@@ -1,0 +1,21 @@
+﻿id,time,tls id
+0,0/61200,corrales_recto_tl
+1,3600,corrales_recto_tl
+2,14400,corrales_recto_tl
+3,43200,corrales_recto_tl
+4,54000,corrales_recto_tl
+0,0/61200,luna_corrales_tl
+1,3600/57600,luna_corrales_tl
+2,5400,luna_corrales_tl
+3,46800,luna_corrales_tl
+4,54000,luna_corrales_tl
+0,0/54000,luna_roa_tl
+1,3600,luna_roa_tl
+2,7200,luna_roa_tl
+3,14400,luna_roa_tl
+0,0/54000,osmena_florentino_tl
+1,3600,osmena_florentino_tl
+0,3600,recto_osmena_tl
+1,5400,recto_osmena_tl
+2,54000,recto_osmena_tl
+3,0/57600,recto_osmena_tl

@@ -34,32 +34,33 @@
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
     <tlLogic id="luna_corrales_tl" type="static" programID="0" offset="0">
-        <phase duration="3600" state="oooooooooooooooooo"/>
-    </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="1" offset="0">
         <phase duration="17" state="GGGosrroGGGoosrroo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
         <phase duration="12" state="srroGGGosrrooGGGoo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
     </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="2" offset="0">
+    <tlLogic id="luna_corrales_tl" type="static" programID="1" offset="0">
         <phase duration="27" state="GGGosrroGGGoosrroo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
         <phase duration="22" state="srroGGGosrrooGGGoo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
     </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="3" offset="0">
+    <tlLogic id="luna_corrales_tl" type="static" programID="2" offset="0">
         <phase duration="17" state="GGGosrroGGGoosrroo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
         <phase duration="22" state="srroGGGosrrooGGGoo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
     </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="4" offset="0">
+    <tlLogic id="luna_corrales_tl" type="static" programID="3" offset="0">
         <phase duration="22" state="GGGosrroGGGoosrroo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
         <phase duration="17" state="srroGGGosrrooGGGoo"/>
         <phase duration="3" state="syyysyyysyyyssyyyr"/>
+    </tlLogic>
+    <tlLogic id="luna_corrales_tl" type="static" programID="4" offset="0">
+        <phase duration="3600" state="oooooooooooooooooo"/>
     </tlLogic>
     
     <WAUT startProg="0" refTime="18000" id="w3">
