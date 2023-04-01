@@ -2,7 +2,7 @@
 
     <input>
         <net-file value="osm.net.xml" />
-        <route-files value="Final Vehicle Route/buses_route.xml, Final Vehicle Route/bicycle_tricycle_route.xml,Final Vehicle Route/cars_SUV_route.xml,Final Vehicle Route/jeepney_route.xml,Final Vehicle Route/largeTrucks_route.xml,Final Vehicle Route/motorcycles_scooters_route.xml,Final Vehicle Route/motorela_route.xml,Final Vehicle Route/smallTrucks_route.xml,Final Vehicle Route/taxi_route.xml,Final Vehicle Route/others_route.xml" />
+        <route-files value="possible_routes.xml" />
         <additional-files value="osm.poly.xml, lanearea_detectors.xml" />
     </input>
 
