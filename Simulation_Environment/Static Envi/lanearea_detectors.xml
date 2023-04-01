@@ -9,19 +9,6 @@
   <laneAreaDetector id="E_1" lane="-785902540#2_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
   -->
 <additional>
-<!-- <routes> -->
-<!-- <vType id="bicycle_tricycle" accel="3.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="15.0" guiShape="bicycle" color="255,0,0" />
-<vType id="buses" accel="0.4" decel="2.0" sigma="0.5" length="15.0" minGap="2.5" maxSpeed="30.0" guiShape="bus" color="0,0,255" />
-<vType id="cars_SUV" accel="0.8" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="30.0" guiShape="passenger" color="0,0,255" />
-<vType id="jeepney" accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" />
-<vType id="smallTrucks" accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" /> 
-<vType id="largeTrucks" accel="0.4" decel="3.0" sigma="0.5" length="12.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" />
-<vType id="motorcycles_scooters" accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" />
-<vType id="motorela" accel="2.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" />
-<vType id="taxi" accel="1.0" decel="4.5" sigma="0.5" length="2.0" minGap="0.5" maxSpeed="30.0" guiShape="bicycle" color="255,0,0" />
-<vType id="others" accel="0.8" decel="4.0" sigma="0.5" length="7.0" minGap="2.5" maxSpeed="30.0" guiShape="truck" color="0,0,255" /> -->
-<!-- </routes> -->
-
 <!-- CM Rect Corrales Junction -->
 <laneAreaDetector id="la_south_corrales_1_0" lane="south_corrales_1_0" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
 <laneAreaDetector id="la_south_corrales_1_1" lane="south_corrales_1_1" pos="-31" endPos="-1" friendlyPos="False" freq="900" file="Output\\E2_out.xml"/>
