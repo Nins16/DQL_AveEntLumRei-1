@@ -13,7 +13,7 @@ args = options.parse_args()
 
 GUI = args.gui
 
-ENVIRONMENT_PATH = "Simulation_Environment\Main MADDPG"
+ENVIRONMENT_PATH = "Simulation_Environment\Static Envi"
 SCHEDULER = Path(f"{ENVIRONMENT_PATH}\\traffic plans.csv")
 
 
@@ -33,7 +33,7 @@ class SumoEnvironment:
         else:
             sys.exit("please declare environment variable 'SUMO_HOME'")
         traci.start([self.sumoBinary, "-c", f"{self.SUMO_CFG}\osm.sumocfg",
-                     "--tripinfo-output", f"{self.SUMO_CFG}\\Results\\tripinfo.xml", "--start"])
+                     "--tripinfo-output", f"{self.SUMO_CFG}\\Results\\tripinfo.xml", "--start", "--time-to-teleport","-1"])
         
         self.scheduler_maker(self.scheduler)
 
@@ -76,6 +76,8 @@ class SumoEnvironment:
     def step(self):
         self.switch(int(traci.simulation.getTime()))
         traci.simulation.step()
+        if traci.simulation.getTime() % 1000==0:
+            print("Current Simulation Time is:", traci.simulation.getTime())
 
 if __name__ == "__main__":
     env = SumoEnvironment(GUI,ENVIRONMENT_PATH, SCHEDULER)
