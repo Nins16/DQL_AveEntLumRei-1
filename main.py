@@ -36,7 +36,7 @@ MAX_SIZE=1000
 
 #Parameters for Sumo Environment
 BUFFER_YELLOW = 4   #4 seconds for transition 'y' phase
-DIR = Path("Simulation_Environment\Static Envi")
+DIR = Path("Simulation_Environment\Main MADDPG")
 CYCLE_LENGTH = 120  #Cycle Length
 SIMULATION_TIME = 57600
 
@@ -45,7 +45,7 @@ EVALUATE = False
 
 #Other Params
 PRINT_INTERVAL = 100
-GUI = True
+GUI = False
 
 def get_all_states(env, trafficlights):
     # This function takes in an environment and a list of trafficlight IDs, 

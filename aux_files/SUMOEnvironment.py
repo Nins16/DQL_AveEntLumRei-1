@@ -17,7 +17,7 @@ DEBUG = False
 class SumoEnvironment:
     """Environment for MADDPG"""
     def __init__(self, gui = True, buffer_size = 10, buffer_yellow = 3, train=False,
-                dir=Path("Simulation_Environment\Main MADDPG"), neighbor_limit = 2, cycle_length=120, simulation_time=57600, simulation_time_tol=0.2):
+                dir=Path("Simulation_Environment\Main MADDPG"), cycle_length=120, simulation_time=57600, simulation_time_tol=0.2):
         #Set directory of environment
         self.dir = dir
 
@@ -58,8 +58,8 @@ class SumoEnvironment:
         #Create dictionary for e2 detectors in TLS using trafficlightID as key
         self.get_e2_detectors()
 
-        #Set neighbor Limit
-        self.neighbor_limit = neighbor_limit
+        # #Set neighbor Limit #TODO: Delete this
+        # self.neighbor_limit = neighbor_limit
 
         #Create Dict for each trafficlight
         self.init_tls_properties()
@@ -74,10 +74,10 @@ class SumoEnvironment:
         self.reset_phase()
         
         #inits vehicle counter
-        # for trafficlight in traci.trafficlight.getIDList():
-        #     tls_dict = self.tls[trafficlight]
-        #     tls_dict['vehicle speed'] = []
-        #     tls_dict['lane queue'] = {}
+        for trafficlight in traci.trafficlight.getIDList():
+            tls_dict = self.tls[trafficlight]
+            tls_dict['vehicle speed'] = []
+            tls_dict['lane queue'] = {}
         #     tls_dict['initial waiting time'] = {}
         #     tls_dict['current waiting time'] = {}
         
@@ -108,11 +108,11 @@ class SumoEnvironment:
         for tls in all_tls:
             self.tls[tls] = {}
 
-        #Add neighbour list to tls dict
-        neighbors = tools.get_neighbors(2,self.net)
-        for key,val in neighbors.items(): 
-            item = self.tls[key]
-            item['neighbors'] = val
+        # #Add neighbour list to tls dict
+        # neighbors = tools.get_neighbors(2,self.net)
+        # for key,val in neighbors.items(): 
+        #     item = self.tls[key]
+        #     item['neighbors'] = val
     
     def get_phase_data(self):
         """Convert Phase SUMO XML TL Program phase data to native python string phase data
@@ -166,26 +166,39 @@ class SumoEnvironment:
         return duration
 
     def get_reward(self, trafficlight):
-        durations = self.get_phase_duration(trafficlight)
-        punishment = 0
+        # Average Speed
+        # durations = self.get_phase_duration(trafficlight)
+        # punishment = 0
         
-        for duration in durations:
-            if duration < 15:   #below minimum green time
-                punishment += -2
+        # for duration in durations:
+        #     if duration < 15:   #below minimum green time
+        #         punishment += -2
         
         tls_dict    = self.tls[trafficlight]
-        all_speed   = tls_dict["vehicle speed"]
+        # all_speed   = tls_dict["vehicle speed"]
         
-        population = len(all_speed)
-        all_speed = np.array(all_speed)
-        speed_max = all_speed.max()
-        speed_max_ratio = all_speed/speed_max
-        speed_max_sum = speed_max_ratio.sum()
+        # population = len(all_speed)
+        # all_speed = np.array(all_speed)
+        # speed_max = all_speed.max()
+        # speed_max_ratio = all_speed/speed_max
+        # speed_max_sum = speed_max_ratio.sum()
 
-        #reset vehicle speed counter
-        tls_dict = self.tls
+        # #reset vehicle speed counter
+        # tls_dict = self.tls
         tls_dict['vehicle speed'] = []
-        reward = (1/population)*speed_max_sum + punishment
+        # reward = (1/population)*speed_max_sum + punishment
+
+        #Waiting Time
+        tls_dict = self.tls[trafficlight]
+        waiting_time_dct = tls_dict['waiting time']
+
+        waiting_times = list(waiting_time_dct.values())
+        waiting_time_normalized = np.array(waiting_times)/max(waiting_times)
+        waiting_time_normalized = waiting_time_normalized.sum()
+        reward = -waiting_time_normalized
+
+        #reset waiting time counter
+        waiting_time_dct = {}
 
         return reward
     
@@ -194,6 +207,7 @@ class SumoEnvironment:
         all_speed = []
         e2_detectors = self.e2_detectors[trafficlight]
         detector_dct = tls_dict['lane queue']
+
         #Records average speed, lane occupancy, and waiting time
         for detector in e2_detectors:
             #Average speed
@@ -208,6 +222,30 @@ class SumoEnvironment:
             if len(detector_dct) == 0:
                 for detector in e2_detectors:
                     detector_dct[detector] = []
+            
+            #Waiting Time #TODO: Check if it works in the simulation
+
+            all_vehicles = traci.lanearea.getLastStepVehicleIDs(detector)
+            
+            try:        #Create waiting time dictionary in tls_dict if not available
+                waiting_time_dict = tls_dict['waiting time']
+            except KeyError:
+                tls_dict['waiting time'] = {}
+                waiting_time_dict = tls_dict['waiting time'] = {}
+
+            for vehicle in all_vehicles:
+                current_waiting_time = traci.vehicle.getWaitingTime(vehicle)
+                try:
+                    previous_time = waiting_time_dict[vehicle]
+                except KeyError:
+                    previous_time = 0
+                
+                if previous_time <= current_waiting_time:
+                    waiting_time = current_waiting_time
+                    waiting_time_dict[vehicle] = waiting_time
+                else:
+                    continue    #does not add the vehicle if the previous time is less than the current (Either it left the simulation or it is already moving. It keeps the max waiting time)
+
 
             detector_dct[detector].append(lane_occupancy)
 

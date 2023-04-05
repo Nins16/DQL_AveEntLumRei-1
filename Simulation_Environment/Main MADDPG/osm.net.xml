@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-04-01 23:50:55 by Eclipse SUMO netedit Version 1.15.0
+<!-- generated on 2023-04-04 23:40:32 by Eclipse SUMO netedit Version 1.10.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="D:\School Documents\Thesis\REPO\MADDPG-Cagayan-de-Oro-Poblacion-ITS\Simulation_Environment\Main MADDPG\osm.net.xml"/>
+        <sumo-net-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
     </input>
 
     <output>
-        <output-file value="D:\School Documents\Thesis\REPO\MADDPG-Cagayan-de-Oro-Poblacion-ITS\Simulation_Environment\Main MADDPG\osm.net.xml"/>
+        <output-file value="D:\Main%20GDrive\Programming\Gthub%20Repo\DQL_AveEntLumRei\Simulation_Environment\Main%20MADDPG\osm.net.xml"/>
         <output.street-names value="true"/>
     </output>
 
@@ -16,19 +16,23 @@
         <geometry.min-radius.fix.railways value="false"/>
         <geometry.max-grade.fix value="false"/>
         <offset.disable-normalization value="true"/>
-        <lefthand value="0"/>
+        <lefthand value="false"/>
     </processing>
 
     <junctions>
         <no-turnarounds value="true"/>
         <junctions.corner-detail value="5"/>
-        <junctions.limit-turn-speed value="5.50"/>
-        <rectangular-lane-cut value="0"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
     </junctions>
 
     <pedestrian>
-        <walkingareas value="0"/>
+        <walkingareas value="false"/>
     </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
 
 </configuration>
 -->
@@ -165,26 +169,26 @@
         <lane id=":luna_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.82" shape="1260.21,795.93 1256.45,775.47"/>
     </edge>
     <edge id=":luna_osmena_3" function="internal">
-        <lane id=":luna_osmena_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="1.44" shape="1260.21,795.93 1260.78,794.60"/>
+        <lane id=":luna_osmena_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1260.21,795.93 1260.78,794.60 1261.49,794.06"/>
     </edge>
     <edge id=":luna_osmena_10" function="internal">
-        <lane id=":luna_osmena_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="3.23" shape="1260.78,794.60 1261.49,794.06 1262.35,794.31 1263.36,795.34"/>
+        <lane id=":luna_osmena_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1261.49,794.06 1262.35,794.31 1263.36,795.34"/>
     </edge>
     <edge id=":luna_osmena_4" function="internal">
         <lane id=":luna_osmena_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.78" shape="1262.75,774.33 1266.50,794.75"/>
         <lane id=":luna_osmena_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="20.78" shape="1259.60,774.90 1263.36,795.34"/>
     </edge>
     <edge id=":luna_osmena_6" function="internal">
-        <lane id=":luna_osmena_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="4.88" shape="1259.60,774.90 1259.78,779.77"/>
+        <lane id=":luna_osmena_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="7.01" shape="1259.60,774.90 1259.80,780.41 1259.24,781.80"/>
     </edge>
     <edge id=":luna_osmena_7" function="internal">
-        <lane id=":luna_osmena_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="1.44" shape="1259.60,774.90 1259.03,776.22"/>
+        <lane id=":luna_osmena_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1259.60,774.90 1259.03,776.22 1258.31,776.76"/>
     </edge>
     <edge id=":luna_osmena_11" function="internal">
-        <lane id=":luna_osmena_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="15.03" shape="1259.78,779.77 1259.80,780.41 1258.15,784.53 1254.65,787.28 1249.31,788.64"/>
+        <lane id=":luna_osmena_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="12.90" shape="1259.24,781.80 1258.15,784.53 1254.65,787.28 1249.31,788.64"/>
     </edge>
     <edge id=":luna_osmena_12" function="internal">
-        <lane id=":luna_osmena_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="3.23" shape="1259.03,776.22 1258.31,776.76 1257.45,776.51 1256.45,775.47"/>
+        <lane id=":luna_osmena_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="2.34" shape="1258.31,776.76 1257.45,776.51 1256.45,775.47"/>
     </edge>
     <edge id=":luna_osmena_8" function="internal">
         <lane id=":luna_osmena_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.36" length="9.04" shape="1248.63,782.27 1251.06,781.65 1252.64,780.41 1253.39,778.54 1253.30,776.04"/>
@@ -258,10 +262,10 @@
         <lane id=":recto_osmena_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.46" shape="1319.38,1097.70 1312.89,1070.06"/>
     </edge>
     <edge id=":recto_osmena_3" function="internal">
-        <lane id=":recto_osmena_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="3.28" shape="1319.38,1097.70 1318.98,1094.44"/>
+        <lane id=":recto_osmena_3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="6.96" shape="1319.38,1097.70 1318.52,1090.79"/>
     </edge>
     <edge id=":recto_osmena_18" function="internal">
-        <lane id=":recto_osmena_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="19.61" shape="1318.98,1094.44 1318.50,1090.64 1319.57,1085.22 1322.59,1081.45 1327.58,1079.33"/>
+        <lane id=":recto_osmena_18_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="15.94" shape="1318.52,1090.79 1318.50,1090.64 1319.57,1085.22 1322.59,1081.45 1327.58,1079.33"/>
     </edge>
     <edge id=":recto_osmena_4" function="internal">
         <lane id=":recto_osmena_4_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.43" length="9.02" shape="1329.82,1089.59 1327.49,1090.43 1326.01,1091.81 1325.39,1093.74 1325.61,1096.22"/>
@@ -272,10 +276,10 @@
         <lane id=":recto_osmena_5_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.38" shape="1328.39,1083.35 1307.38,1086.94"/>
     </edge>
     <edge id=":recto_osmena_8" function="internal">
-        <lane id=":recto_osmena_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="4.27" shape="1328.39,1083.35 1324.12,1083.45"/>
+        <lane id=":recto_osmena_8_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="5.37" shape="1328.39,1083.35 1323.02,1083.47"/>
     </edge>
     <edge id=":recto_osmena_19" function="internal">
-        <lane id=":recto_osmena_19_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="18.98" shape="1324.12,1083.45 1322.76,1083.48 1318.29,1081.30 1315.01,1076.83 1312.89,1070.06"/>
+        <lane id=":recto_osmena_19_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="17.88" shape="1323.02,1083.47 1322.76,1083.48 1318.29,1081.30 1315.01,1076.83 1312.89,1070.06"/>
     </edge>
     <edge id=":recto_osmena_9" function="internal">
         <lane id=":recto_osmena_9_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.58" length="9.42" shape="1319.17,1068.84 1320.01,1071.18 1321.47,1072.67 1323.53,1073.30 1326.21,1073.07"/>
@@ -285,10 +289,10 @@
         <lane id=":recto_osmena_10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="8.33" length="28.19" shape="1316.03,1069.45 1322.50,1096.96"/>
     </edge>
     <edge id=":recto_osmena_12" function="internal">
-        <lane id=":recto_osmena_12_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="3.20" shape="1316.03,1069.45 1316.29,1072.63"/>
+        <lane id=":recto_osmena_12_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="6.76" shape="1316.03,1069.45 1316.58,1076.19"/>
     </edge>
     <edge id=":recto_osmena_20" function="internal">
-        <lane id=":recto_osmena_20_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="18.87" shape="1316.29,1072.63 1316.58,1076.19 1315.32,1081.35 1312.26,1084.93 1307.38,1086.94"/>
+        <lane id=":recto_osmena_20_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="15.30" shape="1316.58,1076.19 1315.32,1081.35 1312.26,1084.93 1307.38,1086.94"/>
     </edge>
     <edge id=":recto_osmena_13" function="internal">
         <lane id=":recto_osmena_13_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="6.60" length="9.23" shape="1305.40,1077.52 1307.71,1076.66 1309.21,1075.24 1309.89,1073.24 1309.75,1070.66"/>
@@ -299,10 +303,10 @@
         <lane id=":recto_osmena_14_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="11.11" length="21.31" shape="1306.72,1083.78 1327.58,1079.33"/>
     </edge>
     <edge id=":recto_osmena_17" function="internal">
-        <lane id=":recto_osmena_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="2.04" shape="1306.72,1083.78 1308.75,1083.74"/>
+        <lane id=":recto_osmena_17_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="4.36" shape="1306.72,1083.78 1311.08,1083.69"/>
     </edge>
     <edge id=":recto_osmena_21" function="internal">
-        <lane id=":recto_osmena_21_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="21.15" shape="1308.75,1083.74 1312.23,1083.66 1316.69,1085.82 1320.12,1090.25 1322.50,1096.96"/>
+        <lane id=":recto_osmena_21_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="9.72" length="18.83" shape="1311.08,1083.69 1312.23,1083.66 1316.69,1085.82 1320.12,1090.25 1322.50,1096.96"/>
     </edge>
     <edge id=":roa_0" function="internal">
         <lane id=":roa_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.65" length="4.67" shape="1072.16,719.54 1072.86,718.28 1073.63,717.81 1074.46,718.15 1075.35,719.28"/>
@@ -545,77 +549,13 @@
         <phase duration="42" state="GGGGsrrrrsrrrsrrrr"/>
         <phase duration="3"  state="syyysyyyysyyysyyyy"/>
     </tlLogic>
-    <tlLogic id="corrales_recto_tl" type="static" programID="1" offset="0">
-        <phase duration="137" state="srrrsrrrrsrrrGGGGG"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="107" state="srrrGGGGGsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="62" state="srrrsrrrrGGGGsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="42" state="GGGGsrrrrsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-    </tlLogic>
-    <tlLogic id="corrales_recto_tl" type="static" programID="2" offset="0">
-        <phase duration="137" state="srrrsrrrrsrrrGGGGG"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="107" state="srrrGGGGGsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="62" state="srrrsrrrrGGGGsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="42" state="GGGGsrrrrsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-    </tlLogic>
-    <tlLogic id="corrales_recto_tl" type="static" programID="3" offset="0">
-        <phase duration="57" state="srrrsrrrrsrrrGGGGG"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="47" state="srrrGGGGGsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="62" state="srrrsrrrrGGGGsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="42" state="GGGGsrrrrsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-    </tlLogic>
-    <tlLogic id="corrales_recto_tl" type="static" programID="4" offset="0">
-        <phase duration="17" state="srrrsrrrrsrrrGGGGG"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="17" state="srrrGGGGGsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="17" state="srrrsrrrrGGGGsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-        <phase duration="17" state="GGGGsrrrrsrrrsrrrr"/>
-        <phase duration="3"  state="syyysyyyysyyysyyyy"/>
-    </tlLogic>
     <tlLogic id="luna_corrales_tl" type="static" programID="0" offset="0">
-        <phase duration="3600" state="oooooooooooooooooo"/>
-    </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="1" offset="0">
         <phase duration="17" state="GGGosrroGGGoosrroo"/>
         <phase duration="3"  state="syyysyyysyyyssyyyr"/>
         <phase duration="12" state="srroGGGosrrooGGGoo"/>
         <phase duration="3"  state="syyysyyysyyyssyyyr"/>
     </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="2" offset="0">
-        <phase duration="27" state="GGGosrroGGGoosrroo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-        <phase duration="22" state="srroGGGosrrooGGGoo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-    </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="3" offset="0">
-        <phase duration="17" state="GGGosrroGGGoosrroo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-        <phase duration="22" state="srroGGGosrrooGGGoo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-    </tlLogic>
-    <tlLogic id="luna_corrales_tl" type="static" programID="4" offset="0">
-        <phase duration="22" state="GGGosrroGGGoosrroo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-        <phase duration="17" state="srroGGGosrrooGGGoo"/>
-        <phase duration="3"  state="syyysyyysyyyssyyyr"/>
-    </tlLogic>
     <tlLogic id="luna_roa_tl" type="static" programID="0" offset="0">
-        <phase duration="3600" state="oooooooooooooooooo"/>
-    </tlLogic>
-    <tlLogic id="luna_roa_tl" type="static" programID="1" offset="0">
         <phase duration="14" state="srrsrrrGGGosrrr"/>
         <phase duration="6"  state="syysyyysyyosyyy"/>
         <phase duration="14" state="GGGsrrrsrrosrrr"/>
@@ -625,30 +565,7 @@
         <phase duration="4"  state="srrsrrrsrroGGGG"/>
         <phase duration="6"  state="syysyyysyyosyyy"/>
     </tlLogic>
-    <tlLogic id="luna_roa_tl" type="static" programID="2" offset="0">
-        <phase duration="34" state="srrsrrrGGGosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="19" state="GGGsrrrsrrosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="24" state="srrGGGGsrrosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="11" state="srrsrrrsrroGGGG"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-    </tlLogic>
-    <tlLogic id="luna_roa_tl" type="static" programID="3" offset="0">
-        <phase duration="54" state="srrsrrrGGGosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="19" state="GGGsrrrsrrosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="29" state="srrGGGGsrrosrrr"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-        <phase duration="9"  state="srrsrrrsrroGGGG"/>
-        <phase duration="6"  state="syysyyysyyosyyy"/>
-    </tlLogic>
     <tlLogic id="osmena_florentino_tl" type="static" programID="0" offset="0">
-        <phase duration="3600" state="oooooooooo"/>
-    </tlLogic>
-    <tlLogic id="osmena_florentino_tl" type="static" programID="1" offset="0">
         <phase duration="19" state="GGrsrrGGGg"/>
         <phase duration="6"  state="yyysrssyyg"/>
         <phase duration="11" state="GGGsrssrrg"/>
@@ -786,13 +703,13 @@
     </junction>
     <junction id="west_recto" type="dead_end" x="890.77" y="1173.12" incLanes="east_recto_2_0 east_recto_2_1 east_recto_2_2" intLanes="" shape="889.97,1169.06 888.10,1159.64 893.99,1186.48 891.74,1177.15" fringe="outer"/>
 
-    <junction id=":luna_osmena_10_0" type="internal" x="1260.78" y="794.60" incLanes=":luna_osmena_3_0 south_osmena_0_0 south_osmena_0_1 west_luna_2_1" intLanes=":luna_osmena_4_0 :luna_osmena_4_1 :luna_osmena_9_0"/>
-    <junction id=":luna_osmena_11_0" type="internal" x="1259.78" y="779.77" incLanes=":luna_osmena_6_0 north_osmena_2_0 north_osmena_2_1" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_9_0"/>
-    <junction id=":luna_osmena_12_0" type="internal" x="1259.03" y="776.22" incLanes=":luna_osmena_7_0 north_osmena_2_0 north_osmena_2_1 west_luna_2_0" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_8_0"/>
-    <junction id=":recto_osmena_18_0" type="internal" x="1318.98" y="1094.44" incLanes=":recto_osmena_3_0 east_recto_0_2 west_recto_2_2" intLanes=":recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_9_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
-    <junction id=":recto_osmena_19_0" type="internal" x="1324.12" y="1083.45" incLanes=":recto_osmena_8_0" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0 :recto_osmena_13_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2"/>
-    <junction id=":recto_osmena_20_0" type="internal" x="1316.29" y="1072.63" incLanes=":recto_osmena_12_0 east_recto_0_2 west_recto_2_2" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
-    <junction id=":recto_osmena_21_0" type="internal" x="1308.75" y="1083.74" incLanes=":recto_osmena_17_0" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_4_0 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0"/>
+    <junction id=":luna_osmena_10_0" type="internal" x="1261.49" y="794.06" incLanes=":luna_osmena_3_0 south_osmena_0_0 south_osmena_0_1 west_luna_2_1" intLanes=":luna_osmena_4_0 :luna_osmena_4_1 :luna_osmena_9_0"/>
+    <junction id=":luna_osmena_11_0" type="internal" x="1259.24" y="781.80" incLanes=":luna_osmena_6_0 north_osmena_2_0 north_osmena_2_1" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_9_0"/>
+    <junction id=":luna_osmena_12_0" type="internal" x="1258.31" y="776.76" incLanes=":luna_osmena_7_0 north_osmena_2_0 north_osmena_2_1 west_luna_2_0" intLanes=":luna_osmena_1_0 :luna_osmena_1_1 :luna_osmena_8_0"/>
+    <junction id=":recto_osmena_18_0" type="internal" x="1318.52" y="1090.79" incLanes=":recto_osmena_3_0 east_recto_0_2 west_recto_2_2" intLanes=":recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_9_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
+    <junction id=":recto_osmena_19_0" type="internal" x="1323.02" y="1083.47" incLanes=":recto_osmena_8_0" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0 :recto_osmena_13_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2"/>
+    <junction id=":recto_osmena_20_0" type="internal" x="1316.58" y="1076.19" incLanes=":recto_osmena_12_0 east_recto_0_2 west_recto_2_2" intLanes=":recto_osmena_0_0 :recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_8_0 :recto_osmena_14_0 :recto_osmena_14_1 :recto_osmena_14_2 :recto_osmena_17_0"/>
+    <junction id=":recto_osmena_21_0" type="internal" x="1311.08" y="1083.69" incLanes=":recto_osmena_17_0" intLanes=":recto_osmena_1_0 :recto_osmena_1_1 :recto_osmena_3_0 :recto_osmena_4_0 :recto_osmena_5_0 :recto_osmena_5_1 :recto_osmena_5_2 :recto_osmena_10_0 :recto_osmena_10_1 :recto_osmena_12_0"/>
 
     <connection from="east_florentino_0" to="south_osmena_2" fromLane="0" toLane="0" via=":osmena_florentino_3_0" tl="osmena_florentino_tl" linkIndex="3" dir="r" state="o"/>
     <connection from="east_florentino_0" to="north_osmena_2" fromLane="0" toLane="1" via=":osmena_florentino_4_0" tl="osmena_florentino_tl" linkIndex="4" dir="l" state="o"/>
